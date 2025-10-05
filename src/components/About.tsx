@@ -14,7 +14,7 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <img
-              src="https://images.pexels.com/photos/6235131/pexels-photo-6235131.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src="https://bocskaiallatorvos.hu/wp-content/uploads/2024/10/zoli-udvozlo.jpg"
               alt="Rendelő"
               className="rounded-2xl shadow-2xl w-full h-auto"
             />
