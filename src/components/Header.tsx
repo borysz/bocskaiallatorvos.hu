@@ -23,7 +23,7 @@ export default function Header({ onAdminClick }: HeaderProps) {
           <div className="flex items-center space-x-3">
             <Stethoscope className="w-8 h-8 text-teal-600" />
             <div>
-              <h1 className="text-2xl font-bold text-gray-800">Bocskai Állatorvos</h1>
+              <h1 className="text-2xl font-bold text-gray-800">Bocskai Állategészségügyi Centrum</h1>
               <p className="text-sm text-gray-600">Állatorvosi Rendelő</p>
             </div>
           </div>
