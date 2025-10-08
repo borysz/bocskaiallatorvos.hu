@@ -1,13 +1,14 @@
 import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import About from './components/About';
-import Pricing from './components/Pricing';
-import Reviews from './components/Reviews';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 import AdminPanel from './components/AdminPanel';
+import HomePage from './pages/HomePage';
+import ServicesPage from './pages/ServicesPage';
+import AboutPage from './pages/AboutPage';
+import PricingPage from './pages/PricingPage';
+import ReviewsPage from './pages/ReviewsPage';
+import ContactPage from './pages/ContactPage';
 
 function App() {
   const [isAdminMode, setIsAdminMode] = useState(false);
@@ -17,16 +18,22 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
-      <Header onAdminClick={() => setIsAdminMode(true)} />
-      <Hero />
-      <Services />
-      <About />
-      <Pricing />
-      <Reviews />
-      <Contact />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="min-h-screen bg-white flex flex-col">
+        <Header onAdminClick={() => setIsAdminMode(true)} />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/szolgaltatasok" element={<ServicesPage />} />
+            <Route path="/rolunk" element={<AboutPage />} />
+            <Route path="/arlista" element={<PricingPage />} />
+            <Route path="/velemenyek" element={<ReviewsPage />} />
+            <Route path="/kapcsolat" element={<ContactPage />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
