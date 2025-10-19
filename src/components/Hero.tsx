@@ -1,4 +1,5 @@
 import { Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
@@ -18,18 +19,18 @@ export default function Hero() {
               Megelőző ellátás, diagnosztika és sürgősségi ellátás egy helyen.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-lg font-medium transition shadow-lg hover:shadow-xl"
+              <Link
+                to="/kapcsolat"
+                className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-lg font-medium transition shadow-lg hover:shadow-xl text-center"
               >
                 Időpontfoglalás
-              </button>
-              <button
-                onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-white hover:bg-gray-50 text-teal-600 px-8 py-3 rounded-lg font-medium transition border-2 border-teal-600"
+              </Link>
+              <Link
+                to="/szolgaltatasok"
+                className="bg-white hover:bg-gray-50 text-teal-600 px-8 py-3 rounded-lg font-medium transition border-2 border-teal-600 text-center"
               >
                 Szolgáltatások
-              </button>
+              </Link>
             </div>
           </div>
           <div className="flex-1">
