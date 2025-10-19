@@ -5,7 +5,7 @@ export default function Contact() {
     <section id="contact" className="py-20 bg-gradient-to-br from-teal-50 to-cyan-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">Kapcsolat</h2>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Kapcsolat</h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Keressen minket bizalommal bármilyen kérdéssel kapcsolatban!
           </p>
@@ -19,7 +19,7 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="font-bold text-gray-800 mb-2">Cím</h3>
-                <p className="text-gray-600">1146 Budapest, Bocskai utca 20.</p>
+                <p className="text-gray-600">4241 Bocskaikert, Debreceni út 25</p>
               </div>
             </div>
 
@@ -29,7 +29,7 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="font-bold text-gray-800 mb-2">Telefon</h3>
-                <p className="text-gray-600">+36 1 555 1234</p>
+                <p className="text-gray-600"><a href="tel:+36302390940" title="+36 30 239 0940">+36 30 239 0940</a></p>
                 <p className="text-sm text-gray-500 mt-1">Sürgősségi: +36 30 555 5678</p>
               </div>
             </div>
@@ -51,10 +51,9 @@ export default function Contact() {
               <div>
                 <h3 className="font-bold text-gray-800 mb-2">Nyitvatartás</h3>
                 <div className="space-y-1 text-gray-600">
-                  <p>Hétfő - Péntek: 8:00 - 18:00</p>
-                  <p>Szombat: 9:00 - 14:00</p>
+                  <p>Hétfő - Péntek: 8:00 - 19:00</p>
+                  <p>Szombat: 9:00 - 12:00</p>
                   <p>Vasárnap: Zárva</p>
-                  <p className="text-teal-600 font-medium mt-2">Sürgősség: 0-24</p>
                 </div>
               </div>
             </div>
@@ -104,6 +103,23 @@ export default function Contact() {
             </form>
           </div>
         </div>
+
+        {/* Google Térkép */}
+        <section id="terkep" className="mt-16 w-full max-w-6xl mx-auto rounded-xl overflow-hidden shadow-lg">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">Térkép</h2>
+          </div>
+          <iframe
+            title="Google Map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86015.92644958379!2d21.577215635094642!3d47.64561149998238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47476d13b3c85163%3A0x19d5440677c3b3a3!2zQm9jc2thaSDDgWxsYXRlZ8Opc3pzw6lnw7xneWkgQ2VudHJ1bQ!5e0!3m2!1shu!2shu!4v1760900241791!5m2!1shu!2shu"
+            width="100%"
+            height="450"
+            style={{ border: 0 }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </section>
+
       </div>
     </section>
   );

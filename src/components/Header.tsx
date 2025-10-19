@@ -14,6 +14,16 @@ export default function Header({ onAdminClick }: HeaderProps) {
 
   const closeMenu = () => setIsMenuOpen(false);
 
+  /*const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
+    }
+  };*/
+
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <header className="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
       <nav className="container mx-auto px-4 py-4">
@@ -40,23 +50,80 @@ export default function Header({ onAdminClick }: HeaderProps) {
               Szolgáltatások
             </Link>
             <Link
-              to="/rolunk"
-              className={`transition ${isActive('/rolunk') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'}`}
+              to="/blog"
+              className={`transition ${isActive('/blog') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'}`}
             >
-              Rólunk
+              Blog
             </Link>
+
             <Link
-              to="/arlista"
-              className={`transition ${isActive('/arlista') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'}`}
+              to="/gyik"
+              className={`transition ${isActive('/gyik') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'}`}
             >
-              Árlista
+              GYIK
             </Link>
+
+            {/* ÚJ LEGÖRDÜLŐ MENÜ */}
+            <div className="relative group">
+              <button
+                className={`transition flex items-center space-x-1 ${
+                  isActive('/arlista') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'
+                }`}
+              >
+                <span>Árlista</span>
+                <svg
+                  className="w-4 h-4 mt-0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {/* Legördülő tartalom */}
+              <div className="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
+                <Link
+                  to="/arlista/altalanos-dijak"
+                  className="block px-4 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-600"
+                >
+                  Általános díjak
+                </Link>
+                <Link
+                  to="/arlista/oltasok"
+                  className="block px-4 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-600"
+                >
+                  Oltások
+                </Link>
+                <Link
+                  to="/arlista/tesztek"
+                  className="block px-4 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-600"
+                >
+                  Tesztek
+                </Link>
+                <Link
+                  to="/arlista/borgyogyaszat"
+                  className="block px-4 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-600"
+                >
+                  Bőrgyógyászat
+                </Link>
+                <Link
+                  to="/arlista/endoszkopia"
+                  className="block px-4 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-600"
+                >
+                  Endoszkópia
+                </Link>
+              </div>
+            </div>
+
             <Link
-              to="/velemenyek"
-              className={`transition ${isActive('/velemenyek') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'}`}
+              to="/blog"
+              className={`transition ${isActive('/blog') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'}`}
             >
-              Vélemények
+              Blog
             </Link>
+
             <Link
               to="/kapcsolat"
               className={`transition ${isActive('/kapcsolat') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'}`}
@@ -69,6 +136,18 @@ export default function Header({ onAdminClick }: HeaderProps) {
             >
               Admin
             </button>
+            {/*<button onClick={() => scrollToSection('hero')} className="text-gray-700 hover:text-teal-600 transition">Főoldal</button>
+            <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-teal-600 transition">Szolgáltatások</button>
+            <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-teal-600 transition">Rólunk</button>
+            <button onClick={() => scrollToSection('pricing')} className="text-gray-700 hover:text-teal-600 transition">Árlista</button>
+            <button onClick={() => scrollToSection('reviews')} className="text-gray-700 hover:text-teal-600 transition">Vélemények</button>
+            <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-teal-600 transition">Kapcsolat</button>
+            <button
+              onClick={onAdminClick}
+              className="text-xs text-gray-400 hover:text-teal-600 transition"
+            >
+              Admin
+            </button>*/}
           </div>
 
           <button
@@ -81,6 +160,12 @@ export default function Header({ onAdminClick }: HeaderProps) {
 
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-3">
+            {/*<button onClick={() => scrollToSection('hero')} className="block w-full text-left text-gray-700 hover:text-teal-600 transition py-2">Főoldal</button>
+            <button onClick={() => scrollToSection('services')} className="block w-full text-left text-gray-700 hover:text-teal-600 transition py-2">Szolgáltatások</button>
+            <button onClick={() => scrollToSection('about')} className="block w-full text-left text-gray-700 hover:text-teal-600 transition py-2">Rólunk</button>
+            <button onClick={() => scrollToSection('pricing')} className="block w-full text-left text-gray-700 hover:text-teal-600 transition py-2">Árlista</button>
+            <button onClick={() => scrollToSection('reviews')} className="block w-full text-left text-gray-700 hover:text-teal-600 transition py-2">Vélemények</button>
+            <button onClick={() => scrollToSection('contact')} className="block w-full text-left text-gray-700 hover:text-teal-600 transition py-2">Kapcsolat</button>*/}
             <Link
               to="/"
               onClick={closeMenu}
@@ -95,27 +180,26 @@ export default function Header({ onAdminClick }: HeaderProps) {
             >
               Szolgáltatások
             </Link>
+
             <Link
-              to="/rolunk"
+              to="/gyik"
               onClick={closeMenu}
-              className={`block w-full text-left transition py-2 ${isActive('/rolunk') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'}`}
+              className={`block w-full text-left transition py-2 ${isActive('/gyik') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'}`}
             >
-              Rólunk
+              GYIK
             </Link>
-            <Link
-              to="/arlista"
-              onClick={closeMenu}
-              className={`block w-full text-left transition py-2 ${isActive('/arlista') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'}`}
-            >
-              Árlista
-            </Link>
-            <Link
-              to="/velemenyek"
-              onClick={closeMenu}
-              className={`block w-full text-left transition py-2 ${isActive('/velemenyek') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'}`}
-            >
-              Vélemények
-            </Link>
+
+            <div>
+              <p className="text-gray-700 font-medium mt-2">Árlista</p>
+              <div className="ml-4 space-y-1">
+                <Link to="/arlista/altalanos-dijak" onClick={closeMenu} className="block text-gray-600 hover:text-teal-600">Általános díjak</Link>
+                <Link to="/arlista/oltasok" onClick={closeMenu} className="block text-gray-600 hover:text-teal-600">Oltások</Link>
+                <Link to="/arlista/tesztek" onClick={closeMenu} className="block text-gray-600 hover:text-teal-600">Tesztek</Link>
+                <Link to="/arlista/borgyogyaszat" onClick={closeMenu} className="block text-gray-600 hover:text-teal-600">Bőrgyógyászat</Link>
+                <Link to="/arlista/endoszkopia" onClick={closeMenu} className="block text-gray-600 hover:text-teal-600">Endoszkópia</Link>
+              </div>
+            </div>
+
             <Link
               to="/kapcsolat"
               onClick={closeMenu}
