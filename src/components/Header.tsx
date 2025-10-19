@@ -22,8 +22,6 @@ export default function Header({ onAdminClick }: HeaderProps) {
     }
   };*/
 
-  const closeMenu = () => setIsMenuOpen(false);
-
   return (
     <header className="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
       <nav className="container mx-auto px-4 py-4">
