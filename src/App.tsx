@@ -11,6 +11,11 @@ import Reviews from './components/Reviews';
 import Contact from './components/Contact'; */
 import Footer from './components/Footer';
 import AdminPanel from './components/AdminPanel';
+import ContactPage from './pages/ContactPage';
+import FAQPage from './pages/FaqPage';
+import { ScrollToHash } from './components/ScrollToHash';
+import BlogList from './pages/BlogList';
+import BlogDetail from './pages/BlogDetail';
 
 function App() {
   const [isAdminMode, setIsAdminMode] = useState(false);
@@ -21,12 +26,17 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToHash />
       <div className="min-h-screen bg-white flex flex-col">
         <Header onAdminClick={() => setIsAdminMode(true)} />
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/szolgaltatasok" element={<ServicesPage />} />
+            <Route path="/kapcsolat" element={<ContactPage />} />
+            <Route path="/gyik" element={<FAQPage />} />
+            <Route path="/blog" element={<BlogList />} />
+            <Route path="/blog/:slug" element={<BlogDetail />} />
             
           </Routes>
         </main>
