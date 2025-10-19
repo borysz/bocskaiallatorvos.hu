@@ -12,7 +12,7 @@ export default function Header({ onAdminClick }: HeaderProps) {
 
   const isActive = (path: string) => location.pathname === path;
 
-  const closeMenu = () => setIsMenuOpen(false);
+  const closeMenu = () => setIsMenuOpen(false); 
 
   /*const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
