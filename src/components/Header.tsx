@@ -36,10 +36,10 @@ export default function Header({ onAdminClick }: HeaderProps) {
 
           <div className="hidden md:flex items-center space-x-8">
             <Link
-              to="/"
-              className={`transition ${isActive('/') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'}`}
+              to="/rolunk"
+              className={`transition ${isActive('/rolunk') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'}`}
             >
-              Főoldal
+              Rólunk
             </Link>
             <Link
               to="/szolgaltatasok"
@@ -165,11 +165,11 @@ export default function Header({ onAdminClick }: HeaderProps) {
             <button onClick={() => scrollToSection('reviews')} className="block w-full text-left text-gray-700 hover:text-teal-600 transition py-2">Vélemények</button>
             <button onClick={() => scrollToSection('contact')} className="block w-full text-left text-gray-700 hover:text-teal-600 transition py-2">Kapcsolat</button>*/}
             <Link
-              to="/"
+              to="/rolunk"
               onClick={closeMenu}
-              className={`block w-full text-left transition py-2 ${isActive('/') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'}`}
+              className={`block w-full text-left transition py-2 ${isActive('/rolunk') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'}`}
             >
-              Főoldal
+              Rólunk
             </Link>
             <Link
               to="/szolgaltatasok"

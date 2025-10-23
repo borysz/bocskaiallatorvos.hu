@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
@@ -16,12 +16,10 @@ import FAQPage from './pages/FaqPage';
 import { ScrollToHash } from './components/ScrollToHash';
 import BlogList from './pages/BlogList';
 import BlogDetail from './pages/BlogDetail';
+import OurTeamPage from './pages/OurTeamPage';
 
 function App() {
   const [isAdminMode, setIsAdminMode] = useState(false);
-
-
-
 
   if (isAdminMode) {
     return <AdminPanel onExit={() => setIsAdminMode(false)} />;
@@ -35,6 +33,7 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/rolunk" element={<OurTeamPage />} />
             <Route path="/szolgaltatasok" element={<ServicesPage />} />
             <Route path="/kapcsolat" element={<ContactPage />} />
             <Route path="/gyik" element={<FAQPage />} />
