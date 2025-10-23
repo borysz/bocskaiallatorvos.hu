@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
@@ -20,6 +20,9 @@ import BlogDetail from './pages/BlogDetail';
 function App() {
   const [isAdminMode, setIsAdminMode] = useState(false);
 
+
+
+
   if (isAdminMode) {
     return <AdminPanel onExit={() => setIsAdminMode(false)} />;
   }
@@ -37,7 +40,7 @@ function App() {
             <Route path="/gyik" element={<FAQPage />} />
             <Route path="/blog" element={<BlogList />} />
             <Route path="/blog/:slug" element={<BlogDetail />} />
-            
+
           </Routes>
         </main>
         <Footer />
@@ -63,5 +66,6 @@ function App() {
     </div>*/
   );
 }
+
 
 export default App;
