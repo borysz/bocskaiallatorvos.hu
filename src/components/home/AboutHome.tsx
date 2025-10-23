@@ -80,7 +80,7 @@ export default function AboutHome() {
                             /*.replace(/<span>/g,'<span class="text-lg text-gray-800 mb-6">')*/;
 
                             return (
-                                <div key={page.slug}>
+                                <div key={page.slug} className='mb-6'>
                                     <h2
                                         className="text-4xl font-bold text-gray-800 mb-6"
                                         dangerouslySetInnerHTML={{ __html: page.title.rendered }}
@@ -92,7 +92,7 @@ export default function AboutHome() {
                             );
                         })}
 
-                        <div className="grid grid-cols-2 gap-6">
+                        <div className="grid grid-cols-2 gap-6 mt-6">
                             {stats.map((stat, index) => (
                                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
                                     <stat.icon className="w-8 h-8 text-teal-600 mb-3" />
