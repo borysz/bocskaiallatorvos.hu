@@ -2,11 +2,11 @@ import { Heart } from 'lucide-react';
 
 export default function TeamHero() {
   return (
-    <section className="relative bg-gradient-to-br from-emerald-50 via-white to-sky-50 py-20 px-4 sm:px-6 lg:px-8">
+    <section className="relative bg-gradient-to-br from-brand via-white to-white py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
           <div className="flex justify-center mb-6">
-            <div className="bg-emerald-600 p-4 rounded-full">
+            <div className="bg-brandButton p-4 rounded-full">
               <Heart className="w-12 h-12 text-white" fill="white" />
             </div>
           </div>

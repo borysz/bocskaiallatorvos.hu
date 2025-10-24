@@ -2,7 +2,7 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-teal-50 to-cyan-50">
+    <section id="contact" className="py-20 bg-gradient-to-br from-brand to-stone-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">Kapcsolat</h1>
@@ -14,7 +14,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="space-y-8">
             <div className="bg-white p-6 rounded-xl shadow-lg flex items-start space-x-4">
-              <div className="bg-teal-600 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+              <div className="bg-brandButton w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
                 <MapPin className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -24,18 +24,18 @@ export default function Contact() {
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-lg flex items-start space-x-4">
-              <div className="bg-teal-600 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+              <div className="bg-brandButton w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
                 <Phone className="w-6 h-6 text-white" />
               </div>
               <div>
                 <h3 className="font-bold text-gray-800 mb-2">Telefon</h3>
                 <p className="text-gray-600"><a href="tel:+36302390940" title="+36 30 239 0940">+36 30 239 0940</a></p>
-                <p className="text-sm text-gray-500 mt-1">Sürgősségi: +36 30 555 5678</p>
+                {/*<p className="text-sm text-gray-500 mt-1">Sürgősségi: +36 30 555 5678</p>*/}
               </div>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-lg flex items-start space-x-4">
-              <div className="bg-teal-600 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+              <div className="bg-brandButton w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
                 <Mail className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -45,7 +45,7 @@ export default function Contact() {
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-lg flex items-start space-x-4">
-              <div className="bg-teal-600 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+              <div className="bg-brandButton w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
                 <Clock className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -66,7 +66,7 @@ export default function Contact() {
                 <label className="block text-gray-700 font-medium mb-2">Név</label>
                 <input
                   type="text"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-600"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brandButton"
                   placeholder="Az Ön neve"
                 />
               </div>
@@ -74,7 +74,7 @@ export default function Contact() {
                 <label className="block text-gray-700 font-medium mb-2">Email</label>
                 <input
                   type="email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-600"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brandButton"
                   placeholder="email@pelda.hu"
                 />
               </div>
@@ -82,7 +82,7 @@ export default function Contact() {
                 <label className="block text-gray-700 font-medium mb-2">Telefon</label>
                 <input
                   type="tel"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-600"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brandButton"
                   placeholder="+36 30 123 4567"
                 />
               </div>
@@ -90,13 +90,13 @@ export default function Contact() {
                 <label className="block text-gray-700 font-medium mb-2">Üzenet</label>
                 <textarea
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-600"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brandButton"
                   placeholder="Írja ide üzenetét..."
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-lg font-medium transition shadow-lg hover:shadow-xl"
+                className="w-full bg-brandButton hover:bg-brandButtonHover text-white px-8 py-3 rounded-lg font-medium transition shadow-lg hover:shadow-xl"
               >
                 Küldés
               </button>

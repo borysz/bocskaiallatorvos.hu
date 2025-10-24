@@ -2,11 +2,8 @@ import { Menu, X, Stethoscope } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-interface HeaderProps {
-  onAdminClick: () => void;
-}
 
-export default function Header({ onAdminClick }: HeaderProps) {
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -27,7 +24,7 @@ export default function Header({ onAdminClick }: HeaderProps) {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-3">
-            <Stethoscope className="w-8 h-8 text-teal-600" />
+            <Stethoscope className="w-8 h-8 text-brandButton" />
             <div>
               <h1 className="text-2xl font-bold text-gray-800">Bocskai Állatorvos</h1>
               <p className="text-sm text-gray-600">Állatorvosi Rendelő</p>
@@ -37,26 +34,26 @@ export default function Header({ onAdminClick }: HeaderProps) {
           <div className="hidden md:flex items-center space-x-8">
             <Link
               to="/rolunk"
-              className={`transition ${isActive('/rolunk') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'}`}
+              className={`transition ${isActive('/rolunk') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'}`}
             >
               Rólunk
             </Link>
             <Link
               to="/szolgaltatasok"
-              className={`transition ${isActive('/szolgaltatasok') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'}`}
+              className={`transition ${isActive('/szolgaltatasok') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'}`}
             >
               Szolgáltatások
             </Link>
             <Link
               to="/blog"
-              className={`transition ${isActive('/blog') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'}`}
+              className={`transition ${isActive('/blog') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'}`}
             >
               Blog
             </Link>
 
             <Link
               to="/gyik"
-              className={`transition ${isActive('/gyik') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'}`}
+              className={`transition ${isActive('/gyik') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'}`}
             >
               GYIK
             </Link>
@@ -65,7 +62,7 @@ export default function Header({ onAdminClick }: HeaderProps) {
             <div className="relative group">
               <button
                 className={`transition flex items-center space-x-1 ${
-                  isActive('/arlista') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'
+                  isActive('/arlista') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'
                 }`}
               >
                 <span>Árlista</span>
@@ -81,34 +78,34 @@ export default function Header({ onAdminClick }: HeaderProps) {
               </button>
 
               {/* Legördülő tartalom */}
-              <div className="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
+              <div className="absolute hidden group-hover:block bg-white shadow-lg rounded-lg -mt-1 py-2 w-48">
                 <Link
                   to="/arlista/altalanos-dijak"
-                  className="block px-4 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-600"
+                  className="block px-4 py-2 text-gray-700 hover:bg-brandSection hover:text-brandButtonHover"
                 >
                   Általános díjak
                 </Link>
                 <Link
                   to="/arlista/oltasok"
-                  className="block px-4 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-600"
+                  className="block px-4 py-2 text-gray-700 hover:bg-brandSection hover:text-brandButtonHover"
                 >
                   Oltások
                 </Link>
                 <Link
                   to="/arlista/tesztek"
-                  className="block px-4 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-600"
+                  className="block px-4 py-2 text-gray-700 hover:bg-brandSection hover:text-brandButtonHover"
                 >
                   Tesztek
                 </Link>
                 <Link
                   to="/arlista/borgyogyaszat"
-                  className="block px-4 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-600"
+                  className="block px-4 py-2 text-gray-700 hover:bg-brandSection hover:text-brandButtonHover"
                 >
                   Bőrgyógyászat
                 </Link>
                 <Link
                   to="/arlista/endoszkopia"
-                  className="block px-4 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-600"
+                  className="block px-4 py-2 text-gray-700 hover:bg-brandSection hover:text-brandButtonHover"
                 >
                   Endoszkópia
                 </Link>
@@ -116,36 +113,19 @@ export default function Header({ onAdminClick }: HeaderProps) {
             </div>
 
             <Link
-              to="/blog"
-              className={`transition ${isActive('/blog') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'}`}
-            >
-              Blog
-            </Link>
-
-            <Link
               to="/kapcsolat"
-              className={`transition ${isActive('/kapcsolat') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'}`}
+              className={`transition ${isActive('/kapcsolat') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'}`}
             >
               Kapcsolat
             </Link>
-            <button
+            {/*<button
               onClick={onAdminClick}
-              className="text-xs text-gray-400 hover:text-teal-600 transition"
+              className="text-xs text-gray-400 hover:text-brandButtonHover transition"
             >
               Admin
             </button>
-            {/*<button onClick={() => scrollToSection('hero')} className="text-gray-700 hover:text-teal-600 transition">Főoldal</button>
-            <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-teal-600 transition">Szolgáltatások</button>
-            <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-teal-600 transition">Rólunk</button>
-            <button onClick={() => scrollToSection('pricing')} className="text-gray-700 hover:text-teal-600 transition">Árlista</button>
-            <button onClick={() => scrollToSection('reviews')} className="text-gray-700 hover:text-teal-600 transition">Vélemények</button>
-            <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-teal-600 transition">Kapcsolat</button>
-            <button
-              onClick={onAdminClick}
-              className="text-xs text-gray-400 hover:text-teal-600 transition"
-            >
-              Admin
-            </button>*/}
+            <button onClick={() => scrollToSection('hero')} className="text-gray-700 hover:text-brandButtonHover transition">Rólunk</button>
+            */}
           </div>
 
           <button
@@ -158,31 +138,34 @@ export default function Header({ onAdminClick }: HeaderProps) {
 
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-3">
-            {/*<button onClick={() => scrollToSection('hero')} className="block w-full text-left text-gray-700 hover:text-teal-600 transition py-2">Főoldal</button>
-            <button onClick={() => scrollToSection('services')} className="block w-full text-left text-gray-700 hover:text-teal-600 transition py-2">Szolgáltatások</button>
-            <button onClick={() => scrollToSection('about')} className="block w-full text-left text-gray-700 hover:text-teal-600 transition py-2">Rólunk</button>
-            <button onClick={() => scrollToSection('pricing')} className="block w-full text-left text-gray-700 hover:text-teal-600 transition py-2">Árlista</button>
-            <button onClick={() => scrollToSection('reviews')} className="block w-full text-left text-gray-700 hover:text-teal-600 transition py-2">Vélemények</button>
-            <button onClick={() => scrollToSection('contact')} className="block w-full text-left text-gray-700 hover:text-teal-600 transition py-2">Kapcsolat</button>*/}
+            {/*<button onClick={() => scrollToSection('hero')} className="block w-full text-left text-gray-700 hover:text-brandButtonHover transition py-2">Rólunk</button>*/}
             <Link
               to="/rolunk"
               onClick={closeMenu}
-              className={`block w-full text-left transition py-2 ${isActive('/rolunk') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'}`}
+              className={`block w-full text-left transition py-2 ${isActive('/rolunk') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'}`}
             >
               Rólunk
             </Link>
             <Link
               to="/szolgaltatasok"
               onClick={closeMenu}
-              className={`block w-full text-left transition py-2 ${isActive('/szolgaltatasok') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'}`}
+              className={`block w-full text-left transition py-2 ${isActive('/szolgaltatasok') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'}`}
             >
               Szolgáltatások
             </Link>
 
             <Link
+              to="/blog"
+              onClick={closeMenu}
+              className={`block w-full text-left transition py-2 ${isActive('/blog') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'}`}
+            >
+              Blog
+            </Link>
+
+            <Link
               to="/gyik"
               onClick={closeMenu}
-              className={`block w-full text-left transition py-2 ${isActive('/gyik') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'}`}
+              className={`block w-full text-left transition py-2 ${isActive('/gyik') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'}`}
             >
               GYIK
             </Link>
@@ -190,18 +173,18 @@ export default function Header({ onAdminClick }: HeaderProps) {
             <div>
               <p className="text-gray-700 font-medium mt-2">Árlista</p>
               <div className="ml-4 space-y-1">
-                <Link to="/arlista/altalanos-dijak" onClick={closeMenu} className="block text-gray-600 hover:text-teal-600">Általános díjak</Link>
-                <Link to="/arlista/oltasok" onClick={closeMenu} className="block text-gray-600 hover:text-teal-600">Oltások</Link>
-                <Link to="/arlista/tesztek" onClick={closeMenu} className="block text-gray-600 hover:text-teal-600">Tesztek</Link>
-                <Link to="/arlista/borgyogyaszat" onClick={closeMenu} className="block text-gray-600 hover:text-teal-600">Bőrgyógyászat</Link>
-                <Link to="/arlista/endoszkopia" onClick={closeMenu} className="block text-gray-600 hover:text-teal-600">Endoszkópia</Link>
+                <Link to="/arlista/altalanos-dijak" onClick={closeMenu} className="block text-gray-600 hover:text-brandButtonHover">Általános díjak</Link>
+                <Link to="/arlista/oltasok" onClick={closeMenu} className="block text-gray-600 hover:text-brandButtonHover">Oltások</Link>
+                <Link to="/arlista/tesztek" onClick={closeMenu} className="block text-gray-600 hover:text-brandButtonHover">Tesztek</Link>
+                <Link to="/arlista/borgyogyaszat" onClick={closeMenu} className="block text-gray-600 hover:text-brandButtonHover">Bőrgyógyászat</Link>
+                <Link to="/arlista/endoszkopia" onClick={closeMenu} className="block text-gray-600 hover:text-brandButtonHover">Endoszkópia</Link>
               </div>
             </div>
 
             <Link
               to="/kapcsolat"
               onClick={closeMenu}
-              className={`block w-full text-left transition py-2 ${isActive('/kapcsolat') ? 'text-teal-600 font-medium' : 'text-gray-700 hover:text-teal-600'}`}
+              className={`block w-full text-left transition py-2 ${isActive('/kapcsolat') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'}`}
             >
               Kapcsolat
             </Link>

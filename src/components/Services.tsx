@@ -48,9 +48,9 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-teal-50 to-cyan-50 p-8 rounded-xl hover:shadow-xl transition group"
+              className="bg-gradient-to-br from-brand to-stone-50 p-8 rounded-xl hover:shadow-xl transition group"
             >
-              <div className="bg-teal-600 w-14 h-14 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
+              <div className="bg-brandButton w-14 h-14 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
                 <service.icon className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-3">{service.title}</h3>

@@ -33,9 +33,9 @@ const facilities = [
   }
 ];
 
-export default function TeamFacility() {
+export default function Facility() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
           Rendelőnk felszereltsége
@@ -52,12 +52,14 @@ export default function TeamFacility() {
                 key={index}
                 className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100"
               >
-                <div className="bg-emerald-100 w-14 h-14 rounded-lg flex items-center justify-center mb-5">
-                  <Icon className="w-7 h-7 text-emerald-700" />
+                <div className="flex items-center gap-4 mb-5">
+                  <div className="bg-brandButton w-14 h-14 rounded-lg flex items-center justify-center">
+                      <Icon className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    {facility.title}
+                  </h3>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {facility.title}
-                </h3>
                 <p className="text-gray-600 leading-relaxed">
                   {facility.description}
                 </p>
