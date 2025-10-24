@@ -8,8 +8,8 @@ const doctors = [
     graduation: '2010',
     specialization: 'Kistállat belgyógyászat és lágyszöveti sebészet',
     isLeader: true,
-    image: 'https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-    bio: 'Dr. Fekete Zoltán 2010-ben szerezte meg állatorvosi diplomáját, és azóta elkötelezetten dolgozik a kistállatok egészségéért. Rendelővezetőként nemcsak szakmai tudásával, hanem empatikus személyiségével is hozzájárul ahhoz, hogy minden állat a lehető legjobb ellátásban részesüljön. Szakterülete a kistállat belgyógyászat és a lágyszöveti sebészet, ahol évek óta szerzett tapasztalatai révén számos összetett esettel foglalkozott sikeresen. Hisz abban, hogy a megelőzés és a korai diagnosztika kulcsfontosságú az állatok egészségének megőrzésében. Szabadidejében szívesen vesz részt szakmai konferenciákon, hogy naprakész tudással szolgálhassa a hozzá forduló állatgazdákat. Számára minden állat egyedi, és mindegyik megérdemli a személyre szabott, gondos kezelést. Célja, hogy rendelőnk mindig a legmagasabb színvonalú ellátást nyújtsa, modern eszközökkel és folyamatosan fejlődő szakmai tudással.'
+    image: 'https://bocskaiallatorvos.hu/wp-content/uploads/2022/08/BIP_5998-1-scaled.jpg',
+    bio: '2010-ben végeztem a budapesti Szent István Egyetem Állatorvos-tudományi Karán. Végzés után a debreceni Jupet Nagyerdei Állatorvosi Rendelőben kezdtem dolgozni. 2010 őszétől 2019 decemberéig a Nyíregyházi Oktató Állatkórházban dolgoztam klinikus állatorvosként. Ezen a nagyforgalmú klinikán eltöltött éveim alatt lehetőségem volt elmélyíteni tudásom a kutyák és macskák belgyógyászatában és lágyszervi sebészetében. Alkalmam volt a különböző képalkotó eljárások megismerésére és ezeken a területeken jelentős tapasztalatot is szereztem. Posztgraduális képzés keretében endoszkópos, ultrahangos és plasztikai sebészeti workshop-okon is részt vettem.Hosszú tervezgetés után 2019. szeptemberében nyitottuk meg a Bocskai Állategészségügyi Centrumot és azóta már kizárólag itt folytatom a szakmai munkát. 2021-ben elvégeztem a Magyar Állatorvosi Kamara Praxisvezető képzését. Elsődlegesen a kisállatok belgyógyászati betegségei, a kardiológia és a gasztroenterológia a fő érdeklődési területem.'
   },
   {
     name: 'Dr. Kuczmog Zita',
@@ -17,8 +17,8 @@ const doctors = [
     graduation: '2015',
     specialization: 'Bőrgyógyászat, onkológia, külső hallójárati gyulladások',
     isLeader: false,
-    image: 'https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-    bio: 'Dr. Kuczmog Zita 2015-ben diplomázott, és már pályafutása kezdetétől fogva különös figyelmet fordított a bőrgyógyászatra és az onkológiára. Tudja, hogy ezek az állapotok gyakran komoly kihívást jelentenek az állatgazdák számára, és ezért különösen fontosnak tartja a részletes kivizsgálást és a türelmes magyarázatot. Szakterületén belül kiemelten foglalkozik külső hallójárati gyulladásokkal, amelyek gyakori problémák kutyák és macskák esetében. Munkája során nagy hangsúlyt fektet a megelőzésre és a tulajdonosok oktatására, hogy az állatok minél tovább egészségesek maradhassanak. Állandóan képezi magát, követi a legújabb kutatási eredményeket, és részt vesz szakmai továbbképzéseken. Számára az állatorvoslás nemcsak hivatás, hanem igazi szenvedély, és minden nap örömet okoz számára, ha látja, ahogy pácienseinek állapota javul a kezelés hatására.'
+    image: 'https://bocskaiallatorvos.hu/wp-content/uploads/2024/10/BIP_5989-1-scaled-1.jpg',
+    bio: '2015-ben végeztem állatorvos-doktorként a Szent István Egyetem Állatorvostudományi Karán, majd 5 évig egy nagyforgalmú nyíregyházi állatorvosi rendelőben dolgoztam. 2020 óta a Bocskai Állategészségügyi Centrum csapatának tagja vagyok, itt a napi általános betegellátás mellett főleg bőrgyógyászati kivizsgálásokkal és kezelésekkel foglalkozom. Fő érdeklődési területem a bőrgyógyászat, az onkológia és a hallójárat gyulladások. A bőrgyógyászat keretein belül napi szinten végzek citológiai vizsgálatokat, látok el allergiás, daganatos, fülgyulladásos, valamint autoimmun betegeket. A Magyar Bőrgyógyász Állatorvosok Egyesületének 2020 óta pártoló, 2022 novembere óta pedig rendes, vizsgázott tagja vagyok, így a kelet-magyarországi régióban egyedüliként jogosultságot szereztem állatorvosi bőrgyógyászati szakrendelés tartására. Rendszeresen rész veszek – előadóként is – bőrgyógyászati témájú szakmai továbbképzéseken és journal clubokon, több cikkem jelent meg bőrgyógyászati témában hazai állatorvosi lapokban. Többször részt vettem az Európai Állatorvosi Bőrgyógyászati Kongresszuson (ECVD-ESVD 2022. Portó, 2023. Göteborg). Kiemelten fontosnak tartom a daganatos betegek mielőbbi szakszerű diagnózisát és ellátását, terveim között szerepel onkológiai ismereteim bővítése és elmélyítése.'
   },
   {
     name: 'Dr. Balogh-Bakos Nóra',
@@ -26,8 +26,8 @@ const doctors = [
     graduation: '2010',
     specialization: 'Kutya és macska fogászat, szájüregi betegségek',
     isLeader: false,
-    image: 'https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-    bio: 'Dr. Balogh-Bakos Nóra 2010-ben szerezte meg diplomáját, és különleges érdeklődést mutatott a fogászat és a szájüregi betegségek iránt. Tudatában van annak, hogy a fogak és a szájüreg egészsége mennyire fontos az állatok általános jólétéhez, ezért különös gondossággal végzi a fogászati beavatkozásokat. Munkája során számtalan fogkő-eltávolítást, foghúzást és egyéb komplex fogászati kezelést végzett el sikeresen. Nagy hangsúlyt fektet a megelőző fogászatra, és szívesen ad tanácsokat az állatgazdáknak a helyes fogápolásról. Célja, hogy csökkentse a fogászati problémákból eredő fájdalmakat és szövődményeket. Folyamatosan követi a fogászati területen történő újításokat, és modern eszközökkel dolgozik. Türelmes, precíz szakember, aki számára a legnagyobb jutalom, amikor egy állat újra boldogan ehet és játszik a sikeres kezelés után.'
+    image: 'https://bocskaiallatorvos.hu/wp-content/uploads/2024/11/dr-balogh-1.jpg',
+    bio: '2010-ben végeztem a Szent István Egyetem Állatorvos-tudományi Karán állatorvos-doktorként. A végzést követően több mint tíz évig az állami állategészségügyi szolgálatnál dolgoztam, elsősorban járványügyi szakterületen. 2022-ben ismerkedtem meg a Bocskai Állategészségügyi Centrum csapatával, ahol rögtön megfogott az ott tapasztalt szakmai és emberi hozzáállás, ezért előbb részmunkaidőben, majd teljes állásban csatlakoztam a rendelő dolgozói közé. Legfőbb érdeklődési területem a kutyák, a macskák fogászata és szájüregi betegségei, mely témában több elméleti és gyakorlati képzésen is részt vettem, veszek jelenleg is. Tizennégy éve macskatartó vagyok, sokat tanultam saját állataimtól erről a különleges fajról, ezért is kiemelten fontos számomra a cicák egészségvédelme, és a minél stresszmentesebb rendelői ellátásuk.'
   }
 ];
 
@@ -35,32 +35,32 @@ const staff = [
   {
     name: 'Puporka Nadinka',
     role: 'Állatorvosi asszisztens',
-    image: 'https://images.pexels.com/photos/5327580/pexels-photo-5327580.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-    bio: 'Nadinka már több mint 8 éve dolgozik állatorvosi asszisztensként, és ez idő alatt rengeteg tapasztalatot szerzett a kistállatok ellátásában. Munkája során segít az orvosoknak a vizsgálatok és műtétek során, valamint gondoskodik arról, hogy az állatok nyugodt és biztonságos környezetben érezzék magukat. Kiválóan ismeri az állatok viselkedését, és képes megnyugtatni még a legidegesesebb kedvenceket is. Precíz, megbízható munkatárs, aki mindig az állatok komfortját helyezi előtérbe. Szabadidejében szívesen olvas szakmai irodalmat, hogy naprakész tudással rendelkezzen. Számára az állatorvosi asszisztensi munka nem egyszerű feladat, hanem hivatás, amelyet szeretettel és odaadással végez minden nap.'
+    image: 'https://bocskaiallatorvos.hu/wp-content/uploads/2024/10/BIP_5983-1-scaled-1.jpg',
+    bio: 'Gyerekkorom óta meg vagyok bolondulva az állatokért, ezért mindig is szerettem volna egy olyan munkahelyet, ahol a közelükben lehetek. Így az érettségi mellett 2012-ben elvégeztem az állatorvosi asszisztens képzést is. Szerencsésnek mondhatom magam, hogy azzal foglalkozhatok, amire mindig is vágytam. Szinte a kezdetektől erősítem a Bocskai Állategészségügyi Centrum csapatát.'
   },
   {
     name: 'Csábi Tímea',
     role: 'Munkatárs',
-    image: 'https://images.pexels.com/photos/6235241/pexels-photo-6235241.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-    bio: 'Tímea a rendelő recepciós munkatársa, aki mindig mosolygós arccal fogadja az érkezőket. Munkája során koordinálja az időpontokat, kezeli a telefonhívásokat és gondoskodik arról, hogy minden simán menjen a rendelőben. Kiváló kommunikációs készséggel rendelkezik, és mindig türelmesen válaszol az állatgazdák kérdéseire. Számára fontos, hogy minden látogató barátságos és professzionális kiszolgálásban részesüljön. Pontosság és szervezőkészség jellemzi, ami nélkülözhetetlen a rendelő zavartalan működéséhez. Imádja az állatokat, és gyakran ő az első, aki megnyugtatja az ideges kisállatokat a váróban. Szabadidejében szívesen sétál kutyájával a természetben, és aktívan részt vesz állatvédelmi programokban.'
+    image: 'https://bocskaiallatorvos.hu/wp-content/uploads/2024/10/Csabi-timea-e1730385922282.jpg',
+    bio: 'Születésem óta kísérik életemet az állatok, főleg a kutyák és macskák iránt érzett szeretet, tisztelet.Szerencsés voltam, kertes házban rengeteg háziállattal körül véve nőhettem fel, családtagként tekintek rájuk.Mindig is olyan munkahelyre vágytam, ahol állatok vesznek körül. Válassz olyan munkát amit szeretsz csinálni, és soha többet nem kell majd dolgoznod.'
   },
   {
     name: 'Turán Mátyás',
     role: 'Munkatárs',
-    image: 'https://images.pexels.com/photos/5327656/pexels-photo-5327656.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-    bio: 'Mátyás a rendelő laborasszisztense, aki felelős a különböző vizsgálatok elvégzéséért és a minták feldolgozásáért. Precíz és lelkiismeretes munkavállaló, aki nagy hangsúlyt fektet a pontosságra, hiszen tudja, hogy munkája mennyire fontos a helyes diagnózis felállításában. Több éves tapasztalattal rendelkezik a laboratóriumi munkában, és kitűnően ismeri a különböző vizsgálati módszereket. Folyamatosan követi a labor területén zajló fejlesztéseket, és szívesen alkalmaz új technológiákat. Csapatjátékos, aki kiválóan együttműködik az orvosokkal és a többi munkatárssal. Számára a legnagyobb elismerés, amikor munkája hozzájárul egy állat gyógyulásához. Szabadidejében természetfotózással foglalkozik, és szívesen dokumentálja az állatok világát.'
+    image: 'https://bocskaiallatorvos.hu/wp-content/uploads/2024/10/matyi.jpg',
+    bio: '2024 januárjától dolgozom a Bocskai Állategészségügyi Centrumban. Előtte Egerben az Eszterházy Károly egyetemen tanultam testnevelés tanári szakon. Munkám mellett gyerekekkel foglalkozok, kézilabda edzőként. Ezt a sportágat hobbi szinten én is gyakorlom. Természet iránti rajongásom miatt választottam ezt a hivatást, a rendelőben pedig rátaláltam arra a környezetre, ahol szívesen dolgozom. Munkám során örömömre szolgál, hogy láthatom az állatok gyógyulását, gazdáik elégedettségét.'
   },
   {
     name: 'Hamvai Alexandra',
     role: 'Munkatárs',
-    image: 'https://images.pexels.com/photos/5327547/pexels-photo-5327547.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-    bio: 'Alexandra állatorvosi asszisztensként dolgozik a rendelőben, és különösen jól bánik a macskaszerű állatokkal. Tapasztalata és türelme révén képes megnyugtatni még a legfélelmetesebb cicákat is. Munkája során segít a vizsgálatokban, felkészíti az állatokat a különböző beavatkozásokra, és gondoskodik róluk a kezelések után is. Nagy hangsúlyt fektet a higiéniára és az állatok kényelmére. Szereti a kihívásokat, és mindig készen áll arra, hogy új dolgokat tanuljon. Rendszeresen részt vesz továbbképzéseken, hogy szakmai tudását bővítse. Számára az állatorvosi munka nemcsak egy foglalkozás, hanem egy életforma, amelyben minden nap lehetőséget kap arra, hogy segítsen a rászoruló állatokon.'
+    image: 'https://bocskaiallatorvos.hu/wp-content/uploads/2024/10/hamvai-alexandra-1050x933-2.jpg',
+    bio: 'Mindig is éreztem,hogy  állatok között szeretném eltölteni az életemet.  Főként a gazdasági állatok körében kezdtem a pályafutásomat, családi gazdaságban,  valamint  munkalovasként . Pár évvel ezelőtt adódott egy lehetőség ,hogy kisállatokkal is foglalkozhassak és akkor éreztem, hogy ez nekem való. Örömmel végzem a munkám, tudván hogy megannyi élet megmentésre kerülhet a segítségemmel. 2024-ben kezdtem erősìteni a Bocskai Állategészségügyi Centrum családias és szakmailag kiemelkedő csapatát.'
   },
   {
     name: 'Borosné Szoboszlai Beatrix',
     role: 'Munkatárs',
-    image: 'https://images.pexels.com/photos/4173239/pexels-photo-4173239.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-    bio: 'Beatrix a rendelő adminisztratív munkatársa, aki gondoskodik a pontos dokumentációról és az adatkezelésről. Munkája során kezeli a betegdokumentációt, számlázást és a biztosítási ügyintézést. Rendkívül szervezett és részletorientált, ami elengedhedetlen a rendelő zökkenőmentes működéséhez. Mindig segítőkész, és örömmel válaszol az állatgazdák adminisztratív kérdéseire. Hosszú évek óta dolgozik az egészségügyi szektorban, így kiválóan ismeri a vonatkozó szabályozásokat és előírásokat. Számára fontos, hogy minden papírmunka pontosan és időben elkészüljön, hogy az orvosok nyugodtan koncentrálhassanak a gyógyításra. Szabadidejében szívesen olvas és kertészkedik, valamint aktívan támogatja helyi állatmenhelyeket adományokkal és önkéntes munkával.'
+    image: 'https://bocskaiallatorvos.hu/wp-content/uploads/2024/10/borosne-1000-1070.jpg',
+    bio: 'Már gyermekkoromtól kezdve nagyon érdekeltek a kutyák, mindig is rajongtam értük mérettől, színtől és fajtától függetlenül. Kutyákkal 2015-ben kezdtem foglalkozni, amikor az egyetem elvégzése után egy menhelyen kezdtem el dolgozni. Két évvel később belecsöppentem az állatasszisztált terápiák világába, ahol a kutyák kiképzésében tehettem szert jelentős tapasztalatokra. Igazán ekkor értettem meg, hogy minden kutya milyen különleges, egyedi személyiség és mennyire meg tudja változtatni egy ember életét. Az ez idő alatt megszerzett tudásomat jelenleg asszisztensként bővíthetem és kamatoztathatom a Bocskai Állategészségügyi Centrumban.'
   }
 ];
 
@@ -78,7 +78,7 @@ export default function TeamTeam() {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-brand to-white">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
           Csapatunk
@@ -89,7 +89,7 @@ export default function TeamTeam() {
 
         <div className="mb-20">
           <h3 className="text-2xl font-semibold text-gray-900 mb-10 flex items-center justify-center gap-3">
-            <Stethoscope className="w-7 h-7 text-emerald-600" />
+            <Stethoscope className="w-7 h-7 text-brandButton" />
             Állatorvosaink
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -97,35 +97,31 @@ export default function TeamTeam() {
               <div
                 key={index}
                 onClick={() => setSelectedMember(doctor)}
-                className={`bg-gradient-to-br ${
-                  doctor.isLeader
-                    ? 'from-emerald-50 to-sky-50 border-2 border-emerald-200'
-                    : 'from-gray-50 to-white border border-gray-200'
-                } p-8 rounded-xl shadow-sm hover:shadow-lg transition-all cursor-pointer`}
+                className={`bg-gradient-to-br ${doctor.isLeader
+                  ? 'from-emerald-50 to-sky-50 border-2 border-emerald-200'
+                  : 'from-brand to-white border border-gray-200'
+                  } p-8 rounded-xl shadow-sm hover:shadow-lg transition-all cursor-pointer`}
               >
                 <div className="mb-6 flex justify-center">
-                  <img
-                    src={doctor.image}
-                    alt={doctor.name}
-                    className={`w-32 h-32 rounded-full object-cover ${
-                      doctor.isLeader ? 'ring-4 ring-emerald-300' : 'ring-2 ring-gray-300'
-                    }`}
-                  />
+                  <div className="animate-pulse-soft">
+                    <img
+                      src={doctor.image}
+                      alt={doctor.name}
+                      className={`w-64 h-64 rounded-full object-cover object-[center_top] transition-all duration-300 hover:scale-110 hover:rotate-3 ${doctor.isLeader ? 'ring-4 ring-emerald-400' : 'ring-2 ring-gray-300'
+                        }`}
+                    />
+                  </div>
                 </div>
 
                 <h4 className="text-xl font-bold text-gray-900 mb-2 text-center">
                   {doctor.name}
                 </h4>
-                <p className={`text-sm font-medium mb-4 text-center ${
-                  doctor.isLeader ? 'text-emerald-700' : 'text-gray-600'
-                }`}>
+                <p className={`text-sm font-medium mb-4 text-center ${doctor.isLeader ? 'text-emerald-700' : 'text-gray-600'
+                  }`}>
                   {doctor.role}
                 </p>
 
                 <div className="space-y-2 text-gray-700">
-                  <p className="text-sm">
-                    <span className="font-medium">Végzés:</span> {doctor.graduation}
-                  </p>
                   <p className="text-sm leading-relaxed">
                     <span className="font-medium">Szakterület:</span> {doctor.specialization}
                   </p>
@@ -137,7 +133,7 @@ export default function TeamTeam() {
 
         <div>
           <h3 className="text-2xl font-semibold text-gray-900 mb-10 flex items-center justify-center gap-3">
-            <Users className="w-7 h-7 text-emerald-600" />
+            <Users className="w-7 h-7 text-brandButton" />
             Munkatársaink
           </h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 max-w-5xl mx-auto">
@@ -147,11 +143,13 @@ export default function TeamTeam() {
                 onClick={() => setSelectedMember(member)}
                 className="flex flex-col items-center text-center cursor-pointer group"
               >
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-28 h-28 rounded-full object-cover ring-2 ring-gray-300 mb-4 group-hover:ring-emerald-300 transition-all"
-                />
+                <div className="animate-pulse-soft">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-40 h-40 rounded-full object-cover object-[center_top] ring-2 ring-gray-300 mb-4 group-hover:ring-brandSection group-hover:scale-110 group-hover:-rotate-2 transition-all duration-300"
+                  />
+                </div>
                 <h4 className="text-base font-semibold text-gray-900 mb-1">
                   {member.name}
                 </h4>
@@ -190,16 +188,11 @@ export default function TeamTeam() {
                 <img
                   src={selectedMember.image}
                   alt={selectedMember.name}
-                  className="w-40 h-40 rounded-full object-cover ring-4 ring-emerald-300 mb-4"
+                  className="w-40 h-40 rounded-full object-cover ring-4 ring-brandButton mb-4"
                 />
-                <p className="text-lg font-medium text-emerald-700">
+                <p className="text-lg font-medium text-brandButtonHover">
                   {selectedMember.role}
                 </p>
-                {selectedMember.graduation && (
-                  <p className="text-sm text-gray-600 mt-1">
-                    Végzés: {selectedMember.graduation}
-                  </p>
-                )}
                 {selectedMember.specialization && (
                   <p className="text-sm text-gray-600 mt-1">
                     Szakterület: {selectedMember.specialization}

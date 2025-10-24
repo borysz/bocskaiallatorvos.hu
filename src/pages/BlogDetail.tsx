@@ -165,7 +165,7 @@ const BlogDetail = () => {
     if (!post) return <p>Betöltés...</p>;
 
     return (
-        <section id="blogITem" className="py-20 bg-gradient-to-br from-teal-50 to-cyan-50">
+        <section id="blogITem" className="py-20 bg-gradient-to-b from-brand to-white">
             <div className="container mx-auto px-4 py-12">
                 <Link to="/blog" className="text-teal-600 hover:underline mb-4 inline-block">
                     ← Vissza a listához

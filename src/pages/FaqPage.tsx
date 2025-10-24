@@ -23,7 +23,7 @@ const FAQPage = () => {
         <>
           Rendelőnk címe: 4241 Bocskaikert, Debreceni út 25<br />
           Részletes térképet talál a{" "}
-          <Link to="/kapcsolat#terkep" className="text-teal-600 underline hover:text-teal-800">
+          <Link to="/kapcsolat#terkep" className="text-brandButton underline hover:text-brandButtonHover">
             kapcsolat
           </Link>{" "}
           oldalon.
@@ -41,7 +41,7 @@ const FAQPage = () => {
   };
 
   return (
-    <section id="faq" className="py-20 bg-gradient-to-br from-teal-50 to-cyan-50">
+    <section id="faq" className="py-20 bg-gradient-to-b from-brand to-white">
         <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-16">
             <h1 className="text-3xl font-bold text-gray-800 mb-8 text-center">
@@ -58,7 +58,7 @@ const FAQPage = () => {
                 <span className="text-lg font-medium text-gray-800">
                     {faq.question}
                 </span>
-                <span className="text-teal-600 text-2xl">
+                <span className="text-brandButton text-2xl">
                     {openIndex === index ? "−" : "+"}
                 </span>
                 </button>

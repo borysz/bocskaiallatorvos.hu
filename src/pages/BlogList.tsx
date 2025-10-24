@@ -29,7 +29,7 @@ const BlogList = () => {
   }, []);
 
   return (
-    <section id="blogList" className="py-20 bg-gradient-to-br from-teal-50 to-cyan-50">
+    <section id="blogList" className="py-20 bg-gradient-to-b from-brand to-white">
         <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">Blog</h1>
