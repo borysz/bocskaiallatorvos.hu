@@ -20,9 +20,11 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">Gyors linkek</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="/" className="hover:text-brandButtonHover transition">Főoldal</a></li>
-              <li><a href="/szolgaltatasok" className="hover:text-brandButtonHover transition">Szolgáltatások</a></li>
               <li><a href="/rolunk" className="hover:text-brandButtonHover transition">Rólunk</a></li>
+              <li><a href="/szolgaltatasok" className="hover:text-brandButtonHover transition">Szolgáltatások</a></li>
+              <li><a href="/blog" className="hover:text-brandButtonHover transition">Blog</a></li>
+              <li><a href="/gyik" className="hover:text-brandButtonHover transition">GYIK</a></li>
+              <li><a href="/arlista" className="hover:text-brandButtonHover transition">Árlista</a></li>
               <li><a href="/kapcsolat" className="hover:text-brandButtonHover transition">Kapcsolat</a></li>
             </ul>
           </div>
