@@ -1,4 +1,3 @@
-import { Heart, Stethoscope, Microscope, Activity } from 'lucide-react';
 import TeamHero from '../components/team/TeamHero';
 import TeamAbout from '../components/team/TeamAbout';
 import TeamFacility from '../components/team/TeamFacility';
@@ -9,8 +8,8 @@ export default function OurTeamPage() {
     <div className="pt-20">
       <TeamHero />
       <TeamAbout />
-      <TeamFacility />
       <TeamTeam />
+      <TeamFacility />
     </div>
   );
 }

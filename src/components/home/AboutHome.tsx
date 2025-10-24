@@ -22,7 +22,7 @@ export default function AboutHome() {
      const heroImage = media.find((m) => m.slug === "bocskaiallatorvos-udvozles");
 
     return (
-        <section id="about" className="py-20 bg-gradient-to-br from-teal-50 to-cyan-50">
+        <section id="about" className="py-20 bg-gradient-to-br from-brand to-stone-50">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>

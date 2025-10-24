@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <Stethoscope className="w-8 h-8 text-teal-400" />
+              <Stethoscope className="w-8 h-8 text-brandButton" />
               <div>
                 <h3 className="text-xl font-bold">Bocskai Állatorvos</h3>
               </div>
@@ -20,19 +20,19 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">Gyors linkek</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="/" className="hover:text-teal-400 transition">Főoldal</a></li>
-              <li><a href="/szolgaltatasok" className="hover:text-teal-400 transition">Szolgáltatások</a></li>
-              <li><a href="/rolunk" className="hover:text-teal-400 transition">Rólunk</a></li>
-              <li><a href="/kapcsolat" className="hover:text-teal-400 transition">Kapcsolat</a></li>
+              <li><a href="/" className="hover:text-brandButtonHover transition">Főoldal</a></li>
+              <li><a href="/szolgaltatasok" className="hover:text-brandButtonHover transition">Szolgáltatások</a></li>
+              <li><a href="/rolunk" className="hover:text-brandButtonHover transition">Rólunk</a></li>
+              <li><a href="/kapcsolat" className="hover:text-brandButtonHover transition">Kapcsolat</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-bold mb-4">Elérhetőség</h4>
             <ul className="space-y-2 text-gray-400">
-              <li>1146 Budapest</li>
-              <li>Bocskai utca 20.</li>
-              <li>+36 1 555 1234</li>
+              <li>4241 Bocskaikert</li>
+              <li>Debreceni út 25.</li>
+              <li><a href="tel:+36302390940" className="hover:text-brandButtonHover transition">+36 30 239 0940</a></li>
               <li>info@bocskaiallatorvos.hu</li>
             </ul>
           </div>

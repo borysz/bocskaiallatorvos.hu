@@ -7,7 +7,7 @@ export default function TeamAbout() {
         </h2>
 
         <div className="space-y-8 text-gray-700 leading-relaxed">
-          <div className="bg-emerald-50 border-l-4 border-emerald-600 p-6 rounded-r-lg">
+          <div className="bg-brandSection border-l-4 border-brandButton p-6 rounded-r-lg">
             <p className="text-lg sm:text-xl font-medium text-gray-900 mb-3">
               "A cél az volt, hogy a lehető legszélesebb körű ellátást nyújtsuk a helyi állatgazdáknak."
             </p>

@@ -2,7 +2,7 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 export default function ContactHome() {
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-teal-50 to-cyan-50">
+    <section id="contact" className="py-20 bg-gradient-to-br from-brand to-stone-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Kapcsolat</h2>
