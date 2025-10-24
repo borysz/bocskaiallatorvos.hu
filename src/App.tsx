@@ -17,6 +17,7 @@ import { ScrollToHash } from './components/ScrollToHash';
 import BlogList from './pages/BlogList';
 import BlogDetail from './pages/BlogDetail';
 import OurTeamPage from './pages/OurTeamPage';
+import ServiceDetailPage from './pages/ServiceDetailPage';
 
 function App() {
   const [isAdminMode, setIsAdminMode] = useState(false);
@@ -29,17 +30,17 @@ function App() {
     <BrowserRouter>
       <ScrollToHash />
       <div className="min-h-screen bg-white flex flex-col">
-        <Header onAdminClick={() => setIsAdminMode(true)} />
+        <Header />
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/rolunk" element={<OurTeamPage />} />
             <Route path="/szolgaltatasok" element={<ServicesPage />} />
+            <Route path="/szolgaltatasok/:slug" element={<ServiceDetailPage />} />
             <Route path="/kapcsolat" element={<ContactPage />} />
             <Route path="/gyik" element={<FAQPage />} />
             <Route path="/blog" element={<BlogList />} />
             <Route path="/blog/:slug" element={<BlogDetail />} />
-
           </Routes>
         </main>
         <Footer />
