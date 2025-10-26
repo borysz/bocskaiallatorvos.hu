@@ -1,21 +1,10 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
+import { WPPage, WPMedia, WPPosts } from "../interfaces/WordpressInterfaces";
 
-// ----- Típusok -----
-interface WPPage {
-    menu_order: number;
-    slug: string;
-    title: { rendered: string };
-    content: { rendered: string };
-}
-
-interface WPMedia {
-    slug: string;
-    guid: { rendered: string };
-    caption: { rendered: string };
-}
 interface CmsContextType {
     pages: WPPage[];
     media: WPMedia[];
+    posts: WPPosts[];
     loading: boolean;
     error: string | null;
     refresh: () => void;
@@ -26,9 +15,11 @@ const CmsContext = createContext<CmsContextType | undefined>(undefined);
 export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [pages, setPages] = useState<WPPage[]>([]);
   const [media, setMedia] = useState<WPMedia[]>([]);
+  const [posts, setPosts] = useState<WPPosts[]>([]);
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [ready, setReady] = useState(false); // 👈 új
+  const [ready, setReady] = useState(false); 
 
   const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -38,20 +29,23 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     const fetchData = async () => {
       setLoading(true);
       try {
-        const [pagesRes, mediaRes] = await Promise.all([
+        const [pagesRes, mediaRes, postsRes] = await Promise.all([
           fetch(`${apiUrl}/pages?_fields=menu_order,slug,title,content&orderby=menu_order&order=asc`),
           fetch(`${apiUrl}/media?_fields=slug,guid,caption`),
+          fetch(`https://api.bocskaiallatorvos.hu/wp-json/wp/v2/posts?_fields=id,date_gmt,title,excerpt,content,slug,categories,tag_names,featured_image_url,menu_order&orderby=menu_order&order=asc`)
         ]);
 
-        const [pagesData, mediaData] = await Promise.all([
+        const [pagesData, mediaData, postsData] = await Promise.all([
           pagesRes.json(),
           mediaRes.json(),
+          postsRes.json()
         ]);
 
         if (!isMounted) return;
 
         setPages(pagesData);
         setMedia(mediaData);
+        setPosts(postsData);
         setError(null);
         setReady(true); // 👈 csak ha minden adat bejött
       } catch {
@@ -87,7 +81,7 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   }
 
   return (
-    <CmsContext.Provider value={{ pages, media, loading, error, refresh: () => window.location.reload() }}>
+    <CmsContext.Provider value={{ pages, media, posts, loading, error, refresh: () => window.location.reload() }}>
       {children}
     </CmsContext.Provider>
   );
