@@ -2,30 +2,18 @@ import { useEffect, useState } from 'react';
 import { Loader2 } from 'lucide-react';
 import ServiceCard from '../components/services/ServiceCard';
 import Pagination from '../components/Pagination';
-import { servicesMock } from '../components/services/ServicesMock';
-
-export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  image_url: string;
-  category: string | null;
-  display_order: number;
-  is_active: boolean;
-  created_at: string;
-  updated_at: string;
-  detailed_content: string | null;
-  slug: string | null;
-}
+import { useCms } from '../context/CmsContext';
+import { Service } from '../interfaces/ServicesInterface';
+import { transformWPPostToService } from '../components/transformation/TransformWPPostToService';
 
 const ITEMS_PER_PAGE = 6;
-
 
 export default function ServicesPage() {
   const [services, setServices] = useState<Service[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalCount, setTotalCount] = useState(0);
   const [loading, setLoading] = useState(true);
+  const { posts, error } = useCms();
 
   useEffect(() => {
     getPaginatedServices();
@@ -34,14 +22,20 @@ export default function ServicesPage() {
   const getPaginatedServices = async () => {
     setLoading(true);
     try {
+      const filteredPost = posts.filter(item => item.categories.includes(3));
+   
+      //if (loading) return <p>Betöltés...</p>;
+      if (error) return <p>Hiba: {error}</p>;
+   
       const from = (currentPage -1) * ITEMS_PER_PAGE;
-      //const to = from + ITEMS_PER_PAGE -1;
       const to = from + ITEMS_PER_PAGE;
+      
+      const services: Service[] = filteredPost.map(transformWPPostToService);
 
-      const selectedServices = servicesMock.slice(from, to);
+      const selectedServices = services.slice(from, to);
 
       setServices(selectedServices || []);
-      setTotalCount(servicesMock.length || 0);
+      setTotalCount(services.length || 0);
     } catch (error) {
       console.error('Error fetching services:', error);
     } finally {
@@ -57,7 +51,7 @@ export default function ServicesPage() {
   };
 
   return (
-    <section id="faq" className="py-20 bg-gradient-to-b from-brand to-white">
+    <section id="servicesList" className="py-20 bg-gradient-to-b from-brand to-white">
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-16">
           <h1 className="text-3xl font-bold text-gray-800 mb-8 text-center">
@@ -96,7 +90,7 @@ export default function ServicesPage() {
 
             <div className="mt-12 text-center">
               <p className="text-gray-600">
-                Összesen <span className="font-semibold text-emerald-600">{totalCount}</span> szolgáltatás
+                Összesen <span className="font-semibold text-brandButton">{totalCount}</span> szolgáltatás
               </p>
             </div>
           </>

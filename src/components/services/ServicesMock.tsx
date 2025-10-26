@@ -12,7 +12,7 @@ export const servicesMock = [
     created_at: "2025-10-24",
     updated_at: "2025-10-24T19:26:46.778937+00",
     detailed_content:
-      "Az ambuláns ellátás keretében biztosítjuk kedvencei számára a legmagasabb színvonalú állatorvosi vizsgálatot és kezelést...",
+      "Az ambuláns ellátás keretében biztosítjuk kedvencei számára a legmagasabb színvonalú állatorvosi vizsgálatot és kezelést. Tapasztalt állatorvosaink minden esetben alapos fizikális vizsgálatot végeznek, amely magában foglalja a testsúly mérést, testhőmérséklet ellenőrzést, szívműködés és légzés vizsgálatát, valamint a bőr és szőrzet állapotának felmérését. Az ambuláns rendelés során foglalkozunk akut és krónikus betegségekkel egyaránt. Teljes körű diagnosztikai lehetőségeinknek köszönhetően azonnal megkezdhetjük a megfelelő kezelést. Rendelkezésre állnak modern orvosi eszközeink a pontos diagnózis felállításához. Szolgáltatásaink: - Teljes körű fizikális vizsgálat - Anamnézis felvétel és orvosi dokumentáció - Akut esetek azonnali ellátása - Krónikus betegségek kezelése és monitorozása - Szakvélemény készítése - Gyógyszer felírása és kezelési terv összeállítása Rendelési időben előzetes időpontfoglalással vagy sürgős esetben azonnal fogadjuk pácienseinket.",
     slug: "ambulans-ellatas",
   },
   {
