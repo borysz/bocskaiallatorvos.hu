@@ -26,8 +26,9 @@ export default function Header() {
           <Link to="/" className="flex items-center space-x-3">
             <Stethoscope className="w-8 h-8 text-brandButton" />
             <div>
-              <h1 className="text-2xl font-bold text-gray-800">Bocskai Állategészségügyi Centrum</h1>
-              <p className="text-sm text-gray-600">Állatorvosi Rendelő</p>
+              <h1 className="text-2xl font-bold text-gray-800">Bocskai <span className="hidden sm:inline">Állategészségügyi Centrum</span></h1>
+              <span className="hidden sm:inline">Állatorvosi Rendelő</span>
+              <span className="inline sm:hidden">Állategészségügyi Centrum</span>
             </div>
           </Link>
 
