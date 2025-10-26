@@ -9,7 +9,7 @@ export default function Header() {
 
   const isActive = (path: string) => location.pathname === path;
 
-  const closeMenu = () => setIsMenuOpen(false); 
+  const closeMenu = () => setIsMenuOpen(false);
 
   /*const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -26,7 +26,7 @@ export default function Header() {
           <Link to="/" className="flex items-center space-x-3">
             <Stethoscope className="w-8 h-8 text-brandButton" />
             <div>
-              <h1 className="text-2xl font-bold text-gray-800">Bocskai Állatorvos</h1>
+              <h1 className="text-2xl font-bold text-gray-800">Bocskai Állategészségügyi Centrum</h1>
               <p className="text-sm text-gray-600">Állatorvosi Rendelő</p>
             </div>
           </Link>
@@ -58,12 +58,10 @@ export default function Header() {
               GYIK
             </Link>
 
-            {/* ÚJ LEGÖRDÜLŐ MENÜ */}
             <div className="relative group">
               <button
-                className={`transition flex items-center space-x-1 ${
-                  isActive('/arlista') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'
-                }`}
+                className={`transition flex items-center space-x-1 ${isActive('/arlista') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'
+                  }`}
               >
                 <span>Árlista</span>
                 <svg
@@ -111,6 +109,35 @@ export default function Header() {
                 </Link>
               </div>
             </div>
+
+            {/*
+            <div className="relative group">
+              <button
+                className={`transition flex items-center space-x-1 ${isActive('/palyazatok') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'
+                  }`}
+              >
+                <span>Pályázatok</span>
+                <svg
+                  className="w-4 h-4 mt-0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              <div className="absolute hidden group-hover:block bg-white shadow-lg rounded-lg -mt-1 py-2 w-48">
+                <Link
+                  to="/palyazatok/ginop-2017-01597"
+                  className="block px-4 py-2 text-gray-700 hover:bg-brandSection hover:text-brandButtonHover"
+                >
+                  GINOP-2017-01597
+                </Link>
+              </div>
+            </div>
+            */}
 
             <Link
               to="/kapcsolat"
@@ -180,6 +207,13 @@ export default function Header() {
                 <Link to="/arlista/endoszkopia" onClick={closeMenu} className="block text-gray-600 hover:text-brandButtonHover">Endoszkópia</Link>
               </div>
             </div>
+
+            {/*<div>
+              <p className="text-gray-700 font-medium mt-2">Pályázatok</p>
+              <div className="ml-4 space-y-1">
+                <Link to="/palyazatok/ginop-2017-01597" onClick={closeMenu} className="block text-gray-600 hover:text-brandButtonHover">GINOP-2017-01597</Link>
+              </div>
+            </div>*/}
 
             <Link
               to="/kapcsolat"
