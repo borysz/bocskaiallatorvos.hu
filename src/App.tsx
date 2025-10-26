@@ -19,6 +19,8 @@ import BlogDetail from './pages/BlogDetail';
 import OurTeamPage from './pages/OurTeamPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
 import ScrollToTop from './components/ScrollToTop';
+import SzechenyiBanner from './components/SzechenyiBanner';
+import PalyazatokPage from './pages/PalyazatokPage';
 
 function App() {
   const [isAdminMode, setIsAdminMode] = useState(false);
@@ -39,6 +41,7 @@ function App() {
             <Route path="/rolunk" element={<OurTeamPage />} />
             <Route path="/szolgaltatasok" element={<ServicesPage />} />
             <Route path="/szolgaltatasok/:slug" element={<ServiceDetailPage />} />
+            <Route path="/palyazatok/:slug" element={<PalyazatokPage />} />
             <Route path="/kapcsolat" element={<ContactPage />} />
             <Route path="/gyik" element={<FAQPage />} />
             <Route path="/blog" element={<BlogList />} />
@@ -47,6 +50,7 @@ function App() {
         </main>
         <Footer />
       </div>
+      <SzechenyiBanner />
     </BrowserRouter>
 
     /*
