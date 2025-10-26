@@ -208,12 +208,12 @@ export default function Header() {
               </div>
             </div>
 
-            {/*<div>
+            <div>
               <p className="text-gray-700 font-medium mt-2">Pályázatok</p>
               <div className="ml-4 space-y-1">
                 <Link to="/palyazatok/ginop-2017-01597" onClick={closeMenu} className="block text-gray-600 hover:text-brandButtonHover">GINOP-2017-01597</Link>
               </div>
-            </div>*/}
+            </div>
 
             <Link
               to="/kapcsolat"
