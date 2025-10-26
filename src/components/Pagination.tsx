@@ -47,7 +47,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }: Pa
       <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className="p-2 rounded-lg border border-gray-300 hover:bg-emerald-50 hover:border-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:border-gray-300 transition-colors duration-200"
+        className="p-2 rounded-lg border border-gray-300 hover:bg-brandButton hover:border-brandButtonHover disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:border-gray-300 transition-colors duration-200"
         aria-label="Előző oldal"
       >
         <ChevronLeft className="w-5 h-5" />
@@ -60,8 +60,8 @@ export default function Pagination({ currentPage, totalPages, onPageChange }: Pa
             onClick={() => onPageChange(page)}
             className={`min-w-[40px] h-10 rounded-lg font-medium transition-all duration-200 ${
               currentPage === page
-                ? 'bg-emerald-600 text-white shadow-lg scale-110'
-                : 'border border-gray-300 hover:bg-emerald-50 hover:border-emerald-500 text-gray-700'
+                ? 'bg-brandButton text-white shadow-lg scale-110'
+                : 'border border-gray-300 hover:bg-brandButton hover:border-brandButtonHover text-gray-700'
             }`}
           >
             {page}
@@ -76,7 +76,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }: Pa
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className="p-2 rounded-lg border border-gray-300 hover:bg-emerald-50 hover:border-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:border-gray-300 transition-colors duration-200"
+        className="p-2 rounded-lg border border-gray-300 hover:bg-brandButton hover:border-brandButtonHover disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:border-gray-300 transition-colors duration-200"
         aria-label="Következő oldal"
       >
         <ChevronRight className="w-5 h-5" />

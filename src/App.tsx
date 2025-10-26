@@ -18,6 +18,7 @@ import BlogList from './pages/BlogList';
 import BlogDetail from './pages/BlogDetail';
 import OurTeamPage from './pages/OurTeamPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [isAdminMode, setIsAdminMode] = useState(false);
@@ -28,6 +29,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <ScrollToHash />
       <div className="min-h-screen bg-white flex flex-col">
         <Header />
