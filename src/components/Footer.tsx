@@ -1,4 +1,5 @@
 import { Stethoscope, Facebook, Instagram, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -20,12 +21,14 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">Gyors linkek</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="/rolunk" className="hover:text-brandButtonHover transition">Rólunk</a></li>
-              <li><a href="/szolgaltatasok" className="hover:text-brandButtonHover transition">Szolgáltatások</a></li>
-              <li><a href="/blog" className="hover:text-brandButtonHover transition">Blog</a></li>
-              <li><a href="/gyik" className="hover:text-brandButtonHover transition">GYIK</a></li>
-              <li><a href="/arlista" className="hover:text-brandButtonHover transition">Árlista</a></li>
-              <li><a href="/kapcsolat" className="hover:text-brandButtonHover transition">Kapcsolat</a></li>
+              <li><Link to="/rolunk" className="hover:text-brandButtonHover transition">Rólunk</Link></li>
+              <li><Link to="/szolgaltatasok" className="hover:text-brandButtonHover transition">Szolgáltatások</Link></li>
+              <li><Link to="/blog" className="hover:text-brandButtonHover transition">Blog</Link></li>
+              <li><Link to="/gyik" className="hover:text-brandButtonHover transition">GYIK</Link></li>
+              <li><Link to="/arlista" className="hover:text-brandButtonHover transition">Árlista</Link></li>
+              <li><Link to="/kapcsolat" className="hover:text-brandButtonHover transition">Kapcsolat</Link></li>
+              <li><Link to="/palyazatok/ginop-2017-01597" className="hover:text-brandButtonHover transition">GINOP-2017-01597</Link></li>
+
             </ul>
           </div>
 
@@ -56,7 +59,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Bocskai Állatorvosi Rendelő. Minden jog fenntartva.</p>
+          <p>&copy; 2019-{new Date().getFullYear()} Bocskai Állatorvosi Rendelő. Minden jog fenntartva.</p>
         </div>
       </div>
     </footer>
