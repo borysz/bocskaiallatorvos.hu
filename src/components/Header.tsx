@@ -59,7 +59,14 @@ export default function Header() {
               GYIK
             </Link>
 
-            <div className="relative group">
+            <Link
+              to="/arlista"
+              className={`transition ${isActive('/arlista') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'}`}
+            >
+              Árlista
+            </Link>
+
+            {/*<div className="relative group">
               <button
                 className={`transition flex items-center space-x-1 ${isActive('/arlista') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'
                   }`}
@@ -76,7 +83,6 @@ export default function Header() {
                 </svg>
               </button>
 
-              {/* Legördülő tartalom */}
               <div className="absolute hidden group-hover:block bg-white shadow-lg rounded-lg -mt-1 py-2 w-48">
                 <Link
                   to="/arlista/altalanos-dijak"
@@ -110,6 +116,8 @@ export default function Header() {
                 </Link>
               </div>
             </div>
+            */}
+            
 
             {/*
             <div className="relative group">
@@ -198,7 +206,15 @@ export default function Header() {
               GYIK
             </Link>
 
-            <div>
+            <Link
+              to="/arlista"
+              onClick={closeMenu}
+              className={`block w-full text-left transition py-2 ${isActive('/arlista') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'}`}
+            >
+              Árlista
+            </Link>
+
+            {/*<div>
               <p className="text-gray-700 font-medium mt-2">Árlista</p>
               <div className="ml-4 space-y-1">
                 <Link to="/arlista/altalanos-dijak" onClick={closeMenu} className="block text-gray-600 hover:text-brandButtonHover">Általános díjak</Link>
@@ -207,7 +223,7 @@ export default function Header() {
                 <Link to="/arlista/borgyogyaszat" onClick={closeMenu} className="block text-gray-600 hover:text-brandButtonHover">Bőrgyógyászat</Link>
                 <Link to="/arlista/endoszkopia" onClick={closeMenu} className="block text-gray-600 hover:text-brandButtonHover">Endoszkópia</Link>
               </div>
-            </div>
+            </div>*/}
 
             <div>
               <p className="text-gray-700 font-medium mt-2">Pályázatok</p>
