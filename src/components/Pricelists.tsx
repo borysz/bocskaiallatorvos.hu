@@ -62,7 +62,7 @@ function Pricelists() {
                                     <div className="flex items-center gap-4">
                                         <div className="bg-slate-200/50 p-3 rounded-xl transition-transform duration-300 group-hover:scale-110">
                                             {IconComponent && (
-                                                <IconComponent className="w-6 h-6 text-teal-600" />
+                                                <IconComponent className="w-6 h-6 text-brandButton" />
                                             )}
                                         </div>
                                         <div>

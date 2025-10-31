@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <div className="container mx-auto px-4 max-w-screen-xl">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <Stethoscope className="w-8 h-8 text-brandButton" />
@@ -14,7 +14,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-400 leading-relaxed">
-              Professzionális állatorvosi ellátás több mint 15 éve.
+              Professzionális állatorvosi ellátás.
             </p>
           </div>
 
@@ -25,10 +25,14 @@ export default function Footer() {
               <li><Link to="/szolgaltatasok" className="hover:text-brandButtonHover transition">Szolgáltatások</Link></li>
               <li><Link to="/blog" className="hover:text-brandButtonHover transition">Blog</Link></li>
               <li><Link to="/gyik" className="hover:text-brandButtonHover transition">GYIK</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-bold mb-4">Gyors linkek</h4>
+            <ul className="space-y-2 text-gray-400">
               <li><Link to="/arlista" className="hover:text-brandButtonHover transition">Árlista</Link></li>
               <li><Link to="/kapcsolat" className="hover:text-brandButtonHover transition">Kapcsolat</Link></li>
-              <li><Link to="/palyazatok/ginop-2017-01597" className="hover:text-brandButtonHover transition">GINOP-2017-01597</Link></li>
-
+              <li><Link to="/palyazatok/ginop-2017-01597" className="hover:text-brandButtonHover transition">Pályázat</Link></li>
             </ul>
           </div>
 

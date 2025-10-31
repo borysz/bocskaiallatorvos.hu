@@ -3,6 +3,9 @@ export interface WPPage {
     slug: string;
     title: { rendered: string };
     content: { rendered: string };
+    meta?: {
+        [key: string]: string[] | undefined;
+    };
 }
 
 export interface WPMedia {
