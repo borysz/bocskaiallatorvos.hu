@@ -22,6 +22,7 @@ import ScrollToTop from './components/ScrollToTop';
 import SzechenyiBanner from './components/SzechenyiBanner';
 import PalyazatokPage from './pages/PalyazatokPage';
 import PricelistPage from './pages/PricelistPage';
+import GalleryPage from './pages/GalleryPage';
 
 function App() {
   const [isAdminMode, setIsAdminMode] = useState(false);
@@ -45,6 +46,7 @@ function App() {
             <Route path="/szolgaltatasok/:slug" element={<ServiceDetailPage />} />
             <Route path="/palyazatok/:slug" element={<PalyazatokPage />} />
             <Route path="/kapcsolat" element={<ContactPage />} />
+            <Route path="/galeria" element={<GalleryPage />} />
             <Route path="/gyik" element={<FAQPage />} />
             <Route path="/blog" element={<BlogList />} />
             <Route path="/blog/:slug" element={<BlogDetail />} />
