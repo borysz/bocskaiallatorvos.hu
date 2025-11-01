@@ -6,15 +6,14 @@ import { useCms } from '../../context/CmsContext';
 
 export default function HeroHome() {
 
-  const { pages, media, error } = useCms();
+    const { pages, media, error } = useCms();
 
-  //if (loading) return <p>Betöltés...</p>;
-  if (error) return <p>Hiba: {error}</p>;
+    //if (loading) return <p>Betöltés...</p>;
+    if (error) return <p>Hiba: {error}</p>;
 
-  const introductionPage = pages.find((p) => p.slug === "bemutatkozas");
-  const welcomeImage = media.find((m) => m.slug === "bocskaiallatorvos-hero");
+    const introductionPage = pages.find((p) => p.slug === "bemutatkozas");
+    const welcomeImage = media.find((m) => m.slug === "bocskaiallatorvos-hero");
 
- 
     return (
         <section id="hero" className="pt-24 pb-16 bg-gradient-to-br from-brand to-stone-50">
             <div className="container mx-auto px-4">
@@ -46,8 +45,8 @@ export default function HeroHome() {
                         </div>
                     </div>
                     <div className="flex-1">
-                        {welcomeImage && <img className="rounded-2xl shadow-2xl w-full h-auto" 
-                        src={welcomeImage.guid.rendered} alt={welcomeImage.caption.rendered} />}     
+                        {welcomeImage && <img className="rounded-2xl shadow-2xl w-full h-auto"
+                            src={welcomeImage.guid.rendered} alt={welcomeImage.caption.rendered} />}
                     </div>
                 </div>
             </div>

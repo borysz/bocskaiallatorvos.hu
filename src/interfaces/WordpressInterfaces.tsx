@@ -26,3 +26,29 @@ export interface WPPosts {
     date_gmt: string;          
     tag_names: string;   
 }
+
+export interface WPPartners {
+  id: number;
+  name: string;
+  url: string;
+  image: string;
+  order: number;
+}
+
+export interface WPGallery {
+  id: string;
+  name: string;
+  main_image: string;
+  main_image_id: number;
+  order: number;
+  images?: WPGalleryImageDetail[];
+}
+
+export interface WPGalleryImageDetail {
+    id: string;
+    attachment_id: number;
+    title: string;
+    description: string;
+    src: string;
+    order: number;
+}

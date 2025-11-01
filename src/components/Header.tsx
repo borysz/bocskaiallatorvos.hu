@@ -149,6 +149,13 @@ export default function Header() {
             */}
 
             <Link
+              to="/galeria"
+              className={`transition ${isActive('/galeria') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'}`}
+            >
+              Galéria
+            </Link>
+
+            <Link
               to="/kapcsolat"
               className={`transition ${isActive('/kapcsolat') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'}`}
             >
@@ -231,6 +238,14 @@ export default function Header() {
                 <Link to="/palyazatok/ginop-2017-01597" onClick={closeMenu} className="block text-gray-600 hover:text-brandButtonHover">GINOP-2017-01597</Link>
               </div>
             </div>
+
+            <Link
+              to="/galeria"
+              onClick={closeMenu}
+              className={`block w-full text-left transition py-2 ${isActive('/galeria') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'}`}
+            >
+              Galéria
+            </Link>
 
             <Link
               to="/kapcsolat"

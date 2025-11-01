@@ -1,10 +1,12 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { WPPage, WPMedia, WPPosts } from "../interfaces/WordpressInterfaces";
+import { WPPage, WPMedia, WPPosts, WPPartners, WPGallery } from "../interfaces/WordpressInterfaces";
 
 interface CmsContextType {
     pages: WPPage[];
     media: WPMedia[];
     posts: WPPosts[];
+    partners: WPPartners[];
+    gallery: WPGallery[];
     loading: boolean;
     error: string | null;
     refresh: () => void;
@@ -16,6 +18,8 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [pages, setPages] = useState<WPPage[]>([]);
   const [media, setMedia] = useState<WPMedia[]>([]);
   const [posts, setPosts] = useState<WPPosts[]>([]);
+  const [partners, setPartners] = useState<WPPartners[]>([]);
+  const [gallery, setGallery] = useState<WPGallery[]>([]);
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -29,16 +33,20 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     const fetchData = async () => {
       setLoading(true);
       try {
-        const [pagesRes, mediaRes, postsRes] = await Promise.all([
+        const [pagesRes, mediaRes, postsRes, partnersRes, galleriesRes] = await Promise.all([
           fetch(`${apiUrl}/pages?_fields=menu_order,slug,title,content,meta&orderby=menu_order&order=asc`),
-          fetch(`${apiUrl}/media?_fields=slug,guid,caption`),
-          fetch(`${apiUrl}/posts?_fields=id,date_gmt,title,excerpt,content,slug,categories,tag_names,featured_image_url,menu_order&orderby=menu_order&order=asc`)
+          fetch(`${apiUrl}/media?_fields=slug,guid,caption&per_page=100`),
+          fetch(`${apiUrl}/posts?_fields=id,date_gmt,title,excerpt,content,slug,categories,tag_names,featured_image_url,menu_order&orderby=menu_order&order=asc`),
+          fetch(`${apiUrl}/partners`),
+          fetch(`${apiUrl}/galleries`),
         ]);
 
-        const [pagesData, mediaData, postsData] = await Promise.all([
+        const [pagesData, mediaData, postsData, partnersData, galleriesData] = await Promise.all([
           pagesRes.json(),
           mediaRes.json(),
-          postsRes.json()
+          postsRes.json(),
+          partnersRes.json(),
+          galleriesRes.json()
         ]);
 
         if (!isMounted) return;
@@ -46,6 +54,8 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         setPages(pagesData);
         setMedia(mediaData);
         setPosts(postsData);
+        setPartners(partnersData);
+        setGallery(galleriesData);
         setError(null);
         setReady(true); // 👈 csak ha minden adat bejött
       } catch {
@@ -81,7 +91,7 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   }
 
   return (
-    <CmsContext.Provider value={{ pages, media, posts, loading, error, refresh: () => window.location.reload() }}>
+    <CmsContext.Provider value={{ pages, media, posts, partners, gallery, loading, error, refresh: () => window.location.reload() }}>
       {children}
     </CmsContext.Provider>
   );
