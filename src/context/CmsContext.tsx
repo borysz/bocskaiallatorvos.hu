@@ -30,9 +30,9 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       setLoading(true);
       try {
         const [pagesRes, mediaRes, postsRes] = await Promise.all([
-          fetch(`${apiUrl}/pages?_fields=menu_order,slug,title,content&orderby=menu_order&order=asc`),
+          fetch(`${apiUrl}/pages?_fields=menu_order,slug,title,content,meta&orderby=menu_order&order=asc`),
           fetch(`${apiUrl}/media?_fields=slug,guid,caption`),
-          fetch(`https://api.bocskaiallatorvos.hu/wp-json/wp/v2/posts?_fields=id,date_gmt,title,excerpt,content,slug,categories,tag_names,featured_image_url,menu_order&orderby=menu_order&order=asc`)
+          fetch(`${apiUrl}/posts?_fields=id,date_gmt,title,excerpt,content,slug,categories,tag_names,featured_image_url,menu_order&orderby=menu_order&order=asc`)
         ]);
 
         const [pagesData, mediaData, postsData] = await Promise.all([
