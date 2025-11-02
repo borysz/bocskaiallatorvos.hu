@@ -1,204 +1,165 @@
-import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
-import ReactMarkdown from "react-markdown";
-import axios from "axios";
+import { useEffect, useState } from 'react';
+import { MetaTags } from '../components/blog/MetaTags';
+import { Link } from '../components/blog/Link';
+import { ArrowLeft, Calendar, Clock, Loader2 } from 'lucide-react';
+import { WPPosts } from '../interfaces/WordpressInterfaces';
+import { getReadTime } from '../components/blog/BlogReadTimeCalculator';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useCms } from '../context/CmsContext';
 
-export interface CoverFormats {
-    large?: {
-        ext: string;
-        url: string;
-        hash: string;
-        mime: string;
-        name: string;
-        path: string | null;
-        size: number;
-        width: number;
-        height: number;
-        sizeInBytes: number;
-    };
-    medium?: {
-        ext: string;
-        url: string;
-        hash: string;
-        mime: string;
-        name: string;
-        path: string | null;
-        size: number;
-        width: number;
-        height: number;
-        sizeInBytes: number;
-    };
-    small?: {
-        ext: string;
-        url: string;
-        hash: string;
-        mime: string;
-        name: string;
-        path: string | null;
-        size: number;
-        width: number;
-        height: number;
-        sizeInBytes: number;
-    };
-    thumbnail?: {
-        ext: string;
-        url: string;
-        hash: string;
-        mime: string;
-        name: string;
-        path: string | null;
-        size: number;
-        width: number;
-        height: number;
-        sizeInBytes: number;
-    };
-}
 
-export interface Cover {
-    id: number;
-    documentId: string;
-    name: string;
-    alternativeText: string | null;
-    caption: string | null;
-    width: number;
-    height: number;
-    formats: CoverFormats;
-    hash: string;
-    ext: string;
-    mime: string;
-    size: number;
-    url: string;
-    previewUrl: string | null;
-    provider: string;
-    provider_metadata: any | null;
-    createdAt: string;
-    updatedAt: string;
-    publishedAt: string;
-}
-
-export interface Author {
-    id: number;
-    documentId: string;
-    name: string;
-    email: string;
-    createdAt: string;
-    updatedAt: string;
-    publishedAt: string;
-}
-
-export interface Category {
-    id: number;
-    documentId: string;
-    name: string;
-    slug: string;
-    description: string | null;
-    createdAt: string;
-    updatedAt: string;
-    publishedAt: string;
-}
-
-export interface RichTextBlock {
-    __component: "shared.rich-text";
-    id: number;
-    body: string;
-}
-
-export interface QuoteBlock {
-    __component: "shared.quote";
-    id: number;
-    title: string;
-    body: string;
-}
-
-export interface MediaBlock {
-    __component: "shared.media";
-    id: number;
-}
-
-export interface SliderBlock {
-    __component: "shared.slider";
-    id: number;
-}
-
-export type Block = RichTextBlock | QuoteBlock | MediaBlock | SliderBlock;
-
-export interface Post {
-    id: number;
-    documentId: string;
-    title: string;
-    description: string;
-    slug: string;
-    createdAt: string;
-    updatedAt: string;
-    publishedAt: string;
-    cover?: Cover;
-    author?: Author;
-    category?: Category;
-    blocks?: Block[];
-}
-
-export interface StrapiPostsResponse {
-    data: Post[];
-}
-
-const BlogDetail = () => {
+export function BlogDetail() {
+    const [post, setPost] = useState<WPPosts | null>(null);
     const { slug } = useParams<{ slug: string }>();
-    const [post, setPost] = useState<Post | null>(null);
-    const token = "44ab308082b0784773ba9746b9828ebf62c5ae0649934bcf6ced96da340f9eb04e5fc11fc38371a535215b8fdf23403c4a768d8708490decb93440982fe5df0fc8b08b9ebb4b0f54cc4ca7087b2efd4ca9991c71993b9b6b0284b2409182c123edc18ee2232dc81a5f39bdcdc1dfa6486ec9f4959a90e43bd1c80ec98ea0b0d9"
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+    const { posts } = useCms();
+
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = (location.state as { from?: string })?.from || '/blog';
+    console.log(from, location.state)
 
 
     useEffect(() => {
-        if (!slug) return;
+        async function fetchPost() {
+            try {
+                setLoading(true);
 
-        axios
-            .get(`https://uplifting-darling-2b497743a0.strapiapp.com/api/articles?filters[slug][$eq]=${slug}&populate=*`, {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                },
-            })
-            .then((res) => {
-                if (res.data.data.length > 0) setPost(res.data.data[0]);
-            })
-            .catch((err) => console.error(err));
+                const filteredPost = posts.filter(item => item.categories.includes(3) && item.slug === slug);
+
+                if (error) throw error;
+
+                if (!filteredPost) {
+                    setError('Blog post not found');
+                    return;
+                }
+
+                setPost(
+                    Array.isArray(filteredPost) && filteredPost.length > 0
+                        ? filteredPost[0]
+                        : {} as WPPosts
+                );
+            } catch (err) {
+                setError(err instanceof Error ? err.message : 'Failed to load blog post');
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        fetchPost();
     }, [slug]);
 
-    if (!post) return <p>Betöltés...</p>;
+    if (loading) {
+        return (
+            <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-blue-50 to-gray-50">
+                <div className="text-center">
+                    <Loader2 className="w-12 h-12 animate-spin text-blue-600 mx-auto mb-4" />
+                    <p className="text-gray-600 text-lg">Bejegyzés betöltése...</p>
+                </div>
+            </div>
+        );
+    }
+
+    if (error || !post) {
+        return (
+            <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-blue-50 to-gray-50">
+                <div className="text-center max-w-md mx-auto px-4">
+                    <div className="bg-red-50 border border-red-200 rounded-2xl p-6 mb-6">
+                        <p className="text-red-600 font-medium mb-2">Error</p>
+                        <p className="text-red-500 text-sm">{error || 'Post not found'}</p>
+                    </div>
+                    <Link
+                        to="/"
+                        className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors"
+                    >
+                        <ArrowLeft className="w-4 h-4" />
+                        Vissza a blogokhoz
+                    </Link>
+                </div>
+            </div>
+        );
+    }
+
+    const currentUrl = `${window.location.origin}/blog/${post.slug}`;
 
     return (
-        <section id="blogITem" className="py-20 bg-gradient-to-b from-brand to-white">
-            <div className="container mx-auto px-4 py-12">
-                <Link to="/blog" className="text-teal-600 hover:underline mb-4 inline-block">
-                    ← Vissza a listához
-                </Link>
-                <div className="text-center mb-16">
-                    <h1 className="text-4xl font-bold text-gray-800 mb-4">{post.title}</h1> 
-                </div>
-                <div className="space-y-6">
-                    {post.blocks?.map((block) => {
-                        switch (block.__component) {
-                            case "shared.rich-text":
-                                /*return <div key={block.id} dangerouslySetInnerHTML={{ __html: block.body }} className="mb-6" />;*/
-                                return <ReactMarkdown>{block.body}</ReactMarkdown>;
-                            /*case "shared.quote":
-                                return (
-                                    <blockquote key={block.id} className="border-l-4 border-teal-600 pl-4 italic mb-6">
-                                        <p>{block.body}</p>
-                                        <cite className="block mt-1 font-bold">{block.title}</cite>
-                                    </blockquote>
-                                );
-                            case "shared.media":
-                                return <div key={block.id} className="mb-6">[Media blokk – implementáld szükség szerint]</div>;
-                            case "shared.slider":
-                                return <div key={block.id} className="mb-6">[Slider blokk – implementáld szükség szerint]</div>;*/
-                            default:
-                                return null;
-                        }
-                    })}
-                </div>
-                {/*<div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: post.data }} />*/}
-            </div>
-        </section>
-    );
-};
+        <>
+            <MetaTags
+                title={post.title.rendered}
+                description={post.excerpt.rendered}
+                ogImage={post.featured_image_url}
+                url={currentUrl}
+            />
 
-export default BlogDetail;
+            <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-gray-50">
+                <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                    <Link
+                        to="/"
+                        className="inline-flex items-center gap-2 text-gray-600 hover:text-blue-600 mb-8 transition-colors duration-300 group"
+                    >
+                        <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-300" />
+                        Vissza a blogokhoz
+                    </Link>
+
+                    <header className="mb-12 animate-fadeIn">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                            {post.title.rendered}
+                        </h1>
+
+                        <div className="flex flex-wrap items-center gap-6 text-gray-600 mb-8">
+                            <div className="flex items-center gap-2">
+                                {/*<User className="w-5 h-5 text-blue-600" />
+                <span className="font-medium">{post.author}</span>*/}
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <Calendar className="w-5 h-5 text-brandButton" />
+                                <time dateTime={post.date_gmt}>
+                                    {new Date(post.date_gmt).toLocaleDateString('en-US', {
+                                        year: 'numeric',
+                                        month: 'long',
+                                        day: 'numeric',
+                                    })}
+                                </time>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <Clock className="w-5 h-5 text-brandButton" />
+                                <span>{getReadTime(post.content.rendered)}</span>
+                            </div>
+                        </div>
+
+                        <div className="relative overflow-hidden rounded-3xl shadow-2xl mb-12 animate-scaleIn">
+                            <img
+                                src={post.featured_image_url}
+                                alt={post.title.rendered}
+                                className="w-full h-auto max-h-[600px] object-cover"
+                            />
+                        </div>
+                    </header>
+
+                    <div
+                        className="prose prose-lg prose-gray max-w-none
+              prose-headings:font-bold prose-headings:text-gray-900
+              prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-6
+              prose-img:rounded-2xl prose-img:shadow-lg prose-img:my-8
+              prose-img:mx-auto prose-img:max-w-full prose-img:h-auto
+              prose-a:text-blue-600 prose-a:no-underline hover:prose-a:text-blue-700
+              prose-strong:text-gray-900 prose-strong:font-semibold
+              animate-fadeIn"
+                        dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+                    />
+
+                    <footer className="mt-16 pt-8 border-t border-gray-200">
+                        <button onClick={() => navigate(from)}
+                            className="inline-flex items-center gap-2 px-6 py-3 bg-brandButton text-white rounded-xl hover:bg-brandButtonHover transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                        >
+                            <ArrowLeft className="w-4 h-4" />
+                            Vissza a blogokhoz
+                        </button>
+                    </footer>
+                </article>
+            </div>
+        </>
+    );
+}

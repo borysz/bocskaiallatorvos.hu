@@ -24,8 +24,7 @@ export default function ServicesPage() {
     try {
       const filteredPost = posts.filter(item => item.categories.includes(3));
    
-      //if (loading) return <p>Betöltés...</p>;
-      if (error) return <p>Hiba: {error}</p>;
+      if (error) throw error;
    
       const from = (currentPage -1) * ITEMS_PER_PAGE;
       const to = from + ITEMS_PER_PAGE;

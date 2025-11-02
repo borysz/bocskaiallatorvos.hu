@@ -16,7 +16,7 @@ export default function HeroHome() {
 
     return (
         <section id="hero" className="pt-24 pb-16 bg-gradient-to-br from-brand to-stone-50">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-4 pt-10">
                 <div className="flex flex-col lg:flex-row items-center gap-12">
                     <div className="flex-1 text-center lg:text-left">
                         <div className="inline-flex items-center bg-brandHero text-stlone-950 px-4 py-2 rounded-full text-sm font-medium mb-6">

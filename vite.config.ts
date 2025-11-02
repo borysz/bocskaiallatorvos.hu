@@ -11,5 +11,6 @@ export default defineConfig({
      fs: {
       strict: false, 
     },
+    allowedHosts: ['borysz.tplinkdns.com']
   },
 });

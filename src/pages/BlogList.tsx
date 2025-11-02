@@ -1,56 +1,120 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
+import { useEffect, useState } from 'react';
+import { BlogCard } from '../components/blog/BlogCard';
+import { Loader2, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useCms } from '../context/CmsContext';
+import { WPPosts } from '../interfaces/WordpressInterfaces';
+import Pagination from '../components/Pagination';
 
-export interface Post {
-  id: number;
-  documentId: string;
-  title: string;
-  description: string;
-  slug: string;
-  createdAt: string;
-  updatedAt: string;
-  publishedAt: string;
+const POSTS_PER_PAGE = 4;
+
+export function BlogList() {
+    const [blogs, setPosts] = useState<WPPosts[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [totalCount, setTotalCount] = useState(0);
+    const { posts, error } = useCms();
+
+
+    useEffect(() => {
+        async function fetchPosts() {
+            try {
+                setLoading(true);
+
+                if (error) throw error;
+
+                const blogPosts = posts.filter(item => item.categories.includes(3));
+
+                setTotalCount(blogPosts.length || 0);
+
+                const from = (currentPage - 1) * POSTS_PER_PAGE;
+                const to = from + POSTS_PER_PAGE;
+
+                const selectedBlogPosts = blogPosts.slice(from, to);
+                setPosts(selectedBlogPosts || []);
+            } catch (err) {
+                console.error('Error fetching blog posts:', error);
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        fetchPosts();
+    }, [currentPage]);
+
+    const totalPages = Math.ceil(totalCount / POSTS_PER_PAGE);
+
+    const goToPage = (page: number) => {
+        if (page >= 1 && page <= totalPages) {
+            setCurrentPage(page);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    };
+
+    if (loading) {
+        return (
+            <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-blue-50 to-gray-50">
+                <div className="text-center">
+                    <Loader2 className="w-12 h-12 animate-spin text-blue-600 mx-auto mb-4" />
+                    <p className="text-gray-600 text-lg">Blogok betöltése...</p>
+                </div>
+            </div>
+        );
+    }
+
+    if (error) {
+        return (
+            <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-blue-50 to-gray-50">
+                <div className="text-center max-w-md mx-auto px-4">
+                    <div className="bg-red-50 border border-red-200 rounded-2xl p-6">
+                        <p className="text-red-600 font-medium mb-2">Hiba a blog bejegyzéseinek betöltése közben! </p>
+                        <p className="text-red-500 text-sm">{error}</p>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    return (
+        <section id="blogPosts" className="py-20 min-h-screen bg-gradient-to-b from-brand to-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <header className="text-center mb-16 animate-fadeIn">
+                    <h1 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+                        Blog
+                    </h1>
+                    <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                        Minden, amit tudni érdemes az állatgyógyászatról és kezelésekről
+                    </p>
+                </header>
+
+                {blogs.length === 0 ? (
+                    <div className="text-center py-12">
+                        <p className="text-gray-600 text-lg">Jelenleg nincsenek elérhető blog bejegyzések.</p>
+                    </div>
+                ) : (
+                    <>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                            {blogs.map((post, index) => (
+                                <BlogCard key={post.id} post={post} index={index} />
+                            ))}
+                        </div>
+
+                        {totalPages > 1 && (
+                            <Pagination
+                                currentPage={currentPage}
+                                totalPages={totalPages}
+                                onPageChange={goToPage}
+                            />
+                        )}
+
+                        <div className="mt-12 text-center">
+                            <p className="text-gray-600">
+                                Összesen <span className="font-semibold text-brandButton">{totalCount}</span> blog bejegyzés
+                            </p>
+                        </div>
+
+                    </>
+                )}
+            </div>
+        </section>
+    );
 }
-
-const BlogList = () => {
-  const [posts, setPosts] = useState<Post[]>([]);
-  const token = "44ab308082b0784773ba9746b9828ebf62c5ae0649934bcf6ced96da340f9eb04e5fc11fc38371a535215b8fdf23403c4a768d8708490decb93440982fe5df0fc8b08b9ebb4b0f54cc4ca7087b2efd4ca9991c71993b9b6b0284b2409182c123edc18ee2232dc81a5f39bdcdc1dfa6486ec9f4959a90e43bd1c80ec98ea0b0d9"
-
-  useEffect(() => {
-    axios
-        .get("https://uplifting-darling-2b497743a0.strapiapp.com/api/articles", {
-            headers: {
-            Authorization: `Bearer ${token}`,
-            },
-        })
-        .then((res) => setPosts(res.data.data))
-        .catch((err) => console.error(err));
-  }, []);
-
-  return (
-    <section id="blogList" className="py-20 bg-gradient-to-b from-brand to-white">
-        <div className="container mx-auto px-4 py-12">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Blog</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-           Minden amit az állatgyógyászatról tudni kell!
-          </p>
-        </div>
-        <div className="space-y-6">
-            {posts.map((post) => (
-            <Link
-                key={post.id}
-                to={`/blog/${post.slug}`}
-                className="block p-6 bg-white rounded shadow hover:shadow-lg transition"
-            >
-                <h2 className="text-2xl font-semibold">{post.title}</h2>
-            </Link>
-            ))}
-        </div>
-        </div>
-    </section>
-  );
-};
-
-export default BlogList;
