@@ -14,8 +14,6 @@ import AdminPanel from './components/AdminPanel';
 import ContactPage from './pages/ContactPage';
 import FAQPage from './pages/FaqPage';
 import { ScrollToHash } from './components/ScrollToHash';
-import BlogList from './pages/BlogList';
-import BlogDetail from './pages/BlogDetail';
 import OurTeamPage from './pages/OurTeamPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
 import ScrollToTop from './components/ScrollToTop';
@@ -23,6 +21,8 @@ import SzechenyiBanner from './components/SzechenyiBanner';
 import PalyazatokPage from './pages/PalyazatokPage';
 import PricelistPage from './pages/PricelistPage';
 import GalleryPage from './pages/GalleryPage';
+import { BlogList } from './pages/BlogList';
+import { BlogDetail } from './pages/BlogDetail';
 
 function App() {
   const [isAdminMode, setIsAdminMode] = useState(false);
