@@ -6,18 +6,8 @@ import { Link, useLocation } from 'react-router-dom';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-
   const isActive = (path: string) => location.pathname === path;
-
   const closeMenu = () => setIsMenuOpen(false);
-
-  /*const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
-    }
-  };*/
 
   return (
     <header className="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
@@ -66,88 +56,6 @@ export default function Header() {
               Árlista
             </Link>
 
-            {/*<div className="relative group">
-              <button
-                className={`transition flex items-center space-x-1 ${isActive('/arlista') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'
-                  }`}
-              >
-                <span>Árlista</span>
-                <svg
-                  className="w-4 h-4 mt-0.5"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-
-              <div className="absolute hidden group-hover:block bg-white shadow-lg rounded-lg -mt-1 py-2 w-48">
-                <Link
-                  to="/arlista/altalanos-dijak"
-                  className="block px-4 py-2 text-gray-700 hover:bg-brandSection hover:text-brandButtonHover"
-                >
-                  Általános díjak
-                </Link>
-                <Link
-                  to="/arlista/oltasok"
-                  className="block px-4 py-2 text-gray-700 hover:bg-brandSection hover:text-brandButtonHover"
-                >
-                  Oltások
-                </Link>
-                <Link
-                  to="/arlista/tesztek"
-                  className="block px-4 py-2 text-gray-700 hover:bg-brandSection hover:text-brandButtonHover"
-                >
-                  Tesztek
-                </Link>
-                <Link
-                  to="/arlista/borgyogyaszat"
-                  className="block px-4 py-2 text-gray-700 hover:bg-brandSection hover:text-brandButtonHover"
-                >
-                  Bőrgyógyászat
-                </Link>
-                <Link
-                  to="/arlista/endoszkopia"
-                  className="block px-4 py-2 text-gray-700 hover:bg-brandSection hover:text-brandButtonHover"
-                >
-                  Endoszkópia
-                </Link>
-              </div>
-            </div>
-            */}
-            
-
-            {/*
-            <div className="relative group">
-              <button
-                className={`transition flex items-center space-x-1 ${isActive('/palyazatok') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'
-                  }`}
-              >
-                <span>Pályázatok</span>
-                <svg
-                  className="w-4 h-4 mt-0.5"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-
-              <div className="absolute hidden group-hover:block bg-white shadow-lg rounded-lg -mt-1 py-2 w-48">
-                <Link
-                  to="/palyazatok/ginop-2017-01597"
-                  className="block px-4 py-2 text-gray-700 hover:bg-brandSection hover:text-brandButtonHover"
-                >
-                  GINOP-2017-01597
-                </Link>
-              </div>
-            </div>
-            */}
-
             <Link
               to="/galeria"
               className={`transition ${isActive('/galeria') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'}`}
@@ -161,14 +69,7 @@ export default function Header() {
             >
               Kapcsolat
             </Link>
-            {/*<button
-              onClick={onAdminClick}
-              className="text-xs text-gray-400 hover:text-brandButtonHover transition"
-            >
-              Admin
-            </button>
-            <button onClick={() => scrollToSection('hero')} className="text-gray-700 hover:text-brandButtonHover transition">Rólunk</button>
-            */}
+
           </div>
 
           <button
@@ -181,7 +82,6 @@ export default function Header() {
 
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-3">
-            {/*<button onClick={() => scrollToSection('hero')} className="block w-full text-left text-gray-700 hover:text-brandButtonHover transition py-2">Rólunk</button>*/}
             <Link
               to="/rolunk"
               onClick={closeMenu}
@@ -221,24 +121,6 @@ export default function Header() {
               Árlista
             </Link>
 
-            {/*<div>
-              <p className="text-gray-700 font-medium mt-2">Árlista</p>
-              <div className="ml-4 space-y-1">
-                <Link to="/arlista/altalanos-dijak" onClick={closeMenu} className="block text-gray-600 hover:text-brandButtonHover">Általános díjak</Link>
-                <Link to="/arlista/oltasok" onClick={closeMenu} className="block text-gray-600 hover:text-brandButtonHover">Oltások</Link>
-                <Link to="/arlista/tesztek" onClick={closeMenu} className="block text-gray-600 hover:text-brandButtonHover">Tesztek</Link>
-                <Link to="/arlista/borgyogyaszat" onClick={closeMenu} className="block text-gray-600 hover:text-brandButtonHover">Bőrgyógyászat</Link>
-                <Link to="/arlista/endoszkopia" onClick={closeMenu} className="block text-gray-600 hover:text-brandButtonHover">Endoszkópia</Link>
-              </div>
-            </div>*/}
-
-            <div>
-              <p className="text-gray-700 font-medium mt-2">Pályázatok</p>
-              <div className="ml-4 space-y-1">
-                <Link to="/palyazatok/ginop-2017-01597" onClick={closeMenu} className="block text-gray-600 hover:text-brandButtonHover">GINOP-2017-01597</Link>
-              </div>
-            </div>
-
             <Link
               to="/galeria"
               onClick={closeMenu}
@@ -246,6 +128,13 @@ export default function Header() {
             >
               Galéria
             </Link>
+
+            <div>
+              <p className="text-gray-700 font-medium mt-2">Pályázatok</p>
+              <div className="ml-4 space-y-1">
+                <Link to="/palyazatok/ginop-2017-01597" onClick={closeMenu} className="block text-gray-600 hover:text-brandButtonHover">GINOP-2017-01597</Link>
+              </div>
+            </div>
 
             <Link
               to="/kapcsolat"
