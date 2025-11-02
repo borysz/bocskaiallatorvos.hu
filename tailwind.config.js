@@ -6,9 +6,11 @@ export default {
       colors: {
         brand: '#f7f4f2',
         brandSection: 'rgb(217 237 138)',
-        brandButton: '#9ec210',
-        brandButtonHover: '#7e9b0bff',
-        brandHero: 'rgb(158 193 32 / 35%)'
+        brandButton: '#B3C942',
+        brandButtonHover: '#6F7A25',
+        brandHero: 'rgb(158 193 32 / 35%)',
+        brandHeaderColor: '#65380F',
+        brandColor: '#6C5D3B'
       }
     },
   },

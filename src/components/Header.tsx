@@ -14,58 +14,60 @@ export default function Header() {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-3">
-            <Stethoscope className="w-8 h-8 text-brandButton" />
+            <span className="logo w-14 h-14 bg-cover bg-center"></span>
+       
+            {/*<Stethoscope className="w-8 h-8 text-brandButton" />*/}
             <div>
-              <h1 className="text-2xl font-bold text-gray-800">Bocskai <span className="hidden sm:inline">Állategészségügyi Centrum</span></h1>
-              <span className="hidden sm:inline">Állatorvosi Rendelő</span>
-              <span className="inline sm:hidden">Állategészségügyi Centrum</span>
+              <h1 className="text-2xl font-bold text-brandHeaderColor">Bocskai <span className="hidden sm:inline">Állategészségügyi Centrum</span></h1>
+              <span className="hidden sm:inline text-brandColor">Állatorvosi Rendelő</span>
+              <span className="inline sm:hidden text-brandColor">Állategészségügyi Centrum</span>
             </div>
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
             <Link
               to="/rolunk"
-              className={`transition ${isActive('/rolunk') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'}`}
+              className={`transition ${isActive('/rolunk') ? 'text-brandButton font-medium' : 'text-brandHeaderColor hover:text-brandButton'}`}
             >
               Rólunk
             </Link>
             <Link
               to="/szolgaltatasok"
-              className={`transition ${isActive('/szolgaltatasok') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'}`}
+              className={`transition ${isActive('/szolgaltatasok') ? 'text-brandButton font-medium' : 'text-brandHeaderColor hover:text-brandButton'}`}
             >
               Szolgáltatások
             </Link>
             <Link
               to="/blog"
-              className={`transition ${isActive('/blog') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'}`}
+              className={`transition ${isActive('/blog') ? 'text-brandButton font-medium' : 'text-brandHeaderColor hover:text-brandButton'}`}
             >
               Blog
             </Link>
 
             <Link
               to="/gyik"
-              className={`transition ${isActive('/gyik') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'}`}
+              className={`transition ${isActive('/gyik') ? 'text-brandButton font-medium' : 'text-brandHeaderColor hover:text-brandButton'}`}
             >
               GYIK
             </Link>
 
             <Link
               to="/arlista"
-              className={`transition ${isActive('/arlista') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'}`}
+              className={`transition ${isActive('/arlista') ? 'text-brandButton font-medium' : 'text-brandHeaderColor hover:text-brandButton'}`}
             >
               Árlista
             </Link>
 
             <Link
               to="/galeria"
-              className={`transition ${isActive('/galeria') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'}`}
+              className={`transition ${isActive('/galeria') ? 'text-brandButton font-medium' : 'text-brandHeaderColor hover:text-brandButton'}`}
             >
               Galéria
             </Link>
 
             <Link
               to="/kapcsolat"
-              className={`transition ${isActive('/kapcsolat') ? 'text-brandButton font-medium' : 'text-gray-700 hover:text-brandButtonHover'}`}
+              className={`transition ${isActive('/kapcsolat') ? 'text-brandButton font-medium' : 'text-brandHeaderColor hover:text-brandButton'}`}
             >
               Kapcsolat
             </Link>

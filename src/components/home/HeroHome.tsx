@@ -23,22 +23,22 @@ export default function HeroHome() {
                             <Heart className="w-4 h-4 mr-2" />
                             Professzionális állatorvosi ellátás
                         </div>
-                        <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6 leading-tight"
+                        <h2 className="text-4xl lg:text-5xl font-bold text-brandHeaderColor mb-6 leading-tight"
                             dangerouslySetInnerHTML={{ __html: introductionPage?.title.rendered || "" }} />
 
-                        <p className="text-lg text-gray-600 mb-8 max-w-xl"
+                        <p className="text-lg text-brandColor mb-8 max-w-xl"
                             dangerouslySetInnerHTML={{ __html: introductionPage?.content.rendered || "" }} />
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <Link
                                 to="/kapcsolat"
-                                className="bg-brandButton hover:bg-brandButtonHover text-black px-8 py-3 rounded-lg font-medium transition shadow-lg hover:shadow-xl text-center"
+                                className="bg-brandButton hover:bg-brandButtonHover text-brandColor hover:text-white px-8 py-3 rounded-lg font-medium transition shadow-lg hover:shadow-xl text-center"
                             >
                                 Kapcsolat
                             </Link>
                             <Link
                                 to="/szolgaltatasok"
-                                className="bg-white hover:bg-lime-50 text-black px-8 py-3 rounded-lg font-medium transition border-2 border-brandButton text-center"
+                                className="bg-white hover:bg-lime-50 text-brandColor px-8 py-3 rounded-lg font-medium transition border-2 border-brandButton text-center"
                             >
                                 Szolgáltatások
                             </Link>

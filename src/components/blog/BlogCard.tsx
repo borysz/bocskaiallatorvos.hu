@@ -1,7 +1,6 @@
-import { useLocation, Link } from 'react-router-dom';
 import { WPPosts } from '../../interfaces/WordpressInterfaces';
 import { getReadTime } from './BlogReadTimeCalculator';
-//import { Link } from './Link';
+import { Link } from './Link';
 import { Clock } from 'lucide-react';
 
 interface BlogCardProps {
@@ -10,11 +9,9 @@ interface BlogCardProps {
 }
 
 export function BlogCard({ post, index }: BlogCardProps) {
-  const location = useLocation();
   return (
     <Link
       to={`/blog/${post.slug}`}
-      state={{ from: location.pathname + location.search }}
       className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
       style={{
         animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`,

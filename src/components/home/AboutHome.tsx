@@ -13,32 +13,32 @@ const stats = [
 
 export default function AboutHome() {
 
-     const { pages, media, error } = useCms();
-   
-     //if (loading) return <p>Betöltés...</p>;
-     if (error) return <p>Hiba: {error}</p>;
-   
-     const aboutPages = pages.filter((p) => ["rolunk", "kepzett-orvosok"].includes(p.slug));
-     const heroImage = media.find((m) => m.slug === "bocskaiallatorvos-udvozles");
+    const { pages, media, error } = useCms();
+
+    //if (loading) return <p>Betöltés...</p>;
+    if (error) return <p>Hiba: {error}</p>;
+
+    const aboutPages = pages.filter((p) => ["rolunk", "kepzett-orvosok"].includes(p.slug));
+    const heroImage = media.find((m) => m.slug === "bocskaiallatorvos-udvozles");
 
     return (
         <section id="about" className="py-20 bg-gradient-to-br from-brand to-stone-50">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
-                        {heroImage && <img className="rounded-2xl shadow-2xl w-full h-auto" 
-                        src={heroImage.guid.rendered} alt={heroImage.caption.rendered} />}                        
+                        {heroImage && <img className="rounded-2xl shadow-2xl w-full h-auto"
+                            src={heroImage.guid.rendered} alt={heroImage.caption.rendered} />}
                     </div>
                     <div>
                         {aboutPages.map((page) => {
                             const replacedContent = page.content.rendered
-                                .replace(/<p>/g, '<p class="text-lg text-gray-600 leading-relaxed mb-6">')
+                                .replace(/<p>/g, '<p class="text-lg text-brandColor leading-relaxed mb-6">')
                             /*.replace(/<span>/g,'<span class="text-lg text-gray-800 mb-6">')*/;
 
                             return (
                                 <div key={page.slug} className='mb-6'>
                                     <h2
-                                        className="text-4xl font-bold text-gray-800 mb-6"
+                                        className="text-4xl font-bold text-brandHeaderColor mb-6"
                                         dangerouslySetInnerHTML={{ __html: page.title.rendered }}
                                     />
                                     <div
@@ -48,12 +48,14 @@ export default function AboutHome() {
                             );
                         })}
 
-                        <div className="grid grid-cols-2 gap-6 mt-6">
+                        <div className="grid grid-cols-2 gap-6 mt-6 ">
                             {stats.map((stat, index) => (
                                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
-                                    <stat.icon className="w-8 h-8 text-teal-600 mb-3" />
-                                    <div className="text-3xl font-bold text-gray-800 mb-1">{stat.value}</div>
-                                    <div className="text-gray-600">{stat.label}</div>
+                                    <div className="flex items-center gap-3 mb-3">
+                                        <stat.icon className="w-8 h-8 text-brandButton" />
+                                        <div className="text-3xl font-bold text-brandHeaderColor">{stat.value}</div>
+                                    </div>
+                                    <div className="text-brandColor">{stat.label}</div>
                                 </div>
                             ))}
                         </div>
