@@ -41,8 +41,8 @@ export default function Reviews() {
     <section id="reviews" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">Ügyfeleink véleménye</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-brandHeaderColor mb-4">Ügyfeleink véleménye</h2>
+          <p className="text-lg text-brandColor max-w-2xl mx-auto">
             Büszkék vagyunk arra, hogy elégedett ügyfelek ezrei bíznak bennünk.
           </p>
         </div>

@@ -12,9 +12,9 @@ export default function ContactHome() {
     <section id="contact" className="py-20 bg-gradient-to-br from-brand to-stone-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4" 
+          <h2 className="text-4xl font-bold text-brandHeaderColor mb-4" 
             dangerouslySetInnerHTML={{ __html: contactPage?.title.rendered  || ""}} />
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto" 
+          <p className="text-lg text-brandColor max-w-2xl mx-auto" 
             dangerouslySetInnerHTML={{ __html: contactPage?.content.rendered  || ""}} />
         </div>
 
@@ -25,8 +25,8 @@ export default function ContactHome() {
                 <MapPin className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="font-bold text-gray-800 mb-2">Cím</h3>
-                <p className="text-gray-600" 
+                <h3 className="font-bold text-brandHeaderColor mb-2">Cím</h3>
+                <p className="text-brandColor" 
                   dangerouslySetInnerHTML={{ __html: contactPage?.meta?.address?.[0]  || ""}} />
               </div>
             </div>
@@ -36,8 +36,8 @@ export default function ContactHome() {
                 <Phone className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="font-bold text-gray-800 mb-2">Telefon</h3>
-                  <p className="text-gray-600">
+                <h3 className="font-bold text-brandHeaderColor mb-2">Telefon</h3>
+                  <p className="text-brandColor">
                     <a
                       href={`tel:${contactPage?.meta?.phone?.[0] || ""}`}
                       title={contactPage?.meta?.phone?.[0] || ""}
@@ -53,8 +53,8 @@ export default function ContactHome() {
                 <Mail className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="font-bold text-gray-800 mb-2">Email</h3>
-                <p className="text-gray-600">{contactPage?.meta?.email?.[0] || ""}</p>
+                <h3 className="font-bold text-brandHeaderColor mb-2">Email</h3>
+                <p className="text-brandColor">{contactPage?.meta?.email?.[0] || ""}</p>
               </div>
             </div>
           </div>
@@ -64,8 +64,8 @@ export default function ContactHome() {
               <Clock className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h3 className="font-bold text-gray-800 mb-4">Nyitvatartás</h3>
-              <div className="space-y-2 text-gray-600" 
+              <h3 className="font-bold text-brandHeaderColor mb-4">Nyitvatartás</h3>
+              <div className="space-y-2 text-brandColor" 
                 dangerouslySetInnerHTML={{ __html: contactPage?.meta?.opening?.[0]  || ""}} />
             </div>
           </div>

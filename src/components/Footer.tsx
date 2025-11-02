@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <Stethoscope className="w-8 h-8 text-brandButton" />
+              <div className="logo w-8 h-8 bg-cover bg-center"></div>
               <div>
                 <h3 className="text-xl font-bold">Bocskai Állatorvos</h3>
               </div>

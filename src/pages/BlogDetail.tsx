@@ -4,7 +4,7 @@ import { Link } from '../components/blog/Link';
 import { ArrowLeft, Calendar, Clock, Loader2 } from 'lucide-react';
 import { WPPosts } from '../interfaces/WordpressInterfaces';
 import { getReadTime } from '../components/blog/BlogReadTimeCalculator';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useCms } from '../context/CmsContext';
 
 
@@ -14,20 +14,14 @@ export function BlogDetail() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const { posts } = useCms();
-
     const navigate = useNavigate();
-    const location = useLocation();
-
-    const from = (location.state as { from?: string })?.from || '/blog';
-    console.log(from, location.state)
-
 
     useEffect(() => {
         async function fetchPost() {
             try {
                 setLoading(true);
 
-                const filteredPost = posts.filter(item => item.categories.includes(3) && item.slug === slug);
+                const filteredPost = posts.filter(item => item.categories.includes(8) && item.slug === slug);
 
                 if (error) throw error;
 
@@ -93,17 +87,9 @@ export function BlogDetail() {
                 url={currentUrl}
             />
 
-            <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-gray-50">
+            <section id="blogDetail" className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-gray-50">
                 <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                    <Link
-                        to="/"
-                        className="inline-flex items-center gap-2 text-gray-600 hover:text-blue-600 mb-8 transition-colors duration-300 group"
-                    >
-                        <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-300" />
-                        Vissza a blogokhoz
-                    </Link>
-
-                    <header className="mb-12 animate-fadeIn">
+                    <header className="pt-20 mb-12 animate-fadeIn">
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                             {post.title.rendered}
                         </h1>
@@ -139,19 +125,12 @@ export function BlogDetail() {
                     </header>
 
                     <div
-                        className="prose prose-lg prose-gray max-w-none
-              prose-headings:font-bold prose-headings:text-gray-900
-              prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-6
-              prose-img:rounded-2xl prose-img:shadow-lg prose-img:my-8
-              prose-img:mx-auto prose-img:max-w-full prose-img:h-auto
-              prose-a:text-blue-600 prose-a:no-underline hover:prose-a:text-blue-700
-              prose-strong:text-gray-900 prose-strong:font-semibold
-              animate-fadeIn"
+                        className="text-gray-700 leading-relaxed space-y-4 animate-fadeIn"
                         dangerouslySetInnerHTML={{ __html: post.content.rendered }}
                     />
 
                     <footer className="mt-16 pt-8 border-t border-gray-200">
-                        <button onClick={() => navigate(from)}
+                        <button onClick={() => navigate('/blog')}
                             className="inline-flex items-center gap-2 px-6 py-3 bg-brandButton text-white rounded-xl hover:bg-brandButtonHover transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                         >
                             <ArrowLeft className="w-4 h-4" />
@@ -159,7 +138,7 @@ export function BlogDetail() {
                         </button>
                     </footer>
                 </article>
-            </div>
+            </section>
         </>
     );
 }

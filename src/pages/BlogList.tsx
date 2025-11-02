@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { BlogCard } from '../components/blog/BlogCard';
-import { Loader2, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 import { useCms } from '../context/CmsContext';
 import { WPPosts } from '../interfaces/WordpressInterfaces';
 import Pagination from '../components/Pagination';
@@ -19,10 +19,9 @@ export function BlogList() {
         async function fetchPosts() {
             try {
                 setLoading(true);
-
                 if (error) throw error;
 
-                const blogPosts = posts.filter(item => item.categories.includes(3));
+                const blogPosts = posts.filter(item => item.categories.includes(8));
 
                 setTotalCount(blogPosts.length || 0);
 
@@ -108,7 +107,7 @@ export function BlogList() {
 
                         <div className="mt-12 text-center">
                             <p className="text-gray-600">
-                                Összesen <span className="font-semibold text-brandButton">{totalCount}</span> blog bejegyzés
+                                Összesen <span className="font-semibold text-brandButton">{totalCount}</span> blogbejegyzés
                             </p>
                         </div>
 

@@ -38,8 +38,8 @@ export default function Services() {
     <section id="services" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">Szolgáltatásaink</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-brandHeaderColor  mb-4">Szolgáltatásaink</h2>
+          <p className="text-lg text-brandColor  max-w-2xl mx-auto">
             Komplett állatorvosi ellátást biztosítunk kedvenceinek, a megelőzéstől a gyógyításig.
           </p>
         </div>
@@ -50,11 +50,13 @@ export default function Services() {
               key={index}
               className="bg-gradient-to-br from-brand to-stone-50 p-8 rounded-xl hover:shadow-xl transition group"
             >
-              <div className="bg-brandButton w-14 h-14 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
-                <service.icon className="w-7 h-7 text-white" />
+              <div className="flex items-center gap-4 mb-4">
+                <div className="bg-brandButton w-14 h-14 rounded-lg flex items-center justify-center group-hover:scale-110 transition">
+                  <service.icon className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-brandHeaderColor">{service.title}</h3>
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">{service.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{service.description}</p>
+              <p className="text-brandColor leading-relaxed">{service.description}</p>
             </div>
           ))}
         </div>

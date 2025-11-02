@@ -2,7 +2,6 @@ import { type ReactNode } from 'react';
 
 interface LinkProps {
   to: string;
-  state: {};
   children: ReactNode;
   className?: string;
   style?: React.CSSProperties;

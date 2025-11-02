@@ -1,6 +1,37 @@
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import axios from 'axios';
+import { useState } from 'react';
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact() {
+
+  const [form, setForm] = useState({ email: '', message: '', name: '', phone: '' });
+  const [captcha, setCaptcha] = useState<string | null>(null);
+
+  const handleCaptchaChange = (token: string | null) => {
+    setCaptcha(token);
+  };
+
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!captcha) {
+      alert("Kérlek, igazold, hogy nem vagy robot!");
+      return;
+    }
+
+    try {
+      await axios.post('https://api.bocskaiallatorvos.hu/wp-json/wp/v2/send-mail', {...form, captcha: captcha})/*.then(response => {
+          console.log(response); // teljes válasz objektum
+          alert(response.data); // csak a válasz tartalma
+        })*/;
+      alert('E-mail elküldve!');
+    } catch (err) {
+      alert('Hiba történt az e-mail küldésekor.');
+    }
+  };
+
   return (
     <section id="contact" className="py-20 bg-gradient-to-br from-brand to-stone-50">
       <div className="container mx-auto px-4">
@@ -61,13 +92,14 @@ export default function Contact() {
 
           <div className="bg-white p-8 rounded-xl shadow-lg">
             <h3 className="text-2xl font-bold text-gray-800 mb-6">Üzenet küldése</h3>
-            <form className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="block text-gray-700 font-medium mb-2">Név</label>
                 <input
                   type="text"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brandButton"
                   placeholder="Az Ön neve"
+                  onChange={(e) => setForm({ ...form, name: e.target.value })}
                 />
               </div>
               <div>
@@ -76,6 +108,7 @@ export default function Contact() {
                   type="email"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brandButton"
                   placeholder="email@pelda.hu"
+                  onChange={(e) => setForm({ ...form, email: e.target.value })}
                 />
               </div>
               <div>
@@ -84,6 +117,7 @@ export default function Contact() {
                   type="tel"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brandButton"
                   placeholder="+36 30 123 4567"
+                  onChange={(e) => setForm({ ...form, phone: e.target.value })}
                 />
               </div>
               <div>
@@ -92,8 +126,15 @@ export default function Contact() {
                   rows={4}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brandButton"
                   placeholder="Írja ide üzenetét..."
+                  onChange={(e) => setForm({ ...form, message: e.target.value })}
                 ></textarea>
               </div>
+
+              <ReCAPTCHA
+                sitekey="6LeUw_8rAAAAAH1ACJUABRgo1onHw-ruaid80sJt"
+                onChange={handleCaptchaChange}
+              />
+
               <button
                 type="submit"
                 className="w-full bg-brandButton hover:bg-brandButtonHover text-white px-8 py-3 rounded-lg font-medium transition shadow-lg hover:shadow-xl"
