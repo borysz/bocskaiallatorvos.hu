@@ -70,7 +70,7 @@ export default function Gallery() {
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
 
                                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform transition-transform duration-300 group-hover:translate-y-0">
-                                    <h3 className="text-3xl font-bold mb-2 group-hover:text-blue-300 transition-colors duration-300">
+                                    <h3 className="text-3xl font-bold mb-2 group-hover:text-brandButton transition-colors duration-300">
                                         {group.name}
                                     </h3>
                                     <p className="text-slate-200 mb-4 opacity-90">
