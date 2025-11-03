@@ -35,12 +35,12 @@ const facilities = [
 
 export default function Facility() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="pb-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-brandHeaderColor mb-4 text-center">
           Rendelőnk felszereltsége
         </h2>
-        <p className="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
+        <p className="text-lg text-brandColor mb-12 text-center max-w-3xl mx-auto">
           Modern eszközeinkkel és átgondolt kialakításunkkal biztosítjuk kedvencei számára a legmagasabb színvonalú ellátást
         </p>
 
@@ -56,11 +56,11 @@ export default function Facility() {
                   <div className="bg-brandButton w-14 h-14 rounded-lg flex items-center justify-center">
                       <Icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900">
+                  <h3 className="text-xl font-semibold text-brandHeaderColor">
                     {facility.title}
                   </h3>
                 </div>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-brandColor leading-relaxed">
                   {facility.description}
                 </p>
               </div>

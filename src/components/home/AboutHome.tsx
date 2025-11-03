@@ -53,7 +53,7 @@ export default function AboutHome() {
                                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
                                     <div className="flex items-center gap-3 mb-3">
                                         <stat.icon className="w-8 h-8 text-brandButton" />
-                                        <div className="text-3xl font-bold text-brandHeaderColor">{stat.value}</div>
+                                        <div className="text-2xl font-bold text-brandHeaderColor">{stat.value}</div>
                                     </div>
                                     <div className="text-brandColor">{stat.label}</div>
                                 </div>

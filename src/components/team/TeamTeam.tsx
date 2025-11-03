@@ -80,15 +80,15 @@ export default function TeamTeam() {
   return (
     <section id="bocskaiteam" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-brand to-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-brandHeaderColor mb-4 text-center">
           Csapatunk
         </h2>
-        <p className="text-lg text-gray-600 mb-16 text-center max-w-3xl mx-auto">
+        <p className="text-lg text-brandColor mb-16 text-center max-w-3xl mx-auto">
           Tapasztalt állatorvosok és szakképzett munkatársak, akik szívvel-lélekkel dolgoznak kedvenceiért
         </p>
 
         <div className="mb-20">
-          <h3 className="text-2xl font-semibold text-gray-900 mb-10 flex items-center justify-center gap-3">
+          <h3 className="text-2xl font-semibold text-brandColor mb-10 flex items-center justify-center gap-3">
             <Stethoscope className="w-7 h-7 text-brandButton" />
             Állatorvosaink
           </h3>
@@ -113,15 +113,15 @@ export default function TeamTeam() {
                   </div>
                 </div>
 
-                <h4 className="text-xl font-bold text-gray-900 mb-2 text-center">
+                <h4 className="text-xl font-bold text-brandHeaderColor mb-2 text-center">
                   {doctor.name}
                 </h4>
-                <p className={`text-sm font-medium mb-4 text-center ${doctor.isLeader ? 'text-emerald-700' : 'text-gray-600'
+                <p className={`text-sm font-medium mb-4 text-center ${doctor.isLeader ? 'text-brandButtonHover' : 'text-brandColor'
                   }`}>
                   {doctor.role}
                 </p>
 
-                <div className="space-y-2 text-gray-700">
+                <div className="space-y-2 text-brandColor">
                   <p className="text-sm leading-relaxed">
                     <span className="font-medium">Szakterület:</span> {doctor.specialization}
                   </p>
@@ -132,7 +132,7 @@ export default function TeamTeam() {
         </div>
 
         <div>
-          <h3 className="text-2xl font-semibold text-gray-900 mb-10 flex items-center justify-center gap-3">
+          <h3 className="text-2xl font-semibold text-brandColor mb-10 flex items-center justify-center gap-3">
             <Users className="w-7 h-7 text-brandButton" />
             Munkatársaink
           </h3>
@@ -150,10 +150,10 @@ export default function TeamTeam() {
                     className="w-40 h-40 rounded-full object-cover object-[center_top] ring-2 ring-gray-300 mb-4 group-hover:ring-brandSection group-hover:scale-110 group-hover:-rotate-2 transition-all duration-300"
                   />
                 </div>
-                <h4 className="text-base font-semibold text-gray-900 mb-1">
+                <h4 className="text-base font-semibold text-brandHeaderColor mb-1">
                   {member.name}
                 </h4>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-brandColor">
                   {member.role}
                 </p>
               </div>
@@ -172,7 +172,7 @@ export default function TeamTeam() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex justify-between items-center">
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-2xl font-bold text-brandHeaderColor">
                 {selectedMember.name}
               </h3>
               <button
@@ -190,18 +190,18 @@ export default function TeamTeam() {
                   alt={selectedMember.name}
                   className="w-40 h-40 rounded-full object-cover ring-4 ring-brandButton mb-4"
                 />
-                <p className="text-lg font-medium text-brandButtonHover">
+                <p className="text-lg font-medium text-brandHeaderColor">
                   {selectedMember.role}
                 </p>
                 {selectedMember.specialization && (
-                  <p className="text-sm text-gray-600 mt-1">
+                  <p className="text-sm text-brandHeaderColor mt-1">
                     Szakterület: {selectedMember.specialization}
                   </p>
                 )}
               </div>
 
               <div className="prose prose-gray max-w-none">
-                <p className="text-gray-700 leading-relaxed text-base">
+                <p className="text-brandColor leading-relaxed text-base">
                   {selectedMember.bio}
                 </p>
               </div>

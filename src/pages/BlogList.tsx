@@ -54,7 +54,7 @@ export function BlogList() {
             <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-blue-50 to-gray-50">
                 <div className="text-center">
                     <Loader2 className="w-12 h-12 animate-spin text-blue-600 mx-auto mb-4" />
-                    <p className="text-gray-600 text-lg">Blogok betöltése...</p>
+                    <p className="text-brandHeaderColor text-lg">Blogok betöltése...</p>
                 </div>
             </div>
         );
@@ -65,7 +65,7 @@ export function BlogList() {
             <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-blue-50 to-gray-50">
                 <div className="text-center max-w-md mx-auto px-4">
                     <div className="bg-red-50 border border-red-200 rounded-2xl p-6">
-                        <p className="text-red-600 font-medium mb-2">Hiba a blog bejegyzéseinek betöltése közben! </p>
+                        <p className="text-brandHeaderColor font-medium mb-2">Hiba a blog bejegyzéseinek betöltése közben! </p>
                         <p className="text-red-500 text-sm">{error}</p>
                     </div>
                 </div>
@@ -76,18 +76,18 @@ export function BlogList() {
     return (
         <section id="blogPosts" className="py-20 min-h-screen bg-gradient-to-b from-brand to-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                <header className="text-center mb-16 animate-fadeIn">
-                    <h1 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+                <header className="text-center mb-16 animate-fade-in">
+                    <h1 className="text-3xl font-bold text-brandHeaderColor mb-8 text-center">
                         Blog
                     </h1>
-                    <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-xl sm:text-2xl text-brandColor max-w-3xl mx-auto leading-relaxed">
                         Minden, amit tudni érdemes az állatgyógyászatról és kezelésekről
                     </p>
                 </header>
 
                 {blogs.length === 0 ? (
                     <div className="text-center py-12">
-                        <p className="text-gray-600 text-lg">Jelenleg nincsenek elérhető blog bejegyzések.</p>
+                        <p className="text-brandHeaderColor text-lg">Jelenleg nincsenek elérhető blog bejegyzések.</p>
                     </div>
                 ) : (
                     <>
@@ -106,8 +106,8 @@ export function BlogList() {
                         )}
 
                         <div className="mt-12 text-center">
-                            <p className="text-gray-600">
-                                Összesen <span className="font-semibold text-brandButton">{totalCount}</span> blogbejegyzés
+                            <p className="text-brandHeaderColor">
+                                Összesen <span className="font-semibold text-brandColor">{totalCount}</span> blogbejegyzés
                             </p>
                         </div>
 
