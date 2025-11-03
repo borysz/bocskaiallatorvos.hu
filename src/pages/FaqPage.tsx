@@ -73,7 +73,7 @@ const FAQPage = () => {
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-blue-50 to-gray-50">
         <div className="text-center">
           <Loader2 className="w-12 h-12 animate-spin text-blue-600 mx-auto mb-4" />
-          <p className="text-gray-600 text-lg">GYIk elemek betöltése...</p>
+          <p className="text-brandHeaderColor text-lg">GYIk elemek betöltése...</p>
         </div>
       </div>
     );
@@ -84,7 +84,7 @@ const FAQPage = () => {
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-blue-50 to-gray-50">
         <div className="text-center max-w-md mx-auto px-4">
           <div className="bg-red-50 border border-red-200 rounded-2xl p-6">
-            <p className="text-red-600 font-medium mb-2">Hiba a GYIK bejegyzéseinek betöltése közben! </p>
+            <p className="text-brandHeaderColor font-medium mb-2">Hiba a GYIK bejegyzéseinek betöltése közben! </p>
             <p className="text-red-500 text-sm">{error}</p>
           </div>
         </div>
@@ -95,8 +95,8 @@ const FAQPage = () => {
   return (
     <section id="faq" className="py-20 bg-gradient-to-b from-brand to-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="text-center mb-16">
-          <h1 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+        <div className="text-center mb-16 animate-fade-in">
+          <h1 className="text-3xl font-bold text-brandHeaderColor  mb-8 text-center">
             Gyakran Ismételt Kérdések
           </h1>
         </div>
@@ -107,7 +107,7 @@ const FAQPage = () => {
                 onClick={() => toggle(index)}
                 className="flex justify-between items-center w-full text-left"
               >
-                <span className="text-lg font-medium text-gray-800">
+                <span className="text-lg font-medium text-brandColor">
                   {faq.title.rendered}
                 </span>
                 <span className="text-brandButton text-2xl">

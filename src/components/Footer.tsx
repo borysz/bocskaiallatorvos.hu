@@ -1,4 +1,4 @@
-import { Stethoscope, Facebook, Instagram, Mail } from 'lucide-react';
+import { Facebook, Instagram, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
@@ -8,32 +8,37 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="logo w-8 h-8 bg-cover bg-center"></div>
               <div>
-                <h3 className="text-xl font-bold">Bocskai Állatorvos</h3>
+                <h3 className="text-xl font-bold">Bocskai Állategészségügyi Centrum</h3>
               </div>
             </div>
-            <p className="text-gray-400 leading-relaxed">
-              Professzionális állatorvosi ellátás.
-            </p>
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="logo w-8 h-8 bg-cover bg-center"></div>
+              <div>
+                <p className="text-gray-400 leading-relaxed">
+                  Állatorvosi Rendelő
+                </p>
+              </div>
+            </div>
+
           </div>
 
           <div>
             <h4 className="font-bold mb-4">Gyors linkek</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><Link to="/rolunk" className="hover:text-brandButtonHover transition">Rólunk</Link></li>
-              <li><Link to="/szolgaltatasok" className="hover:text-brandButtonHover transition">Szolgáltatások</Link></li>
-              <li><Link to="/blog" className="hover:text-brandButtonHover transition">Blog</Link></li>
-              <li><Link to="/gyik" className="hover:text-brandButtonHover transition">GYIK</Link></li>
+              <li><Link to="/rolunk" className="hover:text-brandButton transition">Rólunk</Link></li>
+              <li><Link to="/szolgaltatasok" className="hover:text-brandButton transition">Szolgáltatások</Link></li>
+              <li><Link to="/blog" className="hover:text-brandButton transition">Blog</Link></li>
+              <li><Link to="/gyik" className="hover:text-brandButton transition">GYIK</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="font-bold mb-4">Gyors linkek</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><Link to="/arlista" className="hover:text-brandButtonHover transition">Árlista</Link></li>
-              <li><Link to="/galeria" className="hover:text-brandButtonHover transition">Galéria</Link></li>
-              <li><Link to="/kapcsolat" className="hover:text-brandButtonHover transition">Kapcsolat</Link></li>
-              <li><Link to="/palyazatok/ginop-2017-01597" className="hover:text-brandButtonHover transition">Pályázat</Link></li>
+              <li><Link to="/arlista" className="hover:text-brandButton transition">Árlista</Link></li>
+              <li><Link to="/galeria" className="hover:text-brandButton transition">Galéria</Link></li>
+              <li><Link to="/kapcsolat" className="hover:text-brandButton transition">Kapcsolat</Link></li>
+              <li><Link to="/palyazatok/ginop-2017-01597" className="hover:text-brandButton transition">Pályázat</Link></li>
             </ul>
           </div>
 
@@ -42,7 +47,7 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li>4241 Bocskaikert</li>
               <li>Debreceni út 25.</li>
-              <li><a href="tel:+36302390940" className="hover:text-brandButtonHover transition">+36 30 239 0940</a></li>
+              <li><a href="tel:+36302390940" className="hover:text-brandButton transition">+36 30 239 0940</a></li>
               <li>info@bocskaiallatorvos.hu</li>
             </ul>
           </div>
@@ -50,13 +55,13 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">Kövessen minket</h4>
             <div className="flex space-x-4">
-              <a href="#" className="bg-gray-800 hover:bg-teal-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+              <a href="https://www.facebook.com/bocskaiallatorvos" target="_blank" className="bg-gray-800 hover:bg-brandButtonHover w-10 h-10 rounded-full flex items-center justify-center transition">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="bg-gray-800 hover:bg-teal-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+              <a href="https://www.instagram.com/bocskaiallatorvos/" target="_blank" className="bg-gray-800 hover:bg-brandButtonHover w-10 h-10 rounded-full flex items-center justify-center transition">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="bg-gray-800 hover:bg-teal-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+              <a href="mailto:info@bocskaallatorvos.hu?subject=Weboldalról történő megkeresés" className="bg-gray-800 hover:bg-brandButtonHover w-10 h-10 rounded-full flex items-center justify-center transition">
                 <Mail className="w-5 h-5" />
               </a>
             </div>

@@ -28,7 +28,7 @@ export function BlogCard({ post, index }: BlogCardProps) {
       </div>
 
       <div className="p-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-brandButton transition-colors duration-300 line-clamp-2">
+        <h2 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-brandButtonHover transition-colors duration-300 line-clamp-2">
           {post.title.rendered}
         </h2>
 
