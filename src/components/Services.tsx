@@ -1,4 +1,5 @@
 import { Stethoscope, Syringe, Scissors, HeartPulse, Shield, Pill } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const services = [
   {
@@ -16,7 +17,7 @@ const services = [
     title: 'Sebészeti beavatkozások',
     description: 'Modern eszközökkel felszerelt műtő, ivartalanítás és egyéb sebészeti eljárások.',
   },
-  {
+  /*{
     icon: HeartPulse,
     title: 'Sürgősségi ellátás',
     description: 'Azonnali segítség sürgős esetekben, gyors diagnózis és hatékony kezelés.',
@@ -30,6 +31,21 @@ const services = [
     icon: Pill,
     title: 'Gyógyszerkiadás',
     description: 'Helyben elérhető gyógyszerek és táplálék-kiegészítők kedvence számára.',
+  },*/
+  {
+    icon: Pill,
+    title: 'Fogászati beavatkozás',
+    description: 'Fogászati röntgennel felszerelt Fogorvosi szakvizsgával rendelkező állatorvos kolléga által végzett beavatkozások.',
+  },
+  {
+    icon: Shield,
+    title: 'Bőrgyógyászati vizsgálat',
+    description: 'Kelet-Magyarország egyetlen szakvizsgával rendelkező bőrgyógyásza által.',
+  },
+  {
+    icon: HeartPulse,
+    title: 'Kardiológiai vizsgálat',
+    description: 'Kiemelt figyelmet fordítunk a kardiológiai betegségek diagnosztizálására, kezelésére és a szívférgesség prevencióra!',
   },
 ];
 
@@ -59,6 +75,11 @@ export default function Services() {
               <p className="text-brandColor leading-relaxed">{service.description}</p>
             </div>
           ))}
+        </div>
+
+        <div className="pt-10 flex justify-center">
+          <Link to="/szolgaltatasok" 
+          className="text-brandButton hover:text-brandButtonHover hover:animate-shake transition">Minden szolgáltatás &#8594;</Link>
         </div>
       </div>
     </section>
