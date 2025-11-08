@@ -2,14 +2,14 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 import { WPPage, WPMedia, WPPosts, WPPartners, WPGallery } from "../interfaces/WordpressInterfaces";
 
 interface CmsContextType {
-    pages: WPPage[];
-    media: WPMedia[];
-    posts: WPPosts[];
-    partners: WPPartners[];
-    gallery: WPGallery[];
-    loading: boolean;
-    error: string | null;
-    refresh: () => void;
+  pages: WPPage[];
+  media: WPMedia[];
+  posts: WPPosts[];
+  partners: WPPartners[];
+  gallery: WPGallery[];
+  loading: boolean;
+  error: string | null;
+  refresh: () => void;
 }
 
 const CmsContext = createContext<CmsContextType | undefined>(undefined);
@@ -23,7 +23,7 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [ready, setReady] = useState(false); 
+  const [ready, setReady] = useState(false);
 
   const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -39,6 +39,9 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
           fetch(`${apiUrl}/posts?_fields=id,date_gmt,title,excerpt,content,slug,categories,tag_names,featured_image_url,menu_order&orderby=menu_order&order=asc`),
           fetch(`${apiUrl}/partners`),
           fetch(`${apiUrl}/galleries`),
+          /*Promise.resolve({ json: async () => ([]) }),
+          Promise.resolve({ json: async () => ([]) }),
+          Promise.resolve({ json: async () => ([]) }),*/
         ]);
 
         const [pagesData, mediaData, postsData, partnersData, galleriesData] = await Promise.all([
@@ -88,7 +91,7 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         </div>
       </div>
     );
-  }
+  } 
 
   return (
     <CmsContext.Provider value={{ pages, media, posts, partners, gallery, loading, error, refresh: () => window.location.reload() }}>

@@ -15,10 +15,12 @@ import PricelistPage from './pages/PricelistPage';
 import GalleryPage from './pages/GalleryPage';
 import { BlogList } from './pages/BlogList';
 import { BlogDetail } from './pages/BlogDetail';
+import MetaFetcher from './context/MetaFetcher';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter>f
+      <MetaFetcher />
       <ScrollToTop />
       <ScrollToHash />
       <div className="min-h-screen bg-white flex flex-col">
