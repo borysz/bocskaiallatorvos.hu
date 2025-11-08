@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useEffect, useState, useRef } from "react";
+//import { useLocation } from "react-router-dom";
 
 interface MetaAttributes {
     title?: string;
@@ -18,14 +18,31 @@ interface MetaAttributes {
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
+const originalPushState = window.history.pushState;
+window.history.pushState = function (...args) {
+    originalPushState.apply(this, args);
+    window.dispatchEvent(new Event("urlchange"));
+};
+
+const originalReplaceState = window.history.replaceState;
+window.history.replaceState = function (...args) {
+    originalReplaceState.apply(this, args);
+    window.dispatchEvent(new Event("urlchange"));
+};
+
 const MetaFetcher = () => {
-    const location = useLocation();
+    //const location = useLocation();
     const [meta, setMeta] = useState<MetaAttributes>({});
+    const lastSlug = useRef<string>("");
 
     useEffect(() => {
         const fetchMeta = async () => {
             try {
-                const slug = location.pathname.replace(/^\/+|\/+$/g, "") || "fooldal";
+                //const slug = location.pathname.replace(/^\/+|\/+$/g, "") || "fooldal";
+                const slug = window.location.pathname.replace(/^\/+|\/+$/g, "") || "fooldal";
+                if (slug === lastSlug.current) return; 
+                lastSlug.current = slug;
+
                 const res = await fetch(
                     `${apiUrl}/pages?slug=${slug}&_embed`
                 );
@@ -53,7 +70,16 @@ const MetaFetcher = () => {
             }
         };
         fetchMeta();
-    }, [location]);
+
+        fetchMeta();
+        window.addEventListener("popstate", fetchMeta);
+        window.addEventListener("urlchange", fetchMeta);
+
+        return () => {
+            window.removeEventListener("popstate", fetchMeta);
+            window.removeEventListener("urlchange", fetchMeta);
+        };
+    }, []);
 
     useEffect(() => {
 
