@@ -72,8 +72,8 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="space-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 transition-all animate-slide-up duration-500 ">
+          <div className="space-y-8 pb-4 md:pr-8 md:pb-0">
             <div className="bg-white p-6 rounded-xl shadow-lg flex items-start space-x-4">
               <div className="bg-brandButton w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
                 <MapPin className="w-6 h-6 text-white" />
