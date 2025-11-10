@@ -6,7 +6,7 @@ export default function TeamHero() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
           <div className="flex justify-center mb-6">
-            <div className="bg-brandButton p-4 rounded-full">
+            <div className="bg-brandButton p-4 rounded-full animate-pulse-soft">
               <Heart className="w-12 h-12 text-white" fill="white" />
             </div>
           </div>

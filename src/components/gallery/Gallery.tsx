@@ -35,8 +35,8 @@ export default function Gallery() {
     }
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
-            <div className="max-w-7xl mx-auto px-4 py-16">
+        <div className="py-20 min-h-screen bg-gradient-to-br from-brand to-white">
+            <div className="container max-w-7xl mx-auto px-4 py-12">
                 <div className="text-center mb-16 animate-fade-in">
                     <h1 className="text-4xl font-bold text-brandHeaderColor mb-3 flex items-center justify-center gap-3">
                         Galéria
