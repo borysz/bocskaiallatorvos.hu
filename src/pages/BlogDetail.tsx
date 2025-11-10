@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { MetaTags } from '../components/blog/MetaTags';
+import { MetaTags } from '../context/MetaTags';
 import { Link } from '../components/blog/Link';
 import { ArrowLeft, Calendar, Clock, Loader2 } from 'lucide-react';
 import { WPPosts } from '../interfaces/WordpressInterfaces';
@@ -81,8 +81,8 @@ export function BlogDetail() {
     return (
         <>
             <MetaTags
-                title={post.title.rendered}
-                description={post.excerpt.rendered}
+                title={"Bocskai Állategészségügyi Centrum - "+post.title.rendered}
+                description={post.excerpt.rendered.replace(/<[^>]*>/g, '')}
                 ogImage={post.featured_image_url}
                 url={currentUrl}
             />

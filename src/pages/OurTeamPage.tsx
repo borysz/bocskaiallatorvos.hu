@@ -5,7 +5,7 @@ import TeamTeam from '../components/team/TeamTeam';
 
 export default function OurTeamPage() {
     return (
-    <div className="pt-20">
+    <div className="">
       <TeamHero />
       <TeamAbout />
       <TeamTeam />

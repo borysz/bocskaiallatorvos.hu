@@ -14,13 +14,13 @@ export default function TeamAbout() {
           </div>
 
           <p className="text-lg">
-            Rendelőnk <strong className="text-gray-900">2019-ben nyitotta meg kapuit Bocskaikerten</strong>, mindössze 8 km-re Debrecentől.
-            Fő profilunk a <strong className="text-gray-900">kutyák és macskák állatorvosi ellátása</strong>, amelyet empátiával és folyamatos szakmai fejlődéssel
+            Rendelőnk <strong className="text-brandHeaderColor">2019-ben nyitotta meg kapuit Bocskaikerten</strong>, mindössze 8 km-re Debrecentől.
+            Fő profilunk a <strong className="text-brandHeaderColor">kutyák és macskák állatorvosi ellátása</strong>, amelyet empátiával és folyamatos szakmai fejlődéssel
             végzünk.
           </p>
 
           <p className="text-lg">
-            Küldetésünk, hogy <strong className="text-gray-900">átfogó állategészségügyi szolgáltatást</strong> nyújtsunk, amely magában foglalja
+            Küldetésünk, hogy <strong className="text-brandHeaderColor">átfogó állategészségügyi szolgáltatást</strong> nyújtsunk, amely magában foglalja
             a megelőzést, a diagnosztikát és a kezelést egyaránt. Csapatunk elkötelezett amellett, hogy kedvencei a
             legjobb ellátásban részesüljenek, legyen szó rutinvizsgálatról vagy bonyolultabb egészségügyi problémáról.
           </p>

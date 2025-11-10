@@ -107,7 +107,7 @@ export default function TeamTeam() {
                     <img
                       src={doctor.image}
                       alt={doctor.name}
-                      className={`w-64 h-64 rounded-full object-cover object-[center_top] transition-all duration-300 hover:scale-110 hover:rotate-3 ${doctor.isLeader ? 'ring-4 ring-emerald-400' : 'ring-2 ring-gray-300'
+                      className={`w-64 h-64 rounded-full object-cover object-[center_top] transition-all duration-300 hover:scale-110 hover:rotate-3 ${doctor.isLeader ? 'ring-4 ring-brandButton' : 'ring-2 ring-gray-300'
                         }`}
                     />
                   </div>
@@ -188,7 +188,7 @@ export default function TeamTeam() {
                 <img
                   src={selectedMember.image}
                   alt={selectedMember.name}
-                  className="w-40 h-40 rounded-full object-cover ring-4 ring-brandButton mb-4"
+                  className="w-40 h-40 rounded-full object-cover object-[center_top]  ring-4 ring-brandButton mb-4"
                 />
                 <p className="text-lg font-medium text-brandHeaderColor">
                   {selectedMember.role}
