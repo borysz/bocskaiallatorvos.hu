@@ -24,8 +24,7 @@ export default function ServicesPage() {
     try {
       const filteredPost = posts.filter(item => item.categories.includes(3));
    
-      //if (loading) return <p>Betöltés...</p>;
-      if (error) return <p>Hiba: {error}</p>;
+      if (error) throw error;
    
       const from = (currentPage -1) * ITEMS_PER_PAGE;
       const to = from + ITEMS_PER_PAGE;
@@ -53,22 +52,22 @@ export default function ServicesPage() {
   return (
     <section id="servicesList" className="py-20 bg-gradient-to-b from-brand to-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="text-center mb-16">
-          <h1 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+        <div className="text-center mb-16 animate-fade-in">
+          <h1 className="text-3xl font-bold text-brandHeaderColor mb-8 text-center">
             Állatorvosi Szolgáltatások
           </h1>
-          <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl sm:text-2xl text-brandColor max-w-3xl mx-auto leading-relaxed">
            Szakszerű egészségügyi ellátás kedvencei számára
           </p>
         </div>
         {loading ? (
           <div className="flex flex-col items-center justify-center py-20">
             <Loader2 className="w-12 h-12 text-emerald-600 animate-spin" />
-            <p className="mt-4 text-gray-600">Szolgáltatások betöltése...</p>
+            <p className="mt-4 text-brandHeaderColor">Szolgáltatások betöltése...</p>
           </div>
         ) : services.length === 0 ? (
           <div className="text-center py-20">
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-brandHeaderColor">
               Jelenleg nincsenek elérhető szolgáltatások.
             </p>
           </div>
@@ -89,8 +88,8 @@ export default function ServicesPage() {
             )}
 
             <div className="mt-12 text-center">
-              <p className="text-gray-600">
-                Összesen <span className="font-semibold text-brandButton">{totalCount}</span> szolgáltatás
+              <p className="text-brandHeaderColor">
+                Összesen <span className="font-semibold text-brandColor">{totalCount}</span> szolgáltatás
               </p>
             </div>
           </>

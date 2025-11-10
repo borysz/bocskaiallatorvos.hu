@@ -1,4 +1,5 @@
 import { Stethoscope, Syringe, Scissors, HeartPulse, Shield, Pill } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const services = [
   {
@@ -16,7 +17,7 @@ const services = [
     title: 'Sebészeti beavatkozások',
     description: 'Modern eszközökkel felszerelt műtő, ivartalanítás és egyéb sebészeti eljárások.',
   },
-  {
+  /*{
     icon: HeartPulse,
     title: 'Sürgősségi ellátás',
     description: 'Azonnali segítség sürgős esetekben, gyors diagnózis és hatékony kezelés.',
@@ -30,6 +31,21 @@ const services = [
     icon: Pill,
     title: 'Gyógyszerkiadás',
     description: 'Helyben elérhető gyógyszerek és táplálék-kiegészítők kedvence számára.',
+  },*/
+  {
+    icon: Pill,
+    title: 'Fogászati beavatkozás',
+    description: 'Fogászati röntgennel felszerelt Fogorvosi szakvizsgával rendelkező állatorvos kolléga által végzett beavatkozások.',
+  },
+  {
+    icon: Shield,
+    title: 'Bőrgyógyászati vizsgálat',
+    description: 'Kelet-Magyarország egyetlen szakvizsgával rendelkező bőrgyógyásza által.',
+  },
+  {
+    icon: HeartPulse,
+    title: 'Kardiológiai vizsgálat',
+    description: 'Kiemelt figyelmet fordítunk a kardiológiai betegségek diagnosztizálására, kezelésére és a szívférgesség prevencióra!',
   },
 ];
 
@@ -38,8 +54,8 @@ export default function Services() {
     <section id="services" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">Szolgáltatásaink</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-brandHeaderColor  mb-4">Szolgáltatásaink</h2>
+          <p className="text-lg text-brandColor  max-w-2xl mx-auto">
             Komplett állatorvosi ellátást biztosítunk kedvenceinek, a megelőzéstől a gyógyításig.
           </p>
         </div>
@@ -50,13 +66,20 @@ export default function Services() {
               key={index}
               className="bg-gradient-to-br from-brand to-stone-50 p-8 rounded-xl hover:shadow-xl transition group"
             >
-              <div className="bg-brandButton w-14 h-14 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
-                <service.icon className="w-7 h-7 text-white" />
+              <div className="flex items-center gap-4 mb-4">
+                <div className="bg-brandButton w-14 h-14 rounded-lg flex items-center justify-center group-hover:scale-110 transition">
+                  <service.icon className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-brandHeaderColor">{service.title}</h3>
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">{service.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{service.description}</p>
+              <p className="text-brandColor leading-relaxed">{service.description}</p>
             </div>
           ))}
+        </div>
+
+        <div className="pt-10 flex justify-center">
+          <Link to="/szolgaltatasok" 
+          className="text-brandButton hover:text-brandButtonHover hover:animate-shake transition">Minden szolgáltatás &#8594;</Link>
         </div>
       </div>
     </section>

@@ -14,7 +14,7 @@ const PartnersSlider = () => {
     return (
         <section className="py-20 bg-white">
             <div className="container mx-auto px-4 max-w-screen-xl text-center">
-                <h2 className="text-4xl font-extrabold text-gray-800 mb-12 tracking-tight">
+                <h2 className="text-4xl font-extrabold text-brandHeaderColor mb-12 tracking-tight">
                     Partnereink
                 </h2>
 

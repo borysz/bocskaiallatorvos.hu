@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react';
 import { PriceList } from '../interfaces/PriceListInterface';
-import { ChevronDown, ChevronUp, Wallet, Calendar } from 'lucide-react';
+import { ChevronDown, ChevronUp, Calendar } from 'lucide-react';
 import * as LucideIcons from "lucide-react";
 
 const icons = LucideIcons as unknown as Record<string, React.ComponentType<any>>;
+const apiUrl = import.meta.env.VITE_API_URL;
 
 function Pricelists() {
     const [expandedTables, setExpandedTables] = useState<Set<string>>(new Set());
     const [priceLists, setData] = useState<PriceList[]>([]);
 
     useEffect(() => {
-        fetch("https://api.bocskaiallatorvos.hu/wp-json/custom/v1/prices")
+        fetch(`${apiUrl}/prices`)
             .then((res) => res.json())
             .then((json: PriceList[]) => {
                 setData(json);
@@ -34,13 +35,13 @@ function Pricelists() {
     };
 
     return (
-        <section className="min-h-screen bg-gradient-to-br from-brand via-white to-white py-12 px-4">
-            <div className="max-w-5xl mx-auto space-y-6">
+        <section className="min-h-screen bg-gradient-to-br from-brand via-white to-white py-20 px-4">
+            <div className="container max-w-5xl mx-auto space-y-6 py-12">
                 <div className="text-center mb-12 animate-fade-in">
-                    <h1 className="text-4xl font-bold text-slate-800 mb-3 flex items-center justify-center gap-3">
+                    <h1 className="text-4xl font-bold text-brandHeaderColor mb-3 flex items-center justify-center gap-3">
                         Árlisták
                     </h1>
-                    <p className="text-slate-600 text-lg">Szolgáltatásaink áttekintése</p>
+                    <p className="text-brandColor text-lg">Szolgáltatásaink áttekintése</p>
                 </div>
 
                 {priceLists.map((priceList, index) => {
@@ -66,8 +67,8 @@ function Pricelists() {
                                             )}
                                         </div>
                                         <div>
-                                            <h2 className="text-2xl font-bold text-slate-800 mb-1">{priceList.title}</h2>
-                                            <div className="flex items-center gap-2 text-slate-600 text-sm">
+                                            <h2 className="text-2xl font-bold text-brandHeaderColor mb-1">{priceList.title}</h2>
+                                            <div className="flex items-center gap-2 text-brandColor text-sm">
                                                 <Calendar className="w-4 h-4" />
                                                 <span>Érvényes: {priceList.valid_from}</span>
                                             </div>

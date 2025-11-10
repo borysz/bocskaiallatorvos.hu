@@ -35,13 +35,13 @@ export default function Gallery() {
     }
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
-            <div className="max-w-7xl mx-auto px-4 py-16">
+        <div className="py-20 min-h-screen bg-gradient-to-br from-brand to-white">
+            <div className="container max-w-7xl mx-auto px-4 py-12">
                 <div className="text-center mb-16 animate-fade-in">
-                    <h1 className="text-4xl font-bold text-slate-800 mb-3 flex items-center justify-center gap-3">
+                    <h1 className="text-4xl font-bold text-brandHeaderColor mb-3 flex items-center justify-center gap-3">
                         Galéria
                     </h1>
-                    <p className="text-slate-600 text-lg">
+                    <p className="text-brandColor text-lg">
                         Pillants be rendelőnk mindennapjaiba! 
                     </p>
                 </div>
@@ -70,7 +70,7 @@ export default function Gallery() {
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
 
                                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform transition-transform duration-300 group-hover:translate-y-0">
-                                    <h3 className="text-3xl font-bold mb-2 group-hover:text-blue-300 transition-colors duration-300">
+                                    <h3 className="text-3xl font-bold mb-2 group-hover:text-brandButtonHover transition-colors duration-300">
                                         {group.name}
                                     </h3>
                                     <p className="text-slate-200 mb-4 opacity-90">

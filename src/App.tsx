@@ -1,21 +1,11 @@
-import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
-/*import Hero from './components/Hero';
-import Services from './components/Services';
-import About from './components/About';
-import Pricing from './components/Pricing';
-import Reviews from './components/Reviews';
-import Contact from './components/Contact'; */
 import Footer from './components/Footer';
-import AdminPanel from './components/AdminPanel';
 import ContactPage from './pages/ContactPage';
 import FAQPage from './pages/FaqPage';
 import { ScrollToHash } from './components/ScrollToHash';
-import BlogList from './pages/BlogList';
-import BlogDetail from './pages/BlogDetail';
 import OurTeamPage from './pages/OurTeamPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
 import ScrollToTop from './components/ScrollToTop';
@@ -23,16 +13,12 @@ import SzechenyiBanner from './components/SzechenyiBanner';
 import PalyazatokPage from './pages/PalyazatokPage';
 import PricelistPage from './pages/PricelistPage';
 import GalleryPage from './pages/GalleryPage';
+import { BlogList } from './pages/BlogList';
+import { BlogDetail } from './pages/BlogDetail';
 
 function App() {
-  const [isAdminMode, setIsAdminMode] = useState(false);
-
-  if (isAdminMode) {
-    return <AdminPanel onExit={() => setIsAdminMode(false)} />;
-  }
-
   return (
-    <BrowserRouter>
+    <BrowserRouter>f
       <ScrollToTop />
       <ScrollToHash />
       <div className="min-h-screen bg-white flex flex-col">
@@ -56,24 +42,6 @@ function App() {
       </div>
       <SzechenyiBanner />
     </BrowserRouter>
-
-    /*
-    <Route path="/rolunk" element={<AboutPage />} />
-    <Route path="/arlista" element={<PricingPage />} />
-    <Route path="/velemenyek" element={<ReviewsPage />} />
-    <Route path="/kapcsolat" element={<ContactPage />} />
-    */
-
-    /*<div className="min-h-screen bg-white">
-      <Header onAdminClick={() => setIsAdminMode(true)} />
-      <Hero />
-      <Services />
-      <About />
-      <Pricing />
-      <Reviews />
-      <Contact />
-      <Footer />
-    </div>*/
   );
 }
 
