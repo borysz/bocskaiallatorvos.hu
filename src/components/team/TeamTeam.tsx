@@ -191,13 +191,13 @@ export default function TeamTeam({ sectionTitle, doctorsTitle, doctorsList, coll
                 </p>
                 {selectedMember.meta?.szakterulet?.[0] && (
                   <p className="text-sm text-brandHeaderColor mt-1">
-                    Szakterület: {selectedMember.meta?.szakterulet?.[0]}
+                    <span className="font-medium">Szakterület:</span> {selectedMember.meta?.szakterulet?.[0]}
                   </p>
                 )}
               </div>
 
               <div className="prose prose-gray max-w-none">
-                <div className="text-brandColor leading-relaxed text-base" 
+                <div className="text-brandColor leading-relaxed text-base member-text" 
                   dangerouslySetInnerHTML={{ __html: selectedMember.content.rendered }} />
               </div>
             </div>

@@ -313,3 +313,7 @@
     animation: shake 0.8s ease-in-out;
   }
 }
+
+#bocskaiteam .member-text p {
+  margin-bottom: 1rem;
+}
