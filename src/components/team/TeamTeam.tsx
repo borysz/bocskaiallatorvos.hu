@@ -90,7 +90,7 @@ export default function TeamTeam({ sectionTitle, doctorsTitle, doctorsList, coll
               <div
                 key={index}
                 onClick={() => setSelectedMember(doctor)}
-                className={`bg-gradient-to-br ${doctor.meta?.isLeader?.[0]
+                className={`bg-gradient-to-br ${doctor.meta?.isLeader?.[0] == "1"
                   ? 'from-emerald-50 to-sky-50 border-2 border-emerald-200'
                   : 'from-brand to-white border border-gray-200'
                   } p-8 rounded-xl shadow-sm hover:shadow-lg transition-all cursor-pointer`}
@@ -101,7 +101,7 @@ export default function TeamTeam({ sectionTitle, doctorsTitle, doctorsList, coll
                     <img
                       src={getImageUrl(media ?? [], doctor.featured_media).src}
                       alt={getImageUrl(media ?? [], doctor.featured_media).alt}
-                      className={`w-64 h-64 rounded-full object-cover object-[center_top] transition-all duration-300 hover:scale-110 hover:rotate-3 ${doctor.meta?.isLeader?.[0] ? 'ring-4 ring-brandButton' : 'ring-2 ring-gray-300'
+                      className={`w-64 h-64 rounded-full object-cover object-[center_top] transition-all duration-300 hover:scale-110 hover:rotate-3 ${doctor.meta?.isLeader?.[0] == "1" ? 'ring-4 ring-brandButton' : 'ring-2 ring-gray-300'
                         }`}
                     />
                   </div>
@@ -110,7 +110,7 @@ export default function TeamTeam({ sectionTitle, doctorsTitle, doctorsList, coll
                 <h4 className="text-xl font-bold text-brandHeaderColor mb-2 text-center">
                   {doctor.title?.rendered}
                 </h4>
-                <p className={`text-sm font-medium mb-4 text-center ${doctor.meta?.isLeader?.[0] ? 'text-brandButtonHover' : 'text-brandColor'
+                <p className={`text-sm font-medium mb-4 text-center ${doctor.meta?.isLeader?.[0] == "1"? 'text-brandButtonHover' : 'text-brandColor'
                   }`}>
                   {doctor.meta?.titulus?.[0]}
                 </p>
