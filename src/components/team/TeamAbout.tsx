@@ -1,35 +1,33 @@
-export default function TeamAbout() {
+import { WPPage } from "../../interfaces/WordpressInterfaces";
+
+type TeamAboutProps = {
+  content?: WPPage;
+};
+
+export default function TeamAbout({ content }: TeamAboutProps) {
+
+  const modifiedHtml = content?.content.rendered
+    .replace(
+      /<p([^>]*)>/g,
+      (match, attrs) =>
+        `<p${attrs.replace(/\sclass="[^"]*"/g, "")} class="text-lg">`
+    );
+
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold text-brandColor mb-12 text-center">
-          Rólunk
+          {content?.title.rendered}
         </h2>
 
-        <div className="space-y-8 text-brandColor leading-relaxed">
-          <div className="bg-brandSection border-l-4 border-brandButton p-6 rounded-r-lg">
-            <p className="text-lg sm:text-xl font-medium text-gray-900 mb-3">
-              "A cél az volt, hogy a lehető legszélesebb körű ellátást nyújtsuk a helyi állatgazdáknak."
-            </p>
-          </div>
-
-          <p className="text-lg">
-            Rendelőnk <strong className="text-brandHeaderColor">2019-ben nyitotta meg kapuit Bocskaikerten</strong>, mindössze 8 km-re Debrecentől.
-            Fő profilunk a <strong className="text-brandHeaderColor">kutyák és macskák állatorvosi ellátása</strong>, amelyet empátiával és folyamatos szakmai fejlődéssel
-            végzünk.
-          </p>
-
-          <p className="text-lg">
-            Küldetésünk, hogy <strong className="text-brandHeaderColor">átfogó állategészségügyi szolgáltatást</strong> nyújtsunk, amely magában foglalja
-            a megelőzést, a diagnosztikát és a kezelést egyaránt. Csapatunk elkötelezett amellett, hogy kedvencei a
-            legjobb ellátásban részesüljenek, legyen szó rutinvizsgálatról vagy bonyolultabb egészségügyi problémáról.
-          </p>
-
-          <p className="text-lg">
-            Számunkra minden állat egyedi, és mindegyik megérdemli a személyre szabott, gondos ellátást.
-            Szakmai tudásunkat folyamatosan bővítjük, hogy mindig a legkorszerűbb módszerekkel dolgozzunk.
+        <div className="bg-brandSection border-l-4 border-brandButton p-6 rounded-r-lg">
+          <p className="text-lg sm:text-xl font-medium text-gray-900 mb-3">
+            {content?.meta?.rolunk_idezet}
           </p>
         </div>
+
+        <div className="space-y-8 mt-12 text-brandColor leading-relaxed text-lg"
+          dangerouslySetInnerHTML={{ __html: modifiedHtml ?? "" }} />
       </div>
     </section>
   );
