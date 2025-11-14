@@ -1,6 +1,22 @@
 import { Heart } from 'lucide-react';
 
-export default function TeamHero() {
+type TeamHeroProps = {
+  content?: string;
+};
+
+export default function TeamHero({ content }: TeamHeroProps) {
+
+  const modifiedHtml = content?.replace(
+    /<h1([^>]*)>/g,
+    (match, attrs) =>
+      `<h1${attrs.replace(/\sclass="[^"]*"/g, "")} class="text-4xl sm:text-5xl lg:text-6xl font-bold text-brandHeaderColor mb-6 tracking-tight">`
+  )
+  .replace(
+    /<p([^>]*)>/g,
+    (match, attrs) =>
+      `<p${attrs.replace(/\sclass="[^"]*"/g, "")} class="text-xl sm:text-2xl text-brandColor max-w-3xl mx-auto leading-relaxed">`
+  );
+
   return (
     <section className="relative bg-gradient-to-br from-brand via-white to-white pt-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -10,12 +26,7 @@ export default function TeamHero() {
               <Heart className="w-12 h-12 text-white" fill="white" />
             </div>
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-brandHeaderColor mb-6 tracking-tight">
-            Bocskai Állategészségügyi Centrum
-          </h1>
-          <p className="text-xl sm:text-2xl text-brandColor max-w-3xl mx-auto leading-relaxed">
-            Szívvel-lélekkel a kedvenceiért - professzionális állatorvosi ellátás 2019 óta
-          </p>
+          <div dangerouslySetInnerHTML={{ __html: modifiedHtml ?? "" }} />
         </div>
       </div>
     </section>
