@@ -17,11 +17,7 @@ export default function NotFound() {
 
       {/* Játékos kis animált macska */}
       <div className="mt-10">
-        <img
-          src="src/images/404.png"
-          alt="Bocskai Állategészségügyi Centrum"
-          className="w-32 h-32 animate-bounce-slow"
-        />
+        <div className="image404 w-32 h-32 animate-bounce-slow bg-cover bg-center"></div>        
       </div>
 
       <style>
