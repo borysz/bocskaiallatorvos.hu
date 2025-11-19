@@ -1,15 +1,20 @@
 export interface WPPage {
+    id: number;
+    parent: number;
     menu_order: number;
     slug: string;
     title: { rendered: string };
     content: { rendered: string };
+    featured_media: number;
     meta?: {
         [key: string]: string[] | undefined;
     };
 }
 
 export interface WPMedia {
+    id: number;
     slug: string;
+    alt_text: string;
     guid: { rendered: string };
     caption: { rendered: string };
 }

@@ -1,35 +1,9 @@
-import { Stethoscope, Users, X } from 'lucide-react';
+import { Users, X } from 'lucide-react';
 import { useState } from 'react';
+import { WPMedia, WPPage } from '../../interfaces/WordpressInterfaces';
+import * as LucideIcons from "lucide-react";
 
-const doctors = [
-  {
-    name: 'Dr. Fekete Zoltán',
-    role: 'Rendelővezető',
-    graduation: '2010',
-    specialization: 'Kistállat belgyógyászat és lágyszöveti sebészet',
-    isLeader: true,
-    image: 'https://bocskaiallatorvos.hu/wp-content/uploads/2022/08/BIP_5998-1-scaled.jpg',
-    bio: '2010-ben végeztem a budapesti Szent István Egyetem Állatorvos-tudományi Karán. Végzés után a debreceni Jupet Nagyerdei Állatorvosi Rendelőben kezdtem dolgozni. 2010 őszétől 2019 decemberéig a Nyíregyházi Oktató Állatkórházban dolgoztam klinikus állatorvosként. Ezen a nagyforgalmú klinikán eltöltött éveim alatt lehetőségem volt elmélyíteni tudásom a kutyák és macskák belgyógyászatában és lágyszervi sebészetében. Alkalmam volt a különböző képalkotó eljárások megismerésére és ezeken a területeken jelentős tapasztalatot is szereztem. Posztgraduális képzés keretében endoszkópos, ultrahangos és plasztikai sebészeti workshop-okon is részt vettem.Hosszú tervezgetés után 2019. szeptemberében nyitottuk meg a Bocskai Állategészségügyi Centrumot és azóta már kizárólag itt folytatom a szakmai munkát. 2021-ben elvégeztem a Magyar Állatorvosi Kamara Praxisvezető képzését. Elsődlegesen a kisállatok belgyógyászati betegségei, a kardiológia és a gasztroenterológia a fő érdeklődési területem.'
-  },
-  {
-    name: 'Dr. Kuczmog Zita',
-    role: 'Állatorvos',
-    graduation: '2015',
-    specialization: 'Bőrgyógyászat, onkológia, külső hallójárati gyulladások',
-    isLeader: false,
-    image: 'https://bocskaiallatorvos.hu/wp-content/uploads/2024/10/BIP_5989-1-scaled-1.jpg',
-    bio: '2015-ben végeztem állatorvos-doktorként a Szent István Egyetem Állatorvostudományi Karán, majd 5 évig egy nagyforgalmú nyíregyházi állatorvosi rendelőben dolgoztam. 2020 óta a Bocskai Állategészségügyi Centrum csapatának tagja vagyok, itt a napi általános betegellátás mellett főleg bőrgyógyászati kivizsgálásokkal és kezelésekkel foglalkozom. Fő érdeklődési területem a bőrgyógyászat, az onkológia és a hallójárat gyulladások. A bőrgyógyászat keretein belül napi szinten végzek citológiai vizsgálatokat, látok el allergiás, daganatos, fülgyulladásos, valamint autoimmun betegeket. A Magyar Bőrgyógyász Állatorvosok Egyesületének 2020 óta pártoló, 2022 novembere óta pedig rendes, vizsgázott tagja vagyok, így a kelet-magyarországi régióban egyedüliként jogosultságot szereztem állatorvosi bőrgyógyászati szakrendelés tartására. Rendszeresen rész veszek – előadóként is – bőrgyógyászati témájú szakmai továbbképzéseken és journal clubokon, több cikkem jelent meg bőrgyógyászati témában hazai állatorvosi lapokban. Többször részt vettem az Európai Állatorvosi Bőrgyógyászati Kongresszuson (ECVD-ESVD 2022. Portó, 2023. Göteborg). Kiemelten fontosnak tartom a daganatos betegek mielőbbi szakszerű diagnózisát és ellátását, terveim között szerepel onkológiai ismereteim bővítése és elmélyítése.'
-  },
-  {
-    name: 'Dr. Balogh-Bakos Nóra',
-    role: 'Állatorvos',
-    graduation: '2010',
-    specialization: 'Kutya és macska fogászat, szájüregi betegségek',
-    isLeader: false,
-    image: 'https://bocskaiallatorvos.hu/wp-content/uploads/2024/11/dr-balogh-1.jpg',
-    bio: '2010-ben végeztem a Szent István Egyetem Állatorvos-tudományi Karán állatorvos-doktorként. A végzést követően több mint tíz évig az állami állategészségügyi szolgálatnál dolgoztam, elsősorban járványügyi szakterületen. 2022-ben ismerkedtem meg a Bocskai Állategészségügyi Centrum csapatával, ahol rögtön megfogott az ott tapasztalt szakmai és emberi hozzáállás, ezért előbb részmunkaidőben, majd teljes állásban csatlakoztam a rendelő dolgozói közé. Legfőbb érdeklődési területem a kutyák, a macskák fogászata és szájüregi betegségei, mely témában több elméleti és gyakorlati képzésen is részt vettem, veszek jelenleg is. Tizennégy éve macskatartó vagyok, sokat tanultam saját állataimtól erről a különleges fajról, ezért is kiemelten fontos számomra a cicák egészségvédelme, és a minél stresszmentesebb rendelői ellátásuk.'
-  }
-];
+const icons = LucideIcons as unknown as Record<string, React.ComponentType<any>>;
 
 const staff = [
   {
@@ -64,66 +38,86 @@ const staff = [
   }
 ];
 
-interface TeamMember {
-  name: string;
-  role: string;
-  image: string;
-  bio: string;
-  graduation?: string;
-  specialization?: string;
-  isLeader?: boolean;
+type TeamTeamProps = {
+  sectionTitle?: WPPage;
+  doctorsTitle?: WPPage;
+  doctorsList?: WPPage[];
+  colleaguesTitle?: WPPage;
+  colleagues?: WPPage[];
+  media?: WPMedia[];
+};
+
+function getImageUrl(mediaList: WPMedia[], id: number) {
+  const media = mediaList.find((m) => m.id === id);
+  return {
+    src: media?.guid?.rendered || "",
+    alt: media?.alt_text || "",
+  };
 }
 
-export default function TeamTeam() {
-  const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
+export default function TeamTeam({ sectionTitle, doctorsTitle, doctorsList, colleaguesTitle, colleagues, media }: TeamTeamProps) {
+  const [selectedMember, setSelectedMember] = useState<WPPage | null>(null);
+
+  const sectionTitleHtml = sectionTitle?.content.rendered?.replace(
+    /<h2([^>]*)>/g,
+    (match, attrs) =>
+      `<h2${attrs.replace(/\sclass="[^"]*"/g, "")} class="text-3xl sm:text-4xl font-bold text-brandHeaderColor mb-4 text-center">`
+  )
+    .replace(
+      /<p([^>]*)>/g,
+      (match, attrs) =>
+        `<p${attrs.replace(/\sclass="[^"]*"/g, "")} class="text-lg text-brandColor mb-16 text-center max-w-3xl mx-auto">`
+    );
+
+  const IconComponentDoctorsTitle = icons[(doctorsTitle?.meta?.icon?.[0] as string) || "Stethoscope"];
+  const IconComponentColleaguesTitle = icons[(colleaguesTitle?.meta?.icon?.[0] as string) || "Users"];
 
   return (
     <section id="bocskaiteam" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-brand to-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold text-brandHeaderColor mb-4 text-center">
-          Csapatunk
-        </h2>
-        <p className="text-lg text-brandColor mb-16 text-center max-w-3xl mx-auto">
-          Tapasztalt állatorvosok és szakképzett munkatársak, akik szívvel-lélekkel dolgoznak kedvenceiért
-        </p>
+        <div dangerouslySetInnerHTML={{ __html: sectionTitleHtml ?? "" }} />
 
         <div className="mb-20">
           <h3 className="text-2xl font-semibold text-brandColor mb-10 flex items-center justify-center gap-3">
-            <Stethoscope className="w-7 h-7 text-brandButton" />
-            Állatorvosaink
+            {IconComponentDoctorsTitle && (
+              <IconComponentDoctorsTitle className="w-6 h-6 text-brandButton" />
+            )}
+            {doctorsTitle?.title.rendered}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {doctors.map((doctor, index) => (
+            {doctorsList?.map((doctor, index) => (
+
               <div
                 key={index}
                 onClick={() => setSelectedMember(doctor)}
-                className={`bg-gradient-to-br ${doctor.isLeader
+                className={`bg-gradient-to-br ${doctor.meta?.isLeader?.[0] == "1"
                   ? 'from-emerald-50 to-sky-50 border-2 border-emerald-200'
                   : 'from-brand to-white border border-gray-200'
                   } p-8 rounded-xl shadow-sm hover:shadow-lg transition-all cursor-pointer`}
               >
                 <div className="mb-6 flex justify-center">
                   <div className="animate-pulse-soft">
+
                     <img
-                      src={doctor.image}
-                      alt={doctor.name}
-                      className={`w-64 h-64 rounded-full object-cover object-[center_top] transition-all duration-300 hover:scale-110 hover:rotate-3 ${doctor.isLeader ? 'ring-4 ring-brandButton' : 'ring-2 ring-gray-300'
+                      src={getImageUrl(media ?? [], doctor.featured_media).src}
+                      alt={getImageUrl(media ?? [], doctor.featured_media).alt}
+                      className={`w-64 h-64 rounded-full object-cover object-[center_top] transition-all duration-300 hover:scale-110 hover:rotate-3 ${doctor.meta?.isLeader?.[0] == "1" ? 'ring-4 ring-brandButton' : 'ring-2 ring-gray-300'
                         }`}
                     />
                   </div>
                 </div>
 
                 <h4 className="text-xl font-bold text-brandHeaderColor mb-2 text-center">
-                  {doctor.name}
+                  {doctor.title?.rendered}
                 </h4>
-                <p className={`text-sm font-medium mb-4 text-center ${doctor.isLeader ? 'text-brandButtonHover' : 'text-brandColor'
+                <p className={`text-sm font-medium mb-4 text-center ${doctor.meta?.isLeader?.[0] == "1"? 'text-brandButtonHover' : 'text-brandColor'
                   }`}>
-                  {doctor.role}
+                  {doctor.meta?.titulus?.[0]}
                 </p>
 
                 <div className="space-y-2 text-brandColor">
                   <p className="text-sm leading-relaxed">
-                    <span className="font-medium">Szakterület:</span> {doctor.specialization}
+                    <span className="font-medium">Szakterület:</span> {doctor.meta?.szakterulet?.[0]}
                   </p>
                 </div>
               </div>
@@ -133,11 +127,13 @@ export default function TeamTeam() {
 
         <div>
           <h3 className="text-2xl font-semibold text-brandColor mb-10 flex items-center justify-center gap-3">
-            <Users className="w-7 h-7 text-brandButton" />
-            Munkatársaink
+            {IconComponentColleaguesTitle && (
+              <IconComponentColleaguesTitle className="w-6 h-6 text-brandButton" />
+            )}
+            {colleaguesTitle?.title.rendered}
           </h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 max-w-5xl mx-auto">
-            {staff.map((member, index) => (
+            {colleagues?.map((member, index) => (
               <div
                 key={index}
                 onClick={() => setSelectedMember(member)}
@@ -145,16 +141,16 @@ export default function TeamTeam() {
               >
                 <div className="animate-pulse-soft">
                   <img
-                    src={member.image}
-                    alt={member.name}
+                    src={getImageUrl(media ?? [], member.featured_media).src}
+                    alt={getImageUrl(media ?? [], member.featured_media).alt}
                     className="w-40 h-40 rounded-full object-cover object-[center_top] ring-2 ring-gray-300 mb-4 group-hover:ring-brandSection group-hover:scale-110 group-hover:-rotate-2 transition-all duration-300"
                   />
                 </div>
                 <h4 className="text-base font-semibold text-brandHeaderColor mb-1">
-                  {member.name}
+                  {member.title.rendered}
                 </h4>
                 <p className="text-sm text-brandColor">
-                  {member.role}
+                  {member.meta?.titulus?.[0]}
                 </p>
               </div>
             ))}
@@ -173,7 +169,7 @@ export default function TeamTeam() {
           >
             <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex justify-between items-center">
               <h3 className="text-2xl font-bold text-brandHeaderColor">
-                {selectedMember.name}
+                {selectedMember.title.rendered}
               </h3>
               <button
                 onClick={() => setSelectedMember(null)}
@@ -186,24 +182,23 @@ export default function TeamTeam() {
             <div className="p-6">
               <div className="flex flex-col items-center mb-6">
                 <img
-                  src={selectedMember.image}
-                  alt={selectedMember.name}
+                  src={getImageUrl(media ?? [], selectedMember.featured_media).src}
+                  alt={getImageUrl(media ?? [], selectedMember.featured_media).alt}
                   className="w-40 h-40 rounded-full object-cover object-[center_top]  ring-4 ring-brandButton mb-4"
                 />
                 <p className="text-lg font-medium text-brandHeaderColor">
-                  {selectedMember.role}
+                  {selectedMember.meta?.titulus?.[0]}
                 </p>
-                {selectedMember.specialization && (
+                {selectedMember.meta?.szakterulet?.[0] && (
                   <p className="text-sm text-brandHeaderColor mt-1">
-                    Szakterület: {selectedMember.specialization}
+                    <span className="font-medium">Szakterület:</span> {selectedMember.meta?.szakterulet?.[0]}
                   </p>
                 )}
               </div>
 
               <div className="prose prose-gray max-w-none">
-                <p className="text-brandColor leading-relaxed text-base">
-                  {selectedMember.bio}
-                </p>
+                <div className="text-brandColor leading-relaxed text-base member-text" 
+                  dangerouslySetInnerHTML={{ __html: selectedMember.content.rendered }} />
               </div>
             </div>
           </div>
