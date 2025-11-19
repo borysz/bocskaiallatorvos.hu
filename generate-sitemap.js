@@ -69,6 +69,14 @@ ${urls
 
   fs.writeFileSync("./dist/sitemap.xml", xml, "utf8");
   console.log("✔ sitemap.xml ready");
+  // ---------- robots.txt ----------
+  const robots = `User-agent: *
+Allow: /
+Sitemap: ${BASE}/sitemap.xml
+`;
+
+  fs.writeFileSync("./dist/robots.txt", robots, "utf8");
+  console.log("✔ robots.txt ready");
 }
 
 run();
