@@ -67,8 +67,8 @@ ${urls
       .join("")}
 </urlset>`;
 
-  fs.writeFileSync("./public/sitemap.xml", xml, "utf8");
-  console.log("✔ sitemap.xml elkészült");
+  fs.writeFileSync("./build/sitemap.xml", xml, "utf8");
+  console.log("✔ sitemap.xml ready");
 }
 
 run();
