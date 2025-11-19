@@ -15,6 +15,7 @@ import PricelistPage from './pages/PricelistPage';
 import GalleryPage from './pages/GalleryPage';
 import { BlogList } from './pages/BlogList';
 import { BlogDetail } from './pages/BlogDetail';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
             <Route path="/gyik" element={<FAQPage />} />
             <Route path="/blog" element={<BlogList />} />
             <Route path="/blog/:slug" element={<BlogDetail />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
