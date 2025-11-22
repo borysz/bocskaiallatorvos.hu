@@ -26,41 +26,57 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [ready, setReady] = useState(false);
 
   const apiUrl = import.meta.env.VITE_API_URL;
+  const cacheFile = "./dist/cms-cache.json";
 
   useEffect(() => {
     let isMounted = true;
 
     const fetchData = async () => {
       setLoading(true);
+
       try {
-        const [pagesRes, mediaRes, postsRes, partnersRes, galleriesRes] = await Promise.all([
-          fetch(`${apiUrl}/pages?_fields=id,parent,menu_order,slug,title,content,meta,featured_media&orderby=menu_order&order=asc&per_page=100`),
-          fetch(`${apiUrl}/media?_fields=id,slug,guid,caption&per_page=100`),
-          fetch(`${apiUrl}/posts?_fields=id,date_gmt,title,excerpt,content,slug,categories,tag_names,featured_image_url,menu_order&orderby=menu_order&order=asc`),
-          fetch(`${apiUrl}/partners`),
-          fetch(`${apiUrl}/galleries`),
-          /*Promise.resolve({ json: async () => ([]) }),
-          Promise.resolve({ json: async () => ([]) }),
-          Promise.resolve({ json: async () => ([]) }),*/
-        ]);
+        const cacheRes = await fetch(cacheFile);
+        const contentType = cacheRes.headers.get("content-type") || "";
 
-        const [pagesData, mediaData, postsData, partnersData, galleriesData] = await Promise.all([
-          pagesRes.json(),
-          mediaRes.json(),
-          postsRes.json(),
-          partnersRes.json(),
-          galleriesRes.json()
-        ]);
+        if (contentType.includes("application/json")) {
+          let cacheJson = await cacheRes.json();
+          console.log("➡️ Cache friss → JSON betöltve");
 
-        if (!isMounted) return;
+          setPages(cacheJson.pages);
+          setMedia(cacheJson.media);
+          setPosts(cacheJson.posts);
+          setPartners(cacheJson.partners);
+          setGallery(cacheJson.galleries);
+          setError(null);
+          setReady(true); // 👈 csak ha minden adat bejött */
 
-        setPages(pagesData);
-        setMedia(mediaData);
-        setPosts(postsData);
-        setPartners(partnersData);
-        setGallery(galleriesData);
-        setError(null);
-        setReady(true); // 👈 csak ha minden adat bejött
+        } else {
+          const [pagesRes, mediaRes, postsRes, partnersRes, galleriesRes] = await Promise.all([
+            fetch(`${apiUrl}/pages?_fields=id,parent,menu_order,slug,title,content,meta,featured_media&orderby=menu_order&order=asc&per_page=100`),
+            fetch(`${apiUrl}/media?_fields=id,slug,guid,caption&per_page=100`),
+            fetch(`${apiUrl}/posts?_fields=id,date_gmt,title,excerpt,content,slug,categories,tag_names,featured_image_url,menu_order&orderby=menu_order&order=asc`),
+            fetch(`${apiUrl}/partners`),
+            fetch(`${apiUrl}/galleries`)
+          ]);
+
+          const [pagesData, mediaData, postsData, partnersData, galleriesData] = await Promise.all([
+            pagesRes.json(),
+            mediaRes.json(),
+            postsRes.json(),
+            partnersRes.json(),
+            galleriesRes.json()
+          ]);
+
+          if (!isMounted) return;
+
+          setPages(pagesData);
+          setMedia(mediaData);
+          setPosts(postsData);
+          setPartners(partnersData);
+          setGallery(galleriesData);
+          setError(null);
+          setReady(true); // 👈 csak ha minden adat bejött
+        }
       } catch {
         if (isMounted) setError("Hiba történt az adatok lekérésekor.");
       } finally {
@@ -91,7 +107,7 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         </div>
       </div>
     );
-  } 
+  }
 
   return (
     <CmsContext.Provider value={{ pages, media, posts, partners, gallery, loading, error, refresh: () => window.location.reload() }}>

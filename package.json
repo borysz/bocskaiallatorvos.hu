@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite && node generate-sitemap.js",
-    "build": "vite build && node generate-sitemap.js",
+    "dev": "vite && node fetch-cms.js && node generate-sitemap.js",
+    "build": "vite build && node fetch-cms.js &&  node generate-sitemap.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit -p tsconfig.app.json"
