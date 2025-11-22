@@ -17,9 +17,6 @@ export default function OurTeamPage() {
   const ourColleaguesSection = pages.find((p) => ["rolunk-munkatarsaink"].includes(p.slug));
   const ourColleagues = pages.filter((p) => p.parent === 204);
 
-
-  console.log(ourDoctors);
-
   return (
     <div className="">
       <TeamHero content={heroSection?.content.rendered} />
