@@ -86,14 +86,14 @@ export default function GalleryDetail({ group, onBack }: GalleryDetailProps) {
             <div className="max-w-7xl mx-auto px-4 py-16">
                 <button
                     onClick={onBack}
-                    className="flex items-center text-slate-700 hover:text-slate-900 mb-8 group transition-all duration-300 transform hover:translate-x-[-4px]"
+                    className="flex mt-10 items-center text-brandButton hover:text-brandButtonHover mb-8 group transition-all duration-300 transform hover:translate-x-[-4px]"
                 >
                     <ArrowLeft className="w-5 h-5 mr-2 transition-transform duration-300 group-hover:translate-x-[-4px]" />
                     <span className="font-semibold">Vissza a galériákhoz</span>
                 </button>
 
                 <div className="mb-12 animate-fade-in">
-                    <h1 className="text-5xl font-bold text-slate-900 mb-3">
+                    <h1 className="text-5xl font-bold text-brandHeaderColor mb-3">
                         {group.name}
                     </h1>
                     <p className="text-xl text-slate-600">
