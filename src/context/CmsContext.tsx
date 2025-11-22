@@ -26,6 +26,13 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [ready, setReady] = useState(false);
 
   const apiUrl = import.meta.env.VITE_API_URL;
+
+  if (process.env.NODE_ENV === "production") {
+    console.log("Éles környezet");
+  } else {
+    console.log("Fejlesztői környezet");
+  }
+
   const cacheFile =
     import.meta.env.MODE === "production"
       ? "cms-cache.json"
