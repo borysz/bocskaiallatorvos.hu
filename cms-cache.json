@@ -1,0 +1,1401 @@
+{
+  "pages": [
+    {
+      "id": 89,
+      "slug": "fooldal",
+      "title": {
+        "rendered": "Főoldal"
+      },
+      "content": {
+        "rendered": "",
+        "protected": false
+      },
+      "featured_media": 80,
+      "parent": 0,
+      "menu_order": 0,
+      "meta": {
+        "_edit_lock": [
+          "1762636199:1"
+        ],
+        "_edit_last": [
+          "1"
+        ],
+        "meta_title": [
+          "Bocskai Állategészségügyi Centrum - Főoldal",
+          ""
+        ],
+        "_thumbnail_id": [
+          "80"
+        ],
+        "meta_description": [
+          "Bocskai Állategészségügyi Centrum - Debrecen közelében Bocskaikertben állatorvosi rendelő, fogászat, bőrgyógyászat, kardiológia, röntgen"
+        ]
+      }
+    },
+    {
+      "id": 99,
+      "slug": "kapcsolat-adatok",
+      "title": {
+        "rendered": "Kapcsolat adatok"
+      },
+      "content": {
+        "rendered": "\n<p>Keressen minket bizalommal bármilyen kérdéssel kapcsolatban!</p>\n",
+        "protected": false
+      },
+      "featured_media": 0,
+      "parent": 0,
+      "menu_order": 0,
+      "meta": {
+        "_edit_lock": [
+          "1762023489:1"
+        ],
+        "_edit_last": [
+          "1"
+        ],
+        "address": [
+          "4241 Bocskaikert, Debreceni út 25"
+        ],
+        "address_icon": [
+          "MapPin"
+        ],
+        "phone": [
+          "+36 30 239 0940"
+        ],
+        "phone_icon": [
+          "Phone"
+        ],
+        "email": [
+          "info@bocskaiallatorvos.hu"
+        ],
+        "email_icon": [
+          "Mail"
+        ],
+        "opening": [
+          "<p>Hétfő - Péntek: 8:00 - 19:00</p>\r\n<p>Szombat: 9:00 - 12:00</p>\r\n<p>Vasárnap: Zárva</p>"
+        ],
+        "opening_icon": [
+          "Clock"
+        ]
+      }
+    },
+    {
+      "id": 169,
+      "slug": "gyik",
+      "title": {
+        "rendered": "Gyakran Ismételt Kérdések"
+      },
+      "content": {
+        "rendered": "",
+        "protected": false
+      },
+      "featured_media": 0,
+      "parent": 0,
+      "menu_order": 0,
+      "meta": {
+        "_edit_lock": [
+          "1763580435:1"
+        ],
+        "meta_title": [
+          "Bocskai Állategészségügyi Centrum - Gyakran Ismételt Kérdések",
+          "Bocskai Állategészségügyi Centrum - Gyakran Ismételt Kérdések"
+        ],
+        "_edit_last": [
+          "1"
+        ],
+        "meta_description": [
+          "Gyakran ismétlet kérdések a Bocskai Állategészségügyi Centrum oldalán"
+        ],
+        "sitemap": [
+          "igen"
+        ]
+      }
+    },
+    {
+      "id": 172,
+      "slug": "arlista",
+      "title": {
+        "rendered": "Árlista"
+      },
+      "content": {
+        "rendered": "",
+        "protected": false
+      },
+      "featured_media": 0,
+      "parent": 0,
+      "menu_order": 0,
+      "meta": {
+        "_edit_lock": [
+          "1763671247:1"
+        ],
+        "meta_title": [
+          "Bocskai Állategészségügyi Centrum - Árlista",
+          "Bocskai Állategészségügyi Centrum - Árlista"
+        ],
+        "_edit_last": [
+          "1"
+        ],
+        "meta_description": [
+          "Bocskai Állategészségügyi Centrum - A legjobb szolgáltatások és legjobb árak egy helyen!"
+        ],
+        "sitemap": [
+          "igen"
+        ]
+      }
+    },
+    {
+      "id": 175,
+      "slug": "galeria",
+      "title": {
+        "rendered": "Galéria"
+      },
+      "content": {
+        "rendered": "",
+        "protected": false
+      },
+      "featured_media": 0,
+      "parent": 0,
+      "menu_order": 0,
+      "meta": {
+        "_edit_lock": [
+          "1763580461:1"
+        ],
+        "meta_title": [
+          "Bocskai Állategészségügyi Centrum - Galérai, képek a rendelőről",
+          "Bocskai Állategészségügyi Centrum - Galérai, képek a rendelőről"
+        ],
+        "_edit_last": [
+          "1"
+        ],
+        "meta_description": [
+          "Bocskai Állategészségügyi Centrum Galériája betekintést nyújt a rendelő mindennapjaiba"
+        ],
+        "sitemap": [
+          "igen"
+        ]
+      }
+    },
+    {
+      "id": 178,
+      "slug": "kapcsolat",
+      "title": {
+        "rendered": "Kapcsolat"
+      },
+      "content": {
+        "rendered": "",
+        "protected": false
+      },
+      "featured_media": 0,
+      "parent": 0,
+      "menu_order": 0,
+      "meta": {
+        "_edit_lock": [
+          "1763580649:1"
+        ],
+        "meta_title": [
+          "Bocskai Állategészségügyi Centrum - Kapcsolat",
+          "Bocskai Állategészségügyi Centrum - Kapcsolat"
+        ],
+        "_edit_last": [
+          "1"
+        ],
+        "meta_description": [
+          "Bocskai Állategészségügyi Centrum - Foglalj időpontot rendelőnkbe, Debrecenhez közel"
+        ],
+        "sitemap": [
+          "igen"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "slug": "szolgaltatasok",
+      "title": {
+        "rendered": "Szolgáltatások"
+      },
+      "content": {
+        "rendered": "",
+        "protected": false
+      },
+      "featured_media": 72,
+      "parent": 0,
+      "menu_order": 0,
+      "meta": {
+        "_edit_lock": [
+          "1762805419:1"
+        ],
+        "_edit_last": [
+          "1"
+        ],
+        "meta_title": [
+          "Bocskai Állategészségügyi Centrum - Szolgáltatások"
+        ],
+        "_thumbnail_id": [
+          "72"
+        ],
+        "meta_description": [
+          "Bocskai Állategészségügyi Centrum - Állatorvosi Szolgáltatások -Szakszerű egészségügyi ellátás kedvencei számára"
+        ]
+      }
+    },
+    {
+      "id": 91,
+      "slug": "bemutatkozas",
+      "title": {
+        "rendered": "Gondoskodunk kedvenceiről"
+      },
+      "content": {
+        "rendered": "\n<p><strong>Modern </strong>állatorvosi rendelőnkben tapasztalt szakemberek várják kedvenceit. Megelőző ellátás, diagnosztika és sürgősségi ellátás egy helyen.</p>\n",
+        "protected": false
+      },
+      "featured_media": 0,
+      "parent": 89,
+      "menu_order": 1,
+      "meta": {
+        "_edit_lock": [
+          "1761944445:1"
+        ],
+        "_edit_last": [
+          "1"
+        ]
+      }
+    },
+    {
+      "id": 206,
+      "slug": "puporka-nadinka",
+      "title": {
+        "rendered": "Puporka Nadinka"
+      },
+      "content": {
+        "rendered": "\n<p>Gyerekkorom óta meg vagyok bolondulva az állatokért, ezért mindig is szerettem volna egy olyan munkahelyet, ahol a közelükben lehetek. Így az érettségi mellett 2012-ben elvégeztem az állatorvosi asszisztens képzést is. Szerencsésnek mondhatom magam, hogy azzal foglalkozhatok, amire mindig is vágytam. Szinte a kezdetektől erősítem a Bocskai Állategészségügyi Centrum csapatát.</p>\n",
+        "protected": false
+      },
+      "featured_media": 197,
+      "parent": 204,
+      "menu_order": 1,
+      "meta": {
+        "_edit_lock": [
+          "1763155688:1"
+        ],
+        "_thumbnail_id": [
+          "197"
+        ],
+        "titulus": [
+          "Állatorvosi asszisztens"
+        ],
+        "_edit_last": [
+          "1"
+        ]
+      }
+    },
+    {
+      "id": 181,
+      "slug": "rolunk-hero",
+      "title": {
+        "rendered": "Rólunk &#8211; Hero"
+      },
+      "content": {
+        "rendered": "\n<h1 class=\"wp-block-heading\">Bocskai Állategészségügyi Centrum</h1>\n\n\n\n<p>Szívvel-lélekkel a kedvenceiért &#8211; professzionális állatorvosi ellátás 2019 óta</p>\n",
+        "protected": false
+      },
+      "featured_media": 0,
+      "parent": 93,
+      "menu_order": 1,
+      "meta": {
+        "_edit_lock": [
+          "1762893543:1"
+        ],
+        "_edit_last": [
+          "1"
+        ]
+      }
+    },
+    {
+      "id": 189,
+      "slug": "dr-fekete-zoltan",
+      "title": {
+        "rendered": "Dr. Fekete Zoltán"
+      },
+      "content": {
+        "rendered": "\n<p>2010-ben végeztem a budapesti Szent István Egyetem Állatorvos-tudományi Karán. Végzés után a debreceni Jupet Nagyerdei Állatorvosi Rendelőben kezdtem dolgozni. 2010 őszétől 2019 decemberéig a Nyíregyházi Oktató Állatkórházban dolgoztam klinikus állatorvosként. </p>\n\n\n\n<p>Ezen a nagyforgalmú klinikán eltöltött éveim alatt lehetőségem volt elmélyíteni tudásom a kutyák és macskák belgyógyászatában és lágyszervi sebészetében. Alkalmam volt a különböző képalkotó eljárások megismerésére és ezeken a területeken jelentős tapasztalatot is szereztem. </p>\n\n\n\n<p>Posztgraduális képzés keretében endoszkópos, ultrahangos és plasztikai sebészeti workshop-okon is részt vettem.Hosszú tervezgetés után 2019. szeptemberében nyitottuk meg a Bocskai Állategészségügyi Centrumot és azóta már kizárólag itt folytatom a szakmai munkát. </p>\n\n\n\n<p>2021-ben elvégeztem a Magyar Állatorvosi Kamara Praxisvezető képzését. Elsődlegesen a kisállatok belgyógyászati betegségei, a kardiológia és a gasztroenterológia a fő érdeklődési területem.</p>\n",
+        "protected": false
+      },
+      "featured_media": 97,
+      "parent": 187,
+      "menu_order": 1,
+      "meta": {
+        "_edit_lock": [
+          "1763153921:1"
+        ],
+        "titulus": [
+          "Rendelőzvezető"
+        ],
+        "_thumbnail_id": [
+          "97"
+        ],
+        "szakterulet": [
+          "Kistállat belgyógyászat és lágyszöveti sebészet"
+        ],
+        "_edit_last": [
+          "1"
+        ],
+        "isLeader": [
+          "1"
+        ]
+      }
+    },
+    {
+      "id": 183,
+      "slug": "rolunk-bemutatkozas",
+      "title": {
+        "rendered": "Rólunk"
+      },
+      "content": {
+        "rendered": "\n<p>Rendelőnk&nbsp;<strong>2019-ben nyitotta meg kapuit Bocskaikerten</strong>, mindössze 8 km-re Debrecentől. Fő profilunk a&nbsp;<strong>kutyák és macskák állatorvosi ellátása</strong>, amelyet empátiával és folyamatos szakmai fejlődéssel végzünk.</p>\n\n\n\n<p>Küldetésünk, hogy&nbsp;<strong>átfogó állategészségügyi szolgáltatást</strong>&nbsp;nyújtsunk, amely magában foglalja a megelőzést, a diagnosztikát és a kezelést egyaránt. Csapatunk elkötelezett amellett, hogy kedvencei a legjobb ellátásban részesüljenek, legyen szó rutinvizsgálatról vagy bonyolultabb egészségügyi problémáról.</p>\n\n\n\n<p>Számunkra minden állat egyedi, és mindegyik megérdemli a személyre szabott, gondos ellátást. Szakmai tudásunkat folyamatosan bővítjük, hogy mindig a legkorszerűbb módszerekkel dolgozzunk.</p>\n",
+        "protected": false
+      },
+      "featured_media": 0,
+      "parent": 93,
+      "menu_order": 2,
+      "meta": {
+        "_edit_lock": [
+          "1763151909:1"
+        ],
+        "rolunk_idezet": [
+          "\"A cél az volt, hogy a lehető legszélesebb körű ellátást nyújtsuk a helyi állatgazdáknak.\""
+        ],
+        "_edit_last": [
+          "1"
+        ]
+      }
+    },
+    {
+      "id": 208,
+      "slug": "csabi-timea",
+      "title": {
+        "rendered": "Csábi Tímea"
+      },
+      "content": {
+        "rendered": "\n<p>Születésem óta kísérik életemet az állatok, főleg a kutyák és macskák iránt érzett szeretet, tisztelet.Szerencsés voltam, kertes házban rengeteg háziállattal körül véve nőhettem fel, családtagként tekintek rájuk.Mindig is olyan munkahelyre vágytam, ahol állatok vesznek körül. Válassz olyan munkát amit szeretsz csinálni, és soha többet nem kell majd dolgoznod.</p>\n",
+        "protected": false
+      },
+      "featured_media": 196,
+      "parent": 204,
+      "menu_order": 2,
+      "meta": {
+        "_edit_lock": [
+          "1762893956:1"
+        ],
+        "_thumbnail_id": [
+          "196"
+        ],
+        "titulus": [
+          "Állatorvosi asszisztens"
+        ],
+        "_edit_last": [
+          "1"
+        ]
+      }
+    },
+    {
+      "id": 191,
+      "slug": "dr-kuczmog-zita",
+      "title": {
+        "rendered": "Dr. Kuczmog Zita"
+      },
+      "content": {
+        "rendered": "\n<p>2015-ben végeztem állatorvos-doktorként a Szent István Egyetem Állatorvostudományi Karán, majd 5 évig egy nagyforgalmú nyíregyházi állatorvosi rendelőben dolgoztam. 2020 óta a Bocskai Állategészségügyi Centrum csapatának tagja vagyok, itt a napi általános betegellátás mellett főleg bőrgyógyászati kivizsgálásokkal és kezelésekkel foglalkozom. Fő érdeklődési területem a bőrgyógyászat, az onkológia és a hallójárat gyulladások. </p>\n\n\n\n<p>A bőrgyógyászat keretein belül napi szinten végzek citológiai vizsgálatokat, látok el allergiás, daganatos, fülgyulladásos, valamint autoimmun betegeket. A Magyar Bőrgyógyász Állatorvosok Egyesületének 2020 óta pártoló, 2022 novembere óta pedig rendes, vizsgázott tagja vagyok, így a kelet-magyarországi régióban egyedüliként jogosultságot szereztem állatorvosi bőrgyógyászati szakrendelés tartására. Rendszeresen rész veszek – előadóként is – bőrgyógyászati témájú szakmai továbbképzéseken és journal clubokon, több cikkem jelent meg bőrgyógyászati témában hazai állatorvosi lapokban. </p>\n\n\n\n<p>Többször részt vettem az Európai Állatorvosi Bőrgyógyászati Kongresszuson (ECVD-ESVD 2022. Portó, 2023. Göteborg). Kiemelten fontosnak tartom a daganatos betegek mielőbbi szakszerű diagnózisát és ellátását, terveim között szerepel onkológiai ismereteim bővítése és elmélyítése.</p>\n",
+        "protected": false
+      },
+      "featured_media": 199,
+      "parent": 187,
+      "menu_order": 2,
+      "meta": {
+        "_edit_lock": [
+          "1763157173:1"
+        ],
+        "titulus": [
+          "Állatorvos"
+        ],
+        "_edit_last": [
+          "1"
+        ],
+        "_thumbnail_id": [
+          "199"
+        ],
+        "szakterulet": [
+          "Bőrgyógyászat, onkológia, külső hallójárati gyulladások"
+        ],
+        "isLeader": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": 93,
+      "slug": "rolunk",
+      "title": {
+        "rendered": "Rólunk"
+      },
+      "content": {
+        "rendered": "\n<p>A Bocskai Állategészségügyi Centrumot és Állatpatikát 2019-ben nyitottuk meg a Bocskaikertben, Debrecentől 8km-re. Vállalkozásunk fő célja volt, hogy minél szélesebb körű ellátást biztosítsunk a környék állattartóinak. Fő profilunk a kutyák és macskák állategészségügyi ellátása.<br></p>\n\n\n\n<p>Rendelőnk két vizsgálóval, tágas és kényelmes váróteremmel, röntgennel, ultrahangos helyiséggel, műtővel, saját laborral és állatpatikával rendelkezik. Nyugodt, tiszta környezetben, sokéves klinikai tapasztalattal és előre egyeztetett időpont alapján várjuk ügyfeleinket.<br></p>\n\n\n\n<p>Filozófiánk a dolgok mélyére látni és folyamatosan fejlődni, valamint ügyfeleinkhez maximális empátiával állni.</p>\n",
+        "protected": false
+      },
+      "featured_media": 80,
+      "parent": 89,
+      "menu_order": 2,
+      "meta": {
+        "_edit_lock": [
+          "1763580411:1"
+        ],
+        "_edit_last": [
+          "1"
+        ],
+        "meta_title": [
+          "Bocskai Állategészségügyi Centrum - Rólunk"
+        ],
+        "_thumbnail_id": [
+          "80"
+        ],
+        "meta_description": [
+          "A Bocskai Állategészségügyi Centrumot és Állatpatikát 2019-ben nyitottuk meg a Bocskaikertben, Debrecentől 8km-re."
+        ],
+        "sitemap": [
+          "igen"
+        ]
+      }
+    },
+    {
+      "id": 185,
+      "slug": "rolunk-csapatunk",
+      "title": {
+        "rendered": "Rólunk &#8211; Csapatunk"
+      },
+      "content": {
+        "rendered": "\n<h2 class=\"wp-block-heading\">Csapatunk</h2>\n\n\n\n<p>Tapasztalt állatorvosok és szakképzett munkatársak, akik szívvel-lélekkel dolgoznak kedvenceiért</p>\n",
+        "protected": false
+      },
+      "featured_media": 0,
+      "parent": 93,
+      "menu_order": 3,
+      "meta": {
+        "_edit_lock": [
+          "1763152059:1"
+        ],
+        "_edit_last": [
+          "1"
+        ]
+      }
+    },
+    {
+      "id": 201,
+      "slug": "dr-balogh-bakos-nora",
+      "title": {
+        "rendered": "Dr. Balogh-Bakos Nóra"
+      },
+      "content": {
+        "rendered": "\n<p>2010-ben végeztem a Szent István Egyetem Állatorvos-tudományi Karán állatorvos-doktorként. A végzést követően több mint tíz évig az állami állategészségügyi szolgálatnál dolgoztam, elsősorban járványügyi szakterületen. </p>\n\n\n\n<p>2022-ben ismerkedtem meg a Bocskai Állategészségügyi Centrum csapatával, ahol rögtön megfogott az ott tapasztalt szakmai és emberi hozzáállás, ezért előbb részmunkaidőben, majd teljes állásban csatlakoztam a rendelő dolgozói közé. </p>\n\n\n\n<p>Legfőbb érdeklődési területem a kutyák, a macskák fogászata és szájüregi betegségei, mely témában több elméleti és gyakorlati képzésen is részt vettem, veszek jelenleg is. Tizennégy éve macskatartó vagyok, sokat tanultam saját állataimtól erről a különleges fajról, ezért is kiemelten fontos számomra a cicák egészségvédelme, és a minél stresszmentesebb rendelői ellátásuk.</p>\n",
+        "protected": false
+      },
+      "featured_media": 198,
+      "parent": 187,
+      "menu_order": 3,
+      "meta": {
+        "_edit_lock": [
+          "1763155939:1"
+        ],
+        "titulus": [
+          "Állatorvos"
+        ],
+        "_edit_last": [
+          "1"
+        ],
+        "_thumbnail_id": [
+          "198"
+        ],
+        "szakterulet": [
+          "Kutya és macska fogászat, szájüregi betegségek"
+        ],
+        "isLeader": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": 95,
+      "slug": "kepzett-orvosok",
+      "title": {
+        "rendered": "Képzett orvosok"
+      },
+      "content": {
+        "rendered": "\n<p>Rendelőnk <strong>képzett orvosokkal</strong>, két vizsgálóval, tágas és kényelmes váróteremmel, röntgennel, ultrahangos helyiséggel, műtővel, saját laborral és állatpatikával rendelkezik. Nyugodt, tiszta környezetben, sokéves klinikai tapasztalattal és előre egyeztetett időpont alapján várjuk ügyfeleinket.</p>\n",
+        "protected": false
+      },
+      "featured_media": 0,
+      "parent": 89,
+      "menu_order": 3,
+      "meta": {
+        "_edit_lock": [
+          "1762894002:1"
+        ],
+        "_edit_last": [
+          "1"
+        ]
+      }
+    },
+    {
+      "id": 210,
+      "slug": "turan-matyas",
+      "title": {
+        "rendered": "Turán Mátyás"
+      },
+      "content": {
+        "rendered": "\n<p>2024 januárjától dolgozom a Bocskai Állategészségügyi Centrumban. Előtte Egerben az Eszterházy Károly egyetemen tanultam testnevelés tanári szakon. </p>\n\n\n\n<p></p>\n\n\n\n<p>Munkám mellett gyerekekkel foglalkozok, kézilabda edzőként. Ezt a sportágat hobbi szinten én is gyakorlom. Természet iránti rajongásom miatt választottam ezt a hivatást, a rendelőben pedig rátaláltam arra a környezetre, ahol szívesen dolgozom. </p>\n\n\n\n<p></p>\n\n\n\n<p>Munkám során örömömre szolgál, hogy láthatom az állatok gyógyulását, gazdáik elégedettségét.</p>\n",
+        "protected": false
+      },
+      "featured_media": 195,
+      "parent": 204,
+      "menu_order": 3,
+      "meta": {
+        "_edit_lock": [
+          "1763156564:1"
+        ],
+        "_thumbnail_id": [
+          "195"
+        ],
+        "titulus": [
+          "Állatorvosi asszisztens"
+        ],
+        "_edit_last": [
+          "1"
+        ]
+      }
+    },
+    {
+      "id": 187,
+      "slug": "rolunk-allatorvosaink",
+      "title": {
+        "rendered": "Állatorvosaink"
+      },
+      "content": {
+        "rendered": "",
+        "protected": false
+      },
+      "featured_media": 0,
+      "parent": 93,
+      "menu_order": 4,
+      "meta": {
+        "_edit_lock": [
+          "1763153840:1"
+        ],
+        "icon": [
+          "Stethoscope"
+        ],
+        "_edit_last": [
+          "1"
+        ]
+      }
+    },
+    {
+      "id": 212,
+      "slug": "hamvai-alexandra",
+      "title": {
+        "rendered": "Hamvai Alexandra"
+      },
+      "content": {
+        "rendered": "\n<p>Mindig is éreztem,hogy állatok között szeretném eltölteni az életemet. Főként a gazdasági állatok körében kezdtem a pályafutásomat, családi gazdaságban, valamint munkalovasként . Pár évvel ezelőtt adódott egy lehetőség ,hogy kisállatokkal is foglalkozhassak és akkor éreztem, hogy ez nekem való. Örömmel végzem a munkám, tudván hogy megannyi élet megmentésre kerülhet a segítségemmel. 2024-ben kezdtem erősìteni a Bocskai Állategészségügyi Centrum családias és szakmailag kiemelkedő csapatát.</p>\n",
+        "protected": false
+      },
+      "featured_media": 194,
+      "parent": 204,
+      "menu_order": 4,
+      "meta": {
+        "_edit_lock": [
+          "1762893974:1"
+        ],
+        "_thumbnail_id": [
+          "194"
+        ],
+        "titulus": [
+          "Állatorvosi asszisztens"
+        ],
+        "_edit_last": [
+          "1"
+        ]
+      }
+    },
+    {
+      "id": 204,
+      "slug": "rolunk-munkatarsaink",
+      "title": {
+        "rendered": "Munkatársaink"
+      },
+      "content": {
+        "rendered": "",
+        "protected": false
+      },
+      "featured_media": 0,
+      "parent": 93,
+      "menu_order": 5,
+      "meta": {
+        "_edit_lock": [
+          "1763156219:1"
+        ],
+        "icon": [
+          "Users"
+        ],
+        "_edit_last": [
+          "1"
+        ]
+      }
+    },
+    {
+      "id": 214,
+      "slug": "borosne-szoboszlai-beatrix",
+      "title": {
+        "rendered": "Borosné Szoboszlai Beatrix"
+      },
+      "content": {
+        "rendered": "\n<p>Már gyermekkoromtól kezdve nagyon érdekeltek a kutyák, mindig is rajongtam értük mérettől, színtől és fajtától függetlenül. Kutyákkal 2015-ben kezdtem foglalkozni, amikor az egyetem elvégzése után egy menhelyen kezdtem el dolgozni. Két évvel később belecsöppentem az állatasszisztált terápiák világába, ahol a kutyák kiképzésében tehettem szert jelentős tapasztalatokra. Igazán ekkor értettem meg, hogy minden kutya milyen különleges, egyedi személyiség és mennyire meg tudja változtatni egy ember életét. Az ez idő alatt megszerzett tudásomat jelenleg asszisztensként bővíthetem és kamatoztathatom a Bocskai Állategészségügyi Centrumban.</p>\n",
+        "protected": false
+      },
+      "featured_media": 193,
+      "parent": 204,
+      "menu_order": 5,
+      "meta": {
+        "_edit_lock": [
+          "1762893977:1"
+        ],
+        "_thumbnail_id": [
+          "193"
+        ],
+        "titulus": [
+          "Állatorvosi asszisztens"
+        ],
+        "_edit_last": [
+          "1"
+        ]
+      }
+    }
+  ],
+  "media": [
+    {
+      "id": 199,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/bocskai-allategeszsegugyi-dr-kun-kuczmog-zita-borgyogyasz.jpg"
+      },
+      "slug": "bocskai-allategeszsegugyi-dr-kun-kuczmog-zita-borgyogyasz",
+      "caption": {
+        "rendered": ""
+      }
+    },
+    {
+      "id": 198,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/bocskai-allategeszsegugyi-dr-balogh-bakos-nora-fogasz.jpg"
+      },
+      "slug": "bocskai-allategeszsegugyi-dr-balogh-bakos-nora-fogasz",
+      "caption": {
+        "rendered": ""
+      }
+    },
+    {
+      "id": 197,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/bocskai-allategeszsegugyi-puporka-nadinka-allatorvosi-asszisztens.jpg"
+      },
+      "slug": "bocskai-allategeszsegugyi-puporka-nadinka-allatorvosi-asszisztens",
+      "caption": {
+        "rendered": ""
+      }
+    },
+    {
+      "id": 196,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/bocskai-allategeszsegugyi-csabi-timea-allatorvosi-asszisztens.jpg"
+      },
+      "slug": "bocskai-allategeszsegugyi-csabi-timea-allatorvosi-asszisztens",
+      "caption": {
+        "rendered": ""
+      }
+    },
+    {
+      "id": 195,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/bocskai-allategeszsegugyi-turan-matyas-allatorvosi-asszisztens.jpg"
+      },
+      "slug": "bocskai-allategeszsegugyi-turan-matyas-allatorvosi-asszisztens",
+      "caption": {
+        "rendered": ""
+      }
+    },
+    {
+      "id": 194,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/bocskai-allategeszsegugyi-hamvai-alexandra-allatorvosi-asszisztens.jpg"
+      },
+      "slug": "bocskai-allategeszsegugyi-hamvai-alexandra-allatorvosi-asszisztens",
+      "caption": {
+        "rendered": ""
+      }
+    },
+    {
+      "id": 193,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/bocskai-allategeszsegugyi-borosne-szoboszlai-beatrix-allatorvosi-asszisztens.jpg"
+      },
+      "slug": "bocskai-allategeszsegugyi-borosne-szoboszlai-beatrix-allatorvosi-asszisztens",
+      "caption": {
+        "rendered": ""
+      }
+    },
+    {
+      "id": 152,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/gallery-muveszet-absztrakt.webp"
+      },
+      "slug": "gallery-muveszet-absztrakt",
+      "caption": {
+        "rendered": ""
+      }
+    },
+    {
+      "id": 145,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/gallery-muveszet-sarga.jpeg"
+      },
+      "slug": "gallery-muveszet-sarga",
+      "caption": {
+        "rendered": ""
+      }
+    },
+    {
+      "id": 144,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/gallery-muveszet-kek.jpeg"
+      },
+      "slug": "gallery-muveszet-kek",
+      "caption": {
+        "rendered": ""
+      }
+    },
+    {
+      "id": 143,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/gallery-muveszet-kiallitas.jpeg"
+      },
+      "slug": "gallery-muveszet-kiallitas",
+      "caption": {
+        "rendered": ""
+      }
+    },
+    {
+      "id": 135,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/gallery-varosok-new-york.jpeg"
+      },
+      "slug": "gallery-varosok-new-york",
+      "caption": {
+        "rendered": ""
+      }
+    },
+    {
+      "id": 134,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/gallery-varosok-san-francisco.jpeg"
+      },
+      "slug": "gallery-varosok-san-francisco",
+      "caption": {
+        "rendered": ""
+      }
+    },
+    {
+      "id": 133,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/gallery-varosok-los-angeles.jpeg"
+      },
+      "slug": "gallery-varosok-los-angeles",
+      "caption": {
+        "rendered": ""
+      }
+    },
+    {
+      "id": 122,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/gallery-termeszet-hegyek.jpeg"
+      },
+      "slug": "gallery-termeszet-hegyek",
+      "caption": {
+        "rendered": ""
+      }
+    },
+    {
+      "id": 121,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/gallery-termeszet-erdo.jpeg"
+      },
+      "slug": "gallery-termeszet-erdo",
+      "caption": {
+        "rendered": ""
+      }
+    },
+    {
+      "id": 120,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/gallery-termeszet-hid.jpeg"
+      },
+      "slug": "gallery-termeszet-hid",
+      "caption": {
+        "rendered": ""
+      }
+    },
+    {
+      "id": 98,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/10/bocskaiallatorvos-hero.webp"
+      },
+      "slug": "bocskaiallatorvos-hero",
+      "caption": {
+        "rendered": ""
+      }
+    },
+    {
+      "id": 97,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/10/bocskaiallatorvos-udvozles.jpg"
+      },
+      "slug": "bocskaiallatorvos-udvozles",
+      "caption": {
+        "rendered": ""
+      }
+    },
+    {
+      "id": 82,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/10/cropped-bocskai-allategeszsegugyi-centrum-favicon-transparent.png"
+      },
+      "slug": "cropped-bocskai-allategeszsegugyi-centrum-favicon-transparent-png",
+      "caption": {
+        "rendered": "<p>https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/10/cropped-bocskai-allategeszsegugyi-centrum-favicon-transparent.png</p>\n"
+      }
+    },
+    {
+      "id": 81,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/10/bocskai-allategeszsegugyi-centrum-favicon-transparent.png"
+      },
+      "slug": "bocskai-allategeszsegugyi-centrum-favicon-transparent",
+      "caption": {
+        "rendered": ""
+      }
+    },
+    {
+      "id": 80,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/10/bocskai-allategeszsegugyi-centrum-logo.jpg"
+      },
+      "slug": "bocskai-allategeszsegugyi-centrum-logo",
+      "caption": {
+        "rendered": ""
+      }
+    },
+    {
+      "id": 72,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/10/bocskaiallatorvos-szolgaltatas-ambulancia.jpg"
+      },
+      "slug": "bocskaiallatorvos-szolgaltatas-ambulancia",
+      "caption": {
+        "rendered": "<p>Bocskai Állategészségügyi Centrum Ambuláns betegellátás</p>\n"
+      }
+    },
+    {
+      "id": 71,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/10/bocskaiallatorvos-szolgaltatas-patika.jpg"
+      },
+      "slug": "bocskaiallatorvos-szolgaltatas-patika",
+      "caption": {
+        "rendered": "<p>Bocskai Állategészségügyi Centrum Patika, állatgyógyszertár</p>\n"
+      }
+    },
+    {
+      "id": 70,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/10/bocskaiallatorvos-szolgaltatas-szebeszeti-ellatas.png"
+      },
+      "slug": "bocskaiallatorvos-szolgaltatas-szebeszeti-ellatas",
+      "caption": {
+        "rendered": "<p>Bocskai Állategészségügyi Centrum Sebészeti ellátás</p>\n"
+      }
+    },
+    {
+      "id": 69,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/10/bocskaiallatorvos-szolgaltatas-parazita-ellenes-kezeles.png"
+      },
+      "slug": "bocskaiallatorvos-szolgaltatas-parazita-ellenes-kezeles",
+      "caption": {
+        "rendered": "<p>Bocskai Állategészségügyi Centrum Parazitaellenes kezelés</p>\n"
+      }
+    },
+    {
+      "id": 68,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/10/bocskaiallatorvos-szolgaltatas-vakcinazas.png"
+      },
+      "slug": "bocskaiallatorvos-szolgaltatas-vakcinazas",
+      "caption": {
+        "rendered": "<p>Bocskai Állategészségügyi Centrum Vakcinázás</p>\n"
+      }
+    },
+    {
+      "id": 67,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/10/bocskaiallatorvos-szolgaltatas-kardiologia.png"
+      },
+      "slug": "bocskaiallatorvos-szolgaltatas-kardiologia",
+      "caption": {
+        "rendered": "<p>Bocskai Állategészségügyi Centrum Kisállat kardiológia</p>\n"
+      }
+    },
+    {
+      "id": 66,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/10/bocskaiallatorvos-szolgaltatas-kutya-anatomia-kardiologia.jpg"
+      },
+      "slug": "dog-heart-anatomy-of-circulatory-system-isolated-on-black",
+      "caption": {
+        "rendered": "<p>Dog Heart &#8211; Anatomy of Circulatory System isolated on Black</p>\n"
+      }
+    },
+    {
+      "id": 65,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/10/bocskaiallatorvos-szolgaltatas-mikrochip-utlevel-kiallitas-kisallat.png"
+      },
+      "slug": "bocskaiallatorvos-szolgaltatas-mikrochip-utlevel-kiallitas-kisallat",
+      "caption": {
+        "rendered": "<p>Bocskai Állategészségügyi Centrum Kutya, macska mikrochip elhelyezés</p>\n"
+      }
+    },
+    {
+      "id": 64,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/10/bocskaiallatorvos-szolgaltatas-kutya-chipelo.jpg"
+      },
+      "slug": "bocskaiallatorvos-szolgaltatas-kutya-chipelo",
+      "caption": {
+        "rendered": "<p>Bocskai Állategészségügyi Centrum Kutya microchipelő</p>\n"
+      }
+    },
+    {
+      "id": 63,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/10/bocskaiallatorvos-szolgaltatas-kepalkoto-diagnosztika.png"
+      },
+      "slug": "bocskaiallatorvos-szolgaltatas-kepalkoto-diagnosztika",
+      "caption": {
+        "rendered": "<p>Bocskai Állategészségügyi Centrum Képalkotó diagnosztika</p>\n"
+      }
+    },
+    {
+      "id": 62,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/10/bocskaiallatorvos-szolgaltatas-borgyogyaszat.jpg"
+      },
+      "slug": "bocskaiallatorvos-szolgaltatas-borgyogyaszat",
+      "caption": {
+        "rendered": "<p>Bocskai Állategészségügyi Centrum Bőrgyógyászati szakrendelés</p>\n"
+      }
+    },
+    {
+      "id": 61,
+      "guid": {
+        "rendered": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/10/bocskaiallatorvos-szolgaltatas-labor-vizsgalatok.png"
+      },
+      "slug": "bocskaiallatorvos-szolgaltatas-labor-vizsgalatok",
+      "caption": {
+        "rendered": "<p>Bocskai Állategészségügyi Centrum Laborvizsgálat</p>\n"
+      }
+    }
+  ],
+  "posts": [
+    {
+      "id": 154,
+      "date_gmt": "2025-11-02T19:23:29",
+      "slug": "a-rendelorol",
+      "title": {
+        "rendered": "A rendelőről"
+      },
+      "content": {
+        "rendered": "\n<h2 class=\"wp-block-heading\">What is Lorem Ipsum?</h2>\n\n\n\n<p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#8217;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Why do we use it?</h2>\n\n\n\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#8216;Content here, content here&#8217;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#8216;lorem ipsum&#8217; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\n\n\n\n<h2 class=\"wp-block-heading\">Where does it come from?</h2>\n\n\n\n<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of &#8222;de Finibus Bonorum et Malorum&#8221; (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, &#8222;Lorem ipsum dolor sit amet..&#8221;, comes from a line in section 1.10.32.</p>\n\n\n\n<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from &#8222;de Finibus Bonorum et Malorum&#8221; by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Where can I get some?</h2>\n\n\n\n<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don&#8217;t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn&#8217;t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>\n",
+        "protected": false
+      },
+      "excerpt": {
+        "rendered": "<p>What is Lorem Ipsum? Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#8217;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also [&hellip;]</p>\n",
+        "protected": false
+      },
+      "menu_order": 0,
+      "categories": [
+        8
+      ],
+      "tag_names": [],
+      "featured_image_url": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/10/bocskaiallatorvos-szolgaltatas-patika.jpg"
+    },
+    {
+      "id": 156,
+      "date_gmt": "2025-11-02T19:45:52",
+      "slug": "milyen-allatokat-fogad-a-rendelo",
+      "title": {
+        "rendered": "Milyen állatokat fogad a rendelő?"
+      },
+      "content": {
+        "rendered": "\n<p>Kutyákat, macskákat, nyulakat és kisebb háziállatokat fogadunk.</p>\n",
+        "protected": false
+      },
+      "excerpt": {
+        "rendered": "<p>Kutyákat, macskákat, nyulakat és kisebb háziállatokat fogadunk.</p>\n",
+        "protected": false
+      },
+      "menu_order": 0,
+      "categories": [
+        9
+      ],
+      "tag_names": [],
+      "featured_image_url": null
+    },
+    {
+      "id": 158,
+      "date_gmt": "2025-11-02T19:46:34",
+      "slug": "van-ugyeleti-ellatas",
+      "title": {
+        "rendered": "Van ügyeleti ellátás?"
+      },
+      "content": {
+        "rendered": "\n<p>Igen, sürgős esetben hívja a kapcsolat oldalon megadott telefonszámot az ügyeleti információkért.</p>\n",
+        "protected": false
+      },
+      "excerpt": {
+        "rendered": "<p>Igen, sürgős esetben hívja a kapcsolat oldalon megadott telefonszámot az ügyeleti információkért.</p>\n",
+        "protected": false
+      },
+      "menu_order": 0,
+      "categories": [
+        9
+      ],
+      "tag_names": [],
+      "featured_image_url": null
+    },
+    {
+      "id": 160,
+      "date_gmt": "2025-11-02T19:47:19",
+      "slug": "hol-talalhato-a-rendelo",
+      "title": {
+        "rendered": "Hol található a rendelő?"
+      },
+      "content": {
+        "rendered": "\n<p>Rendelőnk címe: 4241 Bocskaikert, Debreceni út 25.<br>Részletes térképet talál a&nbsp;<a href=\"/kapcsolat#terkep\" target=\"_blank\">kapcsolat</a>&nbsp;oldalon.</p>\n\n\n\n<p></p>\n",
+        "protected": false
+      },
+      "excerpt": {
+        "rendered": "<p>Rendelőnk címe: 4241 Bocskaikert, Debreceni út 25.Részletes térképet talál a&nbsp;kapcsolat&nbsp;oldalon.</p>\n",
+        "protected": false
+      },
+      "menu_order": 0,
+      "categories": [
+        9
+      ],
+      "tag_names": [],
+      "featured_image_url": null
+    },
+    {
+      "id": 162,
+      "date_gmt": "2025-11-02T19:48:00",
+      "slug": "milyen-fizetesi-mod-lehetseges",
+      "title": {
+        "rendered": "Milyen fizetési mód lehetséges?"
+      },
+      "content": {
+        "rendered": "\n<p>Rendelőnkben készpénzes, bankkártyás fizetési lehetőség áll rendelkezésre.</p>\n",
+        "protected": false
+      },
+      "excerpt": {
+        "rendered": "<p>Rendelőnkben készpénzes, bankkártyás fizetési lehetőség áll rendelkezésre.</p>\n",
+        "protected": false
+      },
+      "menu_order": 0,
+      "categories": [
+        9
+      ],
+      "tag_names": [],
+      "featured_image_url": null
+    },
+    {
+      "id": 12,
+      "date_gmt": "2025-10-25T20:09:23",
+      "slug": "ambulans-betegellatas",
+      "title": {
+        "rendered": "Ambuláns betegellátás"
+      },
+      "content": {
+        "rendered": "\n<p>A betegek ellátása – a várakozási idő csökkentése érdekében –&nbsp;<strong>időpontos rendszerben</strong>&nbsp;működik, így az előre egyeztetett időpontra érkező betegek elsőbbséget élveznek az időponttal nem rendelkező betegekkel szemben (ez alól kivételt képez az akut, életveszélyes állapotban lévő páciensek sürgősségi ellátása).</p>\n\n\n\n<p><strong>Időpont egyeztetés a +36 30 23 90 940-es telefonszámon lehetséges rendelési időben!</strong>&nbsp;<strong>Érkezéskor kérjük,&nbsp;</strong><strong>hogy minden esetben szíveskedjenek bejelentkezni a recepción!</strong></p>\n\n\n\n<p>Ha még nem jártak nálunk, az asszisztens felveszi az adatokat és azt rögzíti a rendszerünkbe, szigorúan betartva az adatvédelmi szempontokat. Majd feltesz néhány kérdést a kedvence panaszairól, állapotáról.</p>\n\n\n\n<p>A kórelőzmény felvételét követően az ellátás alapos&nbsp;<strong>fizikai vizsgálattal kezdődik</strong>, ahol orvosaink megnézik a nyálkahártya színét, a fogak és az íny állapotát, a nyirokcsomók méretét, a has áttapinthatóságát, esetleges fájdalmasságát, a bélsár minőségét, a test hőmérsékletét, illetve meghallgatják a tüdő- és szívhangokat.</p>\n\n\n\n<p>Az állapot felmérése után kollégáink&nbsp;<strong>tájékoztatást adnak a szükséges kiegészítő vizsgálatokról</strong>, melyeknek egy része a vizit alkalmával megoldható (vérvizsgálatok, vizeletvizsgálat, citológiai vizsgálat).</p>\n\n\n\n<p><strong>A külső laborba küldendő minták vétele előre egyeztetett időpontban a hét első felében (hétfő, kedd, szerda) történik.</strong></p>\n\n\n\n<p>A helyben készített vizsgálatok már aznap vagy legkésőbb másnap elkészülnek, viszont a külső laborba küldött minták feldolgozása több napot vesz igénybe.</p>\n\n\n\n<p><strong>Az eredményekkel minden esetben orvosaink keresik fel a gazdikat és adnak tájékoztatást!</strong></p>\n\n\n\n<p>Ultrahang vizsgálatokat, kardiológiai kivizsgálást, bőrgyógyászati kivizsgálást, endoszkópos vizsgálatot és műtéteket&nbsp;<strong>kizárólag előzetes időpont egyeztetés alapján tudunk elvégezni</strong>!</p>\n\n\n\n<p>A beteg állapota és a vizsgálatok eredményei alapján a szükséges gyógykezelést elvégezzük és szükség esetén további terápiás javaslatot teszünk. &nbsp;Az ellátásról minden esetben kórlapot készítünk, amit átadunk a tulajdonosoknak.</p>\n",
+        "protected": false
+      },
+      "excerpt": {
+        "rendered": "<p>A betegek ellátása – a várakozási idő csökkentése érdekében –&nbsp;időpontos rendszerben&nbsp;működik, így az előre egyeztetett időpontra érkező betegek elsőbbséget élveznek az időponttal nem rendelkező betegekkel szemben (ez alól kivételt képez az akut, életveszélyes állapotban lévő páciensek sürgősségi ellátása). Időpont egyeztetés a +36 30 23 90 940-es telefonszámon lehetséges rendelési időben!&nbsp;Érkezéskor kérjük,&nbsp;hogy minden esetben szíveskedjenek bejelentkezni [&hellip;]</p>\n",
+        "protected": false
+      },
+      "menu_order": 1,
+      "categories": [
+        3
+      ],
+      "tag_names": [
+        "Általános"
+      ],
+      "featured_image_url": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/10/bocskaiallatorvos-szolgaltatas-ambulancia.jpg"
+    },
+    {
+      "id": 20,
+      "date_gmt": "2025-10-25T20:23:20",
+      "slug": "sebeszeti-ellatas",
+      "title": {
+        "rendered": "Sebészeti ellátás"
+      },
+      "content": {
+        "rendered": "\n<p>A kisállatok lágysebészeti ellátása a test lágy szövetein végzett sebészeti beavatkozásokat foglalja magában. Ezek a műtétek lehetnek tervezett beavatkozások, amelyek megelőző vagy egészségmegőrző céllal történnek, illetve sürgősségi beavatkozások, amelyek azonnali orvosi segítséget igényelnek, hogy megmentsék az állat életét vagy megelőzzék a súlyosabb egészségkárosodást.</p>\n\n\n\n<p>A műtétek előtt az állatot alaposan megvizsgáljuk, beleértve a vérvizsgálatot (rutin labor, véralvdás, szívférgesség teszt, stb.), és ha szükséges a képalkotó diagnosztikai eljárásokat (röntgen, ultrahang) is javaslunk, hogy megbizonyosodjunk az állat általános egészségi állapotáról.<br>Mind a tervezett, mind a sürgősségi beavatkozások során teljes altatásra van szükség, hogy a műtét fájdalommentesen és biztonságosan elvégezhető legyen.<br>A műtét után fontos az állat felépülésének figyelemmel kísérése, a fájdalomcsillapítás és a fertőzések megelőzése érdekében. Az állat sebének tisztán tartása, valamint az állatorvos által javasolt utókezelési és gyógyszeres kezelési terv követése is létfontosságú.</p>\n",
+        "protected": false
+      },
+      "excerpt": {
+        "rendered": "<p>A kisállatok lágysebészeti ellátása a test lágy szövetein végzett sebészeti beavatkozásokat foglalja magában. Ezek a műtétek lehetnek tervezett beavatkozások, amelyek megelőző vagy egészségmegőrző céllal történnek, illetve sürgősségi beavatkozások, amelyek azonnali orvosi segítséget igényelnek, hogy megmentsék az állat életét vagy megelőzzék a súlyosabb egészségkárosodást. A műtétek előtt az állatot alaposan megvizsgáljuk, beleértve a vérvizsgálatot (rutin labor, [&hellip;]</p>\n",
+        "protected": false
+      },
+      "menu_order": 2,
+      "categories": [
+        3
+      ],
+      "tag_names": [
+        "Általános"
+      ],
+      "featured_image_url": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/10/bocskaiallatorvos-szolgaltatas-szebeszeti-ellatas.png"
+    },
+    {
+      "id": 23,
+      "date_gmt": "2025-10-25T20:25:15",
+      "slug": "parazitaellenes-kezeles",
+      "title": {
+        "rendered": "Parazitaellenes kezelés"
+      },
+      "content": {
+        "rendered": "\n<p>A kisállatok parazitaellenes kezelése alapvető fontosságú az egészségük megőrzése érdekében, mivel a különböző paraziták — például bolhák, kullancsok, bélférgek és szívférgek — súlyos betegségeket okozhatnak. A parazitaellenes kezelések megelőzik a fertőzéseket és megszabadítják az állatokat a már meglévő parazitáktól.<strong>&nbsp;</strong></p>\n\n\n\n<p><strong><u>Külső paraziták elleni védekezés</u></strong></p>\n\n\n\n<ol class=\"wp-block-list\">\n<li><strong>Bolhák: </strong></li>\n</ol>\n\n\n\n<p>A bolhák súlyos viszketést, allergiás bőrgyulladást és vérszegénységet okozhatnak, különösen fiatal állatoknál. A megelőzés a rendszeres bolhaellenes készítmény használatával, valamint a környezet (alvóhely, lakótér) rendszeres tisztításával lehetséges. A kezelési lehetőségek közé tartoznak a spot-on készítmények, bolhanyakörvek, tabletták, injekciók és samponok. Ezek a készítmények a bolhákat elpusztítják, és akár védelmet is nyújtanak a további fertőzések ellen.</p>\n\n\n\n<ol start=\"2\" class=\"wp-block-list\">\n<li><strong>Kullancsok:</strong></li>\n</ol>\n\n\n\n<p>A kullancsok komoly betegségeket, például babéziózist és Lyme-kórt terjeszthetnek, amelyek súlyos következményekkel járhatnak. A megelőzés kulcsfontosságú, az állatok rendszeres ellenőrzésével (különösen kirándulás vagy hosszabb kültéri tartózkodás után) és a megfelelő védelmet biztosító készítmények használatával lehetséges. A kezelés ugyanúgy, mint bolhák esetén,&nbsp;<strong>s</strong>pot-on készítmények, kullancsellenes nyakörvek, szájon át adható tabletták és injekció segítségével történhet. Ezek a készítmények elpusztítják a kullancsokat vagy megelőzik a megtapadást és ez által a terjesztett betegségeik kialakulását.</p>\n\n\n\n<ol start=\"3\" class=\"wp-block-list\">\n<li><strong>Rühatka </strong>és<strong> fülatka:</strong></li>\n</ol>\n\n\n\n<p>Ezek a mikroszkopikus paraziták bőrproblémákat, például rühességet, viszketést és szőrhullást okoznak. A kezelés állatorvos közreműködésével, speciális spot-on készítmények, tabletták, fültisztító oldatok, esetlegesen más kiegészítő készítmények segítségével történhet.</p>\n\n\n\n<p>A felsoroltakon kívül számos parazita csoport létezik még, amelyek ellen legtöbb készítmény szintén hatásos.</p>\n\n\n\n<p><strong><u>Belső paraziták elleni védekezés</u></strong></p>\n\n\n\n<ol class=\"wp-block-list\">\n<li><strong>Bélférgek (orsóféreg, galandféreg, kampósféreg stb.) :</strong></li>\n</ol>\n\n\n\n<p>A bélférgek súlyos egészségügyi problémákat, például hasmenést, hányást, fogyást és vérszegénységet okozhatnak. Néhány bélféreg faj emberekre is veszélyes (zoonózis).A megelőzés rendszeres féregtelenítéssel és a megfelelő higiénia és a környezet tisztántartása révén lehetséges. A kezelés féregtelenítő tabletták vagy paszták segítségével történhet, ezeket általában 3 havonta érdemes alkalmazni, különösen olyan felnőtteknél, amelyek sok időt töltenek a szabadban. Kölyök állatok esetén még ennél is gyakrabban, akár 2 hetente javasolt a féregtelenítés.</p>\n\n\n\n<ol start=\"2\" class=\"wp-block-list\">\n<li><strong>Szívférgesség (Dirofilaria immitis) :</strong></li>\n</ol>\n\n\n\n<p>A szívférgesség egy súlyos, életveszélyes parazita által okozott betegség, amelyet szúnyogok terjesztenek. A paraziták a szívből kilépő erekben. a tüdőartériában telepednek meg és ott súlyos károsodást okozhatnak. A megelőző kezelés havonta alkalmazható spot-on vagy szájon át adható készítmények segítségével illetve már éves injekciós kezelésekkel is történhet.</p>\n\n\n\n<p>Fontos a rendszeres szívféreg megelőző kezelés, különösen olyan területeken, ahol gyakori a fertőzés, mivel a fertőzött állat kezelése igen hosszadalmas és bonyolult folyamat.</p>\n\n\n\n<p><strong><u>Parazitaellenes kezelések típusai</u></strong></p>\n\n\n\n<ul class=\"wp-block-list\">\n<li><strong>Spot-on készítmények</strong>: A bőrre cseppentve kerülnek felvitelre, és hatásuk akár több hétig is eltart. Különféle paraziták ellen nyúlthatnak védelmet, például bolhák, kullancsok és bélférgek ellen is.</li>\n\n\n\n<li><strong>Tabletták</strong>: Ezek a termékek belsőleg hatnak, hatékonyak bélférgek vagy bolhák és kullancsok ellen. Általában havonta vagy negyedévente kell beadni.</li>\n\n\n\n<li><strong>Nyakörvek</strong>: A bolhanyakörvek és kullancsellenes nyakörvek hosszú távú védelmet biztosítanak (akár 6-8 hónapig), és kifejezetten kültéri állatok számára ajánlottak.</li>\n\n\n\n<li><strong>Samponok és spray-k</strong>: Ezek gyors segítséget nyújtanak, ha már fertőzés történt, és gyakran kiegészítő kezelésként alkalmazzák őket más parazitaellenes készítmények mellett.</li>\n\n\n\n<li><strong>Injekciós készítmények: </strong>Manapság már elérhetőek olyan készítmények, amelyek éves védettséget nyújthatnak a szívférgesség vagy bolhák, kullancsok és atkák ellen.</li>\n</ul>\n\n\n\n<p>Parazitaellenes kezelés fontos az egészségmegőrzés szempontjából, mivel a paraziták számos betegséget okozhatnak és rontják az állatok életminőségét. A megfelelő kezelés segít elkerülni ezeket a problémákat. Továbbá bizonyos paraziták emberekre is átterjedhetnek, így az állatok védelme az emberek egészségének megőrzése szempontjából is fontos!</p>\n",
+        "protected": false
+      },
+      "excerpt": {
+        "rendered": "<p>A kisállatok parazitaellenes kezelése alapvető fontosságú az egészségük megőrzése érdekében, mivel a különböző paraziták — például bolhák, kullancsok, bélférgek és szívférgek — súlyos betegségeket okozhatnak. A parazitaellenes kezelések megelőzik a fertőzéseket és megszabadítják az állatokat a már meglévő parazitáktól.&nbsp; Külső paraziták elleni védekezés A bolhák súlyos viszketést, allergiás bőrgyulladást és vérszegénységet okozhatnak, különösen fiatal állatoknál. [&hellip;]</p>\n",
+        "protected": false
+      },
+      "menu_order": 3,
+      "categories": [
+        3
+      ],
+      "tag_names": [
+        "Megelőzés"
+      ],
+      "featured_image_url": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/10/bocskaiallatorvos-szolgaltatas-parazita-ellenes-kezeles.png"
+    },
+    {
+      "id": 26,
+      "date_gmt": "2025-10-25T20:30:35",
+      "slug": "vakcinazas",
+      "title": {
+        "rendered": "Vakcinázás"
+      },
+      "content": {
+        "rendered": "\n<p>A kölyök állatok oltási programja létfontosságú az egészségük megőrzéséhez és a súlyos betegségek elleni védelemhez. A vakcinázási terv több lépcsőben zajlik, és az első néhány hónapban többszöri ismétlést igényel. A legtöbb védőoltás nem ad élethosszig tartó védelmet, ezért felnőttkorban is szükséges, azok rendszeres időközönkénti ismétlése.</p>\n\n\n\n<p><a href=\"#kolyokkutyak-oltasi-programja\">Kutyák oltásai</a></p>\n\n\n\n<p><a href=\"#macskak-oltasi-programja\" data-type=\"internal\" data-id=\"#macskak-oltasi-programja\">Macskák oltásai</a></p>\n\n\n\n<p><a href=\"#nyulak-oltasi-programja\" data-type=\"internal\" data-id=\"#nyulak-oltasi-programja\">Nyulak oltásai</a></p>\n\n\n\n<h4 class=\"wp-block-heading\" id=\"kolyokkutyak-oltasi-programja\"><strong>Kölyökkutyák oltási programja:</strong>&nbsp;</h4>\n\n\n\n<ol class=\"wp-block-list\">\n<li><strong>6-8 hetes kor</strong> – <strong>Parvovírus elleni oltás</strong></li>\n</ol>\n\n\n\n<p>Általában 6-8 hetes korban adják az első parvovírus elleni vakcinát. Ez az időszak kritikus, mivel a kölyökkutyák anyai ellenanyagai ekkor már csökkennek, és szükség van a saját immunválaszuk aktiválására. A parvovírus elleni oltás az egyik legfontosabb kölyökkutyáknak beadandó vakcina, mivel ez a kórokozó&nbsp;<strong>súlyos, gyakran halálos kimenetelű betegséget okoz, különösen fiatal és oltatlan kutyákban</strong>. A vírus elsősorban a gyomor- és bélrendszert támadja meg, ami erős hányást, intenzív hasmenést (gyakran véres), kiszáradást okozhat. A megfelelő védettséghez több ismétlő oltásra is szükség van. A parvovírus&nbsp;<strong>rendkívül</strong><strong>&nbsp;fertőző, és gyorsan terjed</strong>&nbsp;szennyezett széklettel, felületekkel és más kutyákkal való érintkezés révén.&nbsp;<strong>A vírus nagyon ellenálló és hónapokig, évekig fertőzőképes maradhat a környezetben.</strong>&nbsp;<strong>Kezelése drága és bonyolult, a halálozási arány pedig magas</strong>&nbsp;lehet, különösen, ha a kezelés nem kezdődik el időben.&nbsp;<strong>Az oltással a kutyák&nbsp;</strong><strong>hatékonyan</strong><strong>&nbsp;védhetők meg ettől a súlyos betegségtől.</strong>&nbsp;</p>\n\n\n\n<ol start=\"2\" class=\"wp-block-list\">\n<li><strong>8-10 hetes kor</strong> – <strong>Parvovírus elleni oltás ismétlése</strong></li>\n</ol>\n\n\n\n<p>A második oltásra általában 8-10 hetes korban kerül sor, az ismétlés segít az immunitás megerősítésében.&nbsp;</p>\n\n\n\n<ol start=\"3\" class=\"wp-block-list\">\n<li><strong>10-12 hetes kor – Kombinált oltás</strong></li>\n</ol>\n\n\n\n<p><strong>A kombinált oltás olyan vakcina, amely több súlyos és fertőző betegség ellen nyújt védelmet egyetlen injekció formájában.</strong>&nbsp;Kölyökkutyák esetében ez az oltás alapvető része az oltási programnak, mivel segít megelőzni több veszélyes, akár halálos betegséget. A kombinált oltás Magyarországon és világszerte a következő betegségek ellen nyújt védelmet:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li><strong>Szopornyica (Distemper)</strong>: Vírusos fertőzés, amely a légző-, emésztő-, és idegrendszert is támadja. Akár halálos kimenetelű, ha nem kezelik időben.</li>\n\n\n\n<li><strong>Fertőző májgyulladás (Hepatitis)</strong>: Adenovírus okozza és súlyos májkárosodást okozhat. Láz, hasi fájdalom, sárgaság és májelégtelenség tünetei jelentkeznek.</li>\n\n\n\n<li><strong>Parvovírus (Parvovirosis)</strong>: Súlyos gyomor- és bélgyulladást okoz, amely véres hasmenéssel, hányással és kiszáradással járhat. A halálozási arány magas a kölyökkutyák körében.</li>\n\n\n\n<li><strong>Parainfluenza</strong>: A légzőrendszert támadó vírus, amely kennelköhögés egyik okozója lehet. Bár általában nem halálos, de súlyos légúti fertőzéseket okozhat.</li>\n\n\n\n<li><strong>Leptospirózis: </strong>Súlyos, gyakran végzetes kimenetelű bakteriális fertőzés, amelyet patkányok és más rágcsálók terjesztenek. Súlyos vesekárosodást, májgyulladást, lázat okozhat és emberekre is átterjedhet (zoonózis).</li>\n</ul>\n\n\n\n<p>A kombinált oltás segít a kölyökkutyák immunrendszerének felkészítésében több súlyos, életveszélyes fertőző betegség ellen. Ezek a betegségek gyorsan terjedhetnek kutyák között, különösen olyan közösségi helyeken, mint a kutyapanziók, kutyaiskolák vagy parkok. Az oltással az állat egész életében védett lehet ezen betegségekkel szemben, és megakadályozható a járványok terjedése is.</p>\n\n\n\n<ol start=\"4\" class=\"wp-block-list\">\n<li><strong>12-14 hetes kor – Kombinált oltás ismétlése</strong></li>\n</ol>\n\n\n\n<p>A második kombinált oltás után, felnőtt korban is évente javasolt ismételni.</p>\n\n\n\n<ol start=\"5\" class=\"wp-block-list\">\n<li><strong>Veszettség elleni oltás (és mikrochip beültetése)</strong></li>\n</ol>\n\n\n\n<p>A&nbsp;<strong>veszettség elleni oltás</strong>&nbsp;a legfontosabb és egyben&nbsp;<strong>kötelező</strong>&nbsp;vakcina kutyák számára Magyarországon és a világ számos országában, mivel a veszettség (rabies) egy&nbsp;<strong>halálos kimenetelű</strong>&nbsp;vírusos betegség, amely nemcsak az állatokra, hanem az emberekre is átterjedhet (zoonózis).</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>Magyarországon jogszabály írja elő<strong>, hogy az első veszettség elleni oltást</strong> <strong>minden kutyának</strong> kötelező <strong>3 hónapos kor</strong> után 4 héten belül megkapnia. Ez az alapoltás, amely a veszettség megelőzését szolgálja.</li>\n\n\n\n<li>Az első oltás után <strong>6 hónap</strong>on belül egy <strong>emlékeztető oltást</strong> kell kapnia a kutyának. Ez biztosítja, hogy a kutya hosszú távú immunitást nyerjen a veszettség ellen.</li>\n\n\n\n<li>A veszettség elleni oltást ezt követően <strong>évente</strong> meg kell ismételni, hogy a védelem folyamatosan fennmaradjon. Az érvényben lévő magyar állatvédelmi törvények alapján minden kutya számára kötelező évente veszettség elleni oltást kapnia.</li>\n</ul>\n\n\n\n<ol start=\"6\" class=\"wp-block-list\">\n<li><strong>Kennelköhögés elleni oltás</strong></li>\n</ol>\n\n\n\n<p>A&nbsp;<strong>kennelköhögés elleni oltás</strong>&nbsp;a kutyák számára készült vakcina, amely a légzőrendszert érintő, fertőző betegség megelőzésére szolgál. A kennelköhögés egy&nbsp;<strong>vírusos és bakteriális kevert fertőzés, amely köhögést, tüsszögést és egyéb légzőszervi tüneteket okoz</strong>. Különösen a kutyaiskolákban, kutyapanziókban és más közösségi környezetben fordul elő gyakran, ahol a kutyák szoros érintkezésben vannak egymással.</p>\n\n\n\n<p>A kennelköhögés elleni oltás általában a következő kórokozók ellen véd:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li><strong>Bordetella bronchiseptica</strong>: Ez a baktérium a kennelköhögés fő okozója. A vakcina segít megelőzni a fertőzést, amely erőteljes köhögést és légúti problémákat okozhat.</li>\n\n\n\n<li><strong>Parainfluenza vírus</strong>: A kennelköhögés egyik vírusos komponense, amely szintén hozzájárul a légzőszervi megbetegedésekhez. A vakcina megvédi a kutyát ettől a vírustól is.</li>\n</ul>\n\n\n\n<h4 class=\"wp-block-heading\"><strong>Nem kötelező, de javasolt védőoltás.</strong></h4>\n\n\n\n<h4 class=\"wp-block-heading\" id=\"macskak-oltasi-programja\"><strong>Macskák oltásai:</strong></h4>\n\n\n\n<p>Macskák esetében kötelező oltásról csak akkor beszélhetünk, ha az illető cicával külföldre szeretnének utazni. Ebben az esetben a cicának érvényes veszettség elleni oltással kell rendelkeznie.</p>\n\n\n\n<p>A külföldre nem utazó macskák esetében kötelező oltás nincs, de mindenképpen javasolt az egészségük védelmének érdekében a macskabetegségek elleni védőoltások valamelyikének beadatása.</p>\n\n\n\n<p><strong>Lakásban tartott cica</strong>&nbsp;esetében, ha az biztosan nem érintkezik más macskával (a vele egy háztartásban élőket kivéve) az ún.&nbsp;<strong>kis kombinált oltás</strong>t javasoljuk. Az oltás a macska vírusos rhinotracheitis&nbsp;<em>(influenza-szerű tünetek),</em>&nbsp;a macska calicivírus-fertőzés&nbsp;<em>(szájgyulladás, influenza-szerű tünetek)</em>&nbsp;és a macska pánleukopénia&nbsp;<em>(nyelvfekély, véres hasmenéses tünetek)</em>&nbsp;ellen alakít ki védelmet.</p>\n\n\n\n<p>A&nbsp;<strong>kijárós cicák</strong>nál nagyobb esély van arra, hogy valamilyen betegséget elkapjanak társaiktól, így náluk a&nbsp;<strong>nagy kombinált oltás</strong>&nbsp;adása javasolt. Ez a vakcina az előző betegségek mellett a macskaleukózis (immunrendszert befolyásoló gyógyíthatatlan betegség) ellen is képes immunitást kialakítani.</p>\n\n\n\n<p>A kijárós macskáknál a macskaleukózis mellett egy másik súlyos immunhiányos betegséggel, a macska-AIDS-el is kell számolni (mindkét betegség gyógyíthatatlan és halálos). Sajnos az utóbbi betegség megelőzésére még nem áll rendelkezésre oltóanyag.</p>\n\n\n\n<p>Az oltások beadatása esetén szükséges az&nbsp;<strong>alapimmunizálás</strong>, ami azt jelenti, hogy az első oltást követően 4 hét múlva egy ismétlő oltást szükséges adni a cicáknak. Ezt követően évente szükséges az oltás a megfelelő védelem érdekében.</p>\n\n\n\n<p>Az első nagy kombinált oltás beadása előtt javasolt a cicákat macskaleukózisra (FeLV) és macska-AIDS-re (FIV) tesztelni. A&nbsp;<strong>gyorsteszt</strong>hez pár csepp vérre van szükség és az eredményt 10-15 perc múlva már látható is.</p>\n\n\n\n<p><strong>Bár nem kötelező, de kijárós macskák esetében javasolni a veszettség elleni védőoltás beadását is, mivel ők nagyobb eséllyel találkozhatnak fertőzött vadállatokal, mint pl. róka vagy denevér.</strong></p>\n\n\n\n<h4 class=\"wp-block-heading\" id=\"nyulak-oltasi-programja\"><strong>Nyulak oltásai:</strong></h4>\n\n\n\n<p>A nyulak oltása fontos része az egészségük megőrzésének, mivel különböző fertőző betegségekkel szemben védelmet nyújt. A nyulak számára ajánlott oltások közé tartozik a myxomatosis és a vérzéses betegség (RHD) elleni vakcina.</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li><strong>Myxomatosis</strong>: Ez a vírusos betegség a nyulak bőrén és szemein okoz duzzanatokat, és súlyos esetekben halált okozhat. A myxomatosis vírus elsősorban szúnyogok révén terjed.</li>\n\n\n\n<li><strong>Nyulak vérzéses betegsége (RHD)</strong>: Ez a betegség a nyulak máját érinti, és szintén halálos kimenetelű lehet. A vírus gyorsan terjed, és a fertőzött nyulak gyorsan elhullanak. <strong> </strong></li>\n</ul>\n\n\n\n<p>A myxomatosis és a RHD ellen rendelkezésre állnak<strong>&nbsp;kombinált vakcinák</strong>. Ez megkönnyíti az oltási folyamatot, és biztosítja a védettséget mindkét betegség ellen. Az első oltás<strong>&nbsp;leghamarabb 5 hetes kor</strong>&nbsp;körül történik és javasolt a későbbi ismétlő oltást évente.</p>\n",
+        "protected": false
+      },
+      "excerpt": {
+        "rendered": "<p>A kölyök állatok oltási programja létfontosságú az egészségük megőrzéséhez és a súlyos betegségek elleni védelemhez. A vakcinázási terv több lépcsőben zajlik, és az első néhány hónapban többszöri ismétlést igényel. A legtöbb védőoltás nem ad élethosszig tartó védelmet, ezért felnőttkorban is szükséges, azok rendszeres időközönkénti ismétlése. Kutyák oltásai Macskák oltásai Nyulak oltásai Kölyökkutyák oltási programja:&nbsp; Általában [&hellip;]</p>\n",
+        "protected": false
+      },
+      "menu_order": 4,
+      "categories": [
+        3
+      ],
+      "tag_names": [
+        "Megelőzés"
+      ],
+      "featured_image_url": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/10/bocskaiallatorvos-szolgaltatas-vakcinazas.png"
+    },
+    {
+      "id": 29,
+      "date_gmt": "2025-10-25T20:34:41",
+      "slug": "kardiologia-es-szivfergesseg-terapia",
+      "title": {
+        "rendered": "Kardiológia és szívférgesség terápia"
+      },
+      "content": {
+        "rendered": "\n<h4 class=\"wp-block-heading\">Rendelőnkben lehetőség van a szívműködés teljes kivizsgálására, melyet&nbsp;<strong>Dr. Fekete Zoltán</strong>&nbsp;végez.</h4>\n\n\n\n<p>Kiemelt figyelmet fordítunk a kardiológiai betegségek diagnosztizálására, kezelésére és a szívférgesség prevencióra!<br>Mindamellett, hogy a szív ritmusosságát a rutin vizsgálatok részeként fonendoszkóppal orvosaink minden esetben ellenőrzik, <strong>az esetlegesen felmerülő problémákat digitális röntgen, EKG, HDO vérnyomásmérő illetve ultrahang berendezéssel tudjuk vizsgálni</strong>.</p>\n\n\n\n<p>Kóros hallgatózási lelet vagy fennálló tünetek (köhögés, fáradékonyság, zihálás, ájulás) megnyilvánulása esetén első körben mellkas röntgent készítünk a tüdő és a szív állapotáról. Indokolt esetben szívultrahangra kerül a sor. A vizsgálatot mindig előre egyeztetett időpontban végezzük, amelynek részeként az adatok kielemzése és a diagnózis felállítása a vizsgálat végén egyből, helyben meg is történik.</p>\n\n\n\n<figure class=\"wp-block-image size-full\"><img decoding=\"async\" src=\"https://bocskaiallatorvos.hu/api/wp-content/uploads/2025/10/bocskaiallatorvos-szolgaltatas-kutya-anatomia-kardiologia.jpg\" alt=\"\" class=\"wp-image-30\"/></figure>\n\n\n\n<p>A vizsgálat normál esetben nem igényel bódítást. Miközben az állat az oldalán fekszik, egy speciális ultrahangos fej használatával nem csupán csak a szív alakját, szerkezetét vagy alaki elváltozásait, hanem a szív működését is tudjuk vizsgálni. Többek között lemérhető a szív üregeinek tágassága és a falainak vastagsága a szív összehúzódásának két periódusában. Láthatóvá válik, hogy a billentyűk megfelelően záródnak-e, illetve hogy van-e valamilyen zavar a vér áramlásában.&nbsp; Kiszűrhetőek a veleszületett szívfejlődési hibák, illetve az idős korra jellemző szívbetegségek is.</p>\n\n\n\n<p>Szívritmus-zavarok, ún. arrythmiák gyanúja esetén EKG (echokardiogram) készíthető, továbbá a kardiológiai kivizsgálás részeként vérnyomásmérésre is sor kerülhet, egy High Definition Oszcillometriás (HDO) nevű készülék segítségével. Ezek a vizsgálatok sem igényelnek bódítást, fájdalommentesek és pár perc alatt elkészülnek. A röntgen, ultrahang, EKG felvételek, illetve vérnyomásmérés értékelése helyben, azonnal történik. A vizsgálatok eredményét és a diagnózist részletesen megbeszéljük a gazdival, és már aznap beállítjuk a kezeléshez szükséges gyógyszereket.</p>\n",
+        "protected": false
+      },
+      "excerpt": {
+        "rendered": "<p>Rendelőnkben lehetőség van a szívműködés teljes kivizsgálására, melyet&nbsp;Dr. Fekete Zoltán&nbsp;végez. Kiemelt figyelmet fordítunk a kardiológiai betegségek diagnosztizálására, kezelésére és a szívférgesség prevencióra!Mindamellett, hogy a szív ritmusosságát a rutin vizsgálatok részeként fonendoszkóppal orvosaink minden esetben ellenőrzik, az esetlegesen felmerülő problémákat digitális röntgen, EKG, HDO vérnyomásmérő illetve ultrahang berendezéssel tudjuk vizsgálni. Kóros hallgatózási lelet vagy fennálló tünetek (köhögés, [&hellip;]</p>\n",
+        "protected": false
+      },
+      "menu_order": 5,
+      "categories": [
+        3
+      ],
+      "tag_names": [
+        "Szakrendelés"
+      ],
+      "featured_image_url": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/10/bocskaiallatorvos-szolgaltatas-kardiologia.png"
+    }
+  ],
+  "partners": [
+    {
+      "id": 103,
+      "name": "Euro Pet Shop",
+      "url": "https://europetshop.hu/",
+      "image": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/bocskai-allategeszsegugyi-euro-pet-shop.jpg",
+      "order": 1
+    },
+    {
+      "id": 109,
+      "name": "Dog-Like Kutyakozmetika és Panzió",
+      "url": "https://www.facebook.com/dog.like.debrecen/",
+      "image": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/bocskai-allategeszsegugyi-dog-like-300x300.jpg",
+      "order": 2
+    },
+    {
+      "id": 110,
+      "name": "Sires On Ice ReproStars Hungary",
+      "url": "https://www.facebook.com/profile.php?id=100057298335591",
+      "image": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/bocskai-allategeszsegugyi-sires-on-ice-reprostars-hungary.jpg",
+      "order": 3
+    },
+    {
+      "id": 111,
+      "name": "Puli Állatvédő Egyesület",
+      "url": "http://debrecendog.com/",
+      "image": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/bocskai-allategeszsegugyi-puli-allatvedo-egyesulet-300x300.jpg",
+      "order": 4
+    },
+    {
+      "id": 112,
+      "name": "Macskamenta Cicapanzió",
+      "url": "https://www.facebook.com/people/Macskamenta-Cicapanzi%C3%B3/100063623974490/",
+      "image": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/bocskai-allategeszsegugyi-macskamenta-cicapanzio-300x300.jpg",
+      "order": 5
+    }
+  ],
+  "gallery": [
+    {
+      "id": 114,
+      "name": "Természet",
+      "main_image": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/gallery-termeszet-683x1024.webp",
+      "main_image_id": 117,
+      "order": 0,
+      "images": [
+        {
+          "id": 129,
+          "attachment_id": 121,
+          "title": "Erdő",
+          "description": "Erdő leírás",
+          "src": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/gallery-termeszet-erdo-683x1024.jpeg",
+          "order": 0
+        },
+        {
+          "id": 130,
+          "attachment_id": 122,
+          "title": "Tó",
+          "description": "Tavak",
+          "src": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/gallery-termeszet-hegyek-1024x689.jpeg",
+          "order": 1
+        },
+        {
+          "id": 131,
+          "attachment_id": 120,
+          "title": "Híd",
+          "description": "Hidak",
+          "src": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/gallery-termeszet-hid-1024x683.jpeg",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": 142,
+      "name": "Művészet",
+      "main_image": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/gallery-muveszet.jpeg",
+      "main_image_id": 115,
+      "order": 1,
+      "images": [
+        {
+          "id": 146,
+          "attachment_id": 143,
+          "title": "gallery-muveszet-kiallitas",
+          "description": "Szép Kép",
+          "src": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/gallery-muveszet-kiallitas-1024x683.jpeg",
+          "order": 0
+        },
+        {
+          "id": 147,
+          "attachment_id": 144,
+          "title": "gallery-muveszet-kek",
+          "description": "Másik Szép kép",
+          "src": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/gallery-muveszet-kek-1024x770.jpeg",
+          "order": 1
+        },
+        {
+          "id": 148,
+          "attachment_id": 145,
+          "title": "sarga",
+          "description": "Nagyon szép kép",
+          "src": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/gallery-muveszet-sarga-1024x688.jpeg",
+          "order": 2
+        },
+        {
+          "id": 153,
+          "attachment_id": 152,
+          "title": "Absztrakt",
+          "description": "Absztrakt kép",
+          "src": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/gallery-muveszet-absztrakt-819x1024.webp",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": 132,
+      "name": "Városok",
+      "main_image": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/gallery-varosok-los-angeles-1024x666.jpeg",
+      "main_image_id": 133,
+      "order": 2,
+      "images": [
+        {
+          "id": 136,
+          "attachment_id": 133,
+          "title": "LA",
+          "description": "Los Angeles",
+          "src": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/gallery-varosok-los-angeles-1024x666.jpeg",
+          "order": 0
+        },
+        {
+          "id": 137,
+          "attachment_id": 134,
+          "title": "SF",
+          "description": "San Francisco",
+          "src": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/gallery-varosok-san-francisco-1024x636.jpeg",
+          "order": 1
+        },
+        {
+          "id": 138,
+          "attachment_id": 135,
+          "title": "NY",
+          "description": "New york",
+          "src": "https://api.bocskaiallatorvos.hu/wp-content/uploads/2025/11/gallery-varosok-new-york-1024x655.jpeg",
+          "order": 2
+        }
+      ]
+    }
+  ],
+  "generatedAt": "2025-11-22T20:08:07.741Z"
+}

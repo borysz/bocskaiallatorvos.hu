@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function NotFound() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-brandColor to-white text-black p-6">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-white to-white text-black p-6">
       <h1 className="text-8xl font-extrabold animate-bounce mb-6 text-brandButtonHover">404</h1>
       <p className="text-2xl sm:text-3xl font-bold mb-4">Oops! Oldal nem található</p>
       <p className="text-center max-w-xl mb-6">

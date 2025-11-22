@@ -16,10 +16,16 @@ import GalleryPage from './pages/GalleryPage';
 import { BlogList } from './pages/BlogList';
 import { BlogDetail } from './pages/BlogDetail';
 import NotFound from './pages/NotFound';
+import ReactGA from "react-ga4";
+import AnalyticsTracker from './components/AnalyticsTracker';
+
+ReactGA.initialize("G-H3JP7MM77N");
+
 
 function App() {
   return (
-    <BrowserRouter>f
+    <BrowserRouter>
+      <AnalyticsTracker />
       <ScrollToTop />
       <ScrollToHash />
       <div className="min-h-screen bg-white flex flex-col">
