@@ -49,7 +49,7 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
           setMedia(cacheJson.media);
           setPosts(cacheJson.posts);
           setPartners(cacheJson.partners);
-          setGallery(cacheJson.galleries);
+          setGallery(cacheJson.gallery);
           setError(null);
           setReady(true); // 👈 csak ha minden adat bejött */
 
