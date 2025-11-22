@@ -1,42 +1,9 @@
-import { Users, X } from 'lucide-react';
+import { X } from 'lucide-react';
 import { useState } from 'react';
 import { WPMedia, WPPage } from '../../interfaces/WordpressInterfaces';
 import * as LucideIcons from "lucide-react";
 
 const icons = LucideIcons as unknown as Record<string, React.ComponentType<any>>;
-
-const staff = [
-  {
-    name: 'Puporka Nadinka',
-    role: 'Állatorvosi asszisztens',
-    image: 'https://bocskaiallatorvos.hu/wp-content/uploads/2024/10/BIP_5983-1-scaled-1.jpg',
-    bio: 'Gyerekkorom óta meg vagyok bolondulva az állatokért, ezért mindig is szerettem volna egy olyan munkahelyet, ahol a közelükben lehetek. Így az érettségi mellett 2012-ben elvégeztem az állatorvosi asszisztens képzést is. Szerencsésnek mondhatom magam, hogy azzal foglalkozhatok, amire mindig is vágytam. Szinte a kezdetektől erősítem a Bocskai Állategészségügyi Centrum csapatát.'
-  },
-  {
-    name: 'Csábi Tímea',
-    role: 'Munkatárs',
-    image: 'https://bocskaiallatorvos.hu/wp-content/uploads/2024/10/Csabi-timea-e1730385922282.jpg',
-    bio: 'Születésem óta kísérik életemet az állatok, főleg a kutyák és macskák iránt érzett szeretet, tisztelet.Szerencsés voltam, kertes házban rengeteg háziállattal körül véve nőhettem fel, családtagként tekintek rájuk.Mindig is olyan munkahelyre vágytam, ahol állatok vesznek körül. Válassz olyan munkát amit szeretsz csinálni, és soha többet nem kell majd dolgoznod.'
-  },
-  {
-    name: 'Turán Mátyás',
-    role: 'Munkatárs',
-    image: 'https://bocskaiallatorvos.hu/wp-content/uploads/2024/10/matyi.jpg',
-    bio: '2024 januárjától dolgozom a Bocskai Állategészségügyi Centrumban. Előtte Egerben az Eszterházy Károly egyetemen tanultam testnevelés tanári szakon. Munkám mellett gyerekekkel foglalkozok, kézilabda edzőként. Ezt a sportágat hobbi szinten én is gyakorlom. Természet iránti rajongásom miatt választottam ezt a hivatást, a rendelőben pedig rátaláltam arra a környezetre, ahol szívesen dolgozom. Munkám során örömömre szolgál, hogy láthatom az állatok gyógyulását, gazdáik elégedettségét.'
-  },
-  {
-    name: 'Hamvai Alexandra',
-    role: 'Munkatárs',
-    image: 'https://bocskaiallatorvos.hu/wp-content/uploads/2024/10/hamvai-alexandra-1050x933-2.jpg',
-    bio: 'Mindig is éreztem,hogy  állatok között szeretném eltölteni az életemet.  Főként a gazdasági állatok körében kezdtem a pályafutásomat, családi gazdaságban,  valamint  munkalovasként . Pár évvel ezelőtt adódott egy lehetőség ,hogy kisállatokkal is foglalkozhassak és akkor éreztem, hogy ez nekem való. Örömmel végzem a munkám, tudván hogy megannyi élet megmentésre kerülhet a segítségemmel. 2024-ben kezdtem erősìteni a Bocskai Állategészségügyi Centrum családias és szakmailag kiemelkedő csapatát.'
-  },
-  {
-    name: 'Borosné Szoboszlai Beatrix',
-    role: 'Munkatárs',
-    image: 'https://bocskaiallatorvos.hu/wp-content/uploads/2024/10/borosne-1000-1070.jpg',
-    bio: 'Már gyermekkoromtól kezdve nagyon érdekeltek a kutyák, mindig is rajongtam értük mérettől, színtől és fajtától függetlenül. Kutyákkal 2015-ben kezdtem foglalkozni, amikor az egyetem elvégzése után egy menhelyen kezdtem el dolgozni. Két évvel később belecsöppentem az állatasszisztált terápiák világába, ahol a kutyák kiképzésében tehettem szert jelentős tapasztalatokra. Igazán ekkor értettem meg, hogy minden kutya milyen különleges, egyedi személyiség és mennyire meg tudja változtatni egy ember életét. Az ez idő alatt megszerzett tudásomat jelenleg asszisztensként bővíthetem és kamatoztathatom a Bocskai Állategészségügyi Centrumban.'
-  }
-];
 
 type TeamTeamProps = {
   sectionTitle?: WPPage;
@@ -73,7 +40,7 @@ export default function TeamTeam({ sectionTitle, doctorsTitle, doctorsList, coll
   const IconComponentColleaguesTitle = icons[(colleaguesTitle?.meta?.icon?.[0] as string) || "Users"];
 
   return (
-    <section id="bocskaiteam" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-brand to-white">
+    <section id="bocskaiteam" className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-brand to-white">
       <div className="max-w-7xl mx-auto">
         <div dangerouslySetInnerHTML={{ __html: sectionTitleHtml ?? "" }} />
 
