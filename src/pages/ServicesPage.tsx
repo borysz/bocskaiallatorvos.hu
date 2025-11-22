@@ -53,7 +53,7 @@ export default function ServicesPage() {
     <section id="servicesList" className="py-20 bg-gradient-to-b from-brand to-white">
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-16 animate-fade-in">
-          <h1 className="text-3xl font-bold text-brandHeaderColor mb-8 text-center">
+          <h1 className="text-4xl font-bold text-brandHeaderColor mb-8 text-center">
             Állatorvosi Szolgáltatások
           </h1>
           <p className="text-xl sm:text-2xl text-brandColor max-w-3xl mx-auto leading-relaxed">

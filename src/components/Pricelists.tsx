@@ -41,7 +41,7 @@ function Pricelists() {
                     <h1 className="text-4xl font-bold text-brandHeaderColor mb-3 flex items-center justify-center gap-3">
                         Árlisták
                     </h1>
-                    <p className="text-brandColor text-lg">Szolgáltatásaink áttekintése</p>
+                    <p className="text-brandColor text-xl sm:text-2xl">Szolgáltatásaink áttekintése</p>
                 </div>
 
                 {priceLists.map((priceList, index) => {

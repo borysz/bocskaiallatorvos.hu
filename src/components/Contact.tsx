@@ -67,7 +67,7 @@ export default function Contact() {
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-16 animate-fade-in">
           <h1 className="text-4xl font-bold text-brandHeaderColor mb-4">Kapcsolat</h1>
-          <p className="text-lg text-brandColor max-w-2xl mx-auto">
+          <p className="text-xl sm:text-2xl text-brandColor max-w-2xl mx-auto">
             Keressen minket bizalommal bármilyen kérdéssel kapcsolatban!
           </p>
         </div>
