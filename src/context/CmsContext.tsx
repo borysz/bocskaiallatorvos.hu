@@ -26,7 +26,10 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [ready, setReady] = useState(false);
 
   const apiUrl = import.meta.env.VITE_API_URL;
-  const cacheFile = "./dist/cms-cache.json";
+  const cacheFile =
+    import.meta.env.MODE === "production"
+      ? "cms-cache.json"
+      : "./dist/cms-cache.json";
 
   useEffect(() => {
     let isMounted = true;
