@@ -90,7 +90,7 @@ export function BlogDetail() {
             <section id="blogDetail" className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-gray-50">
                 <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                     <header className="pt-20 mb-12 animate-fadeIn">
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brandHeaderColor mb-6 leading-tight">
                             {post.title.rendered}
                         </h1>
 

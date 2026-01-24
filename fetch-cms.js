@@ -10,9 +10,9 @@ async function run() {
     await Promise.all([
       fetch(`${apiUrl}/pages?_fields=id,parent,menu_order,slug,title,content,meta,featured_media&orderby=menu_order&order=asc&per_page=100`),
       fetch(`${apiUrl}/media?_fields=id,slug,guid,caption&per_page=100`),
-      fetch(`${apiUrl}/posts?_fields=id,date_gmt,title,excerpt,content,slug,categories,tag_names,featured_image_url,menu_order&orderby=menu_order&order=asc`),
-      fetch(`${apiUrl}/partners`),
-      fetch(`${apiUrl}/galleries`)
+      fetch(`${apiUrl}/posts?_fields=id,date_gmt,title,excerpt,content,slug,categories,tag_names,featured_image_url,menu_order&orderby=menu_order&order=asc&per_page=100`),
+      fetch(`${apiUrl}/partners&per_page=100`),
+      fetch(`${apiUrl}/galleries&per_page=100`)
     ]);
 
   const data = {
