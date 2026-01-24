@@ -77,7 +77,7 @@ export function BlogList() {
         <section id="blogPosts" className="py-20 min-h-screen bg-gradient-to-b from-brand to-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <header className="text-center mb-16 animate-fade-in">
-                    <h1 className="text-3xl font-bold text-brandHeaderColor mb-8 text-center">
+                    <h1 className="text-4xl font-bold text-brandHeaderColor mb-8 text-center">
                         Blog
                     </h1>
                     <p className="text-xl sm:text-2xl text-brandColor max-w-3xl mx-auto leading-relaxed">

@@ -19,7 +19,7 @@ export default function TeamHero({ content }: TeamHeroProps) {
 
   return (
     <section className="relative bg-gradient-to-br from-brand via-white to-white pt-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto py-12">
         <div className="text-center">
           <div className="flex justify-center mb-6">
             <div className="bg-brandButton p-4 rounded-full animate-pulse-soft">

@@ -63,7 +63,7 @@ export default function ServiceDetailPage() {
             <section id="serviceDetails" className="py-16 bg-gradient-to-b from-brand to-white">
                 <div className="min-h-screen">
                     <header className="bg-white shadow-sm sticky top-0 z-10">
-                        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4 mt-6">
                             <Link
                                 to="/szolgaltatasok"
                                 className="inline-flex items-center gap-2 text-brandButton hover:text-brandButtonHover transition-colors font-medium"

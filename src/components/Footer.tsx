@@ -45,7 +45,7 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">Elérhetőség</h4>
             <ul className="space-y-2 text-gray-400">
-              <li>4241 Bocskaikert</li>
+              <li>4241 Bocskaikert,</li>
               <li>Debreceni út 25.</li>
               <li><a href="tel:+36302390940" className="hover:text-brandButton transition">+36 30 239 0940</a></li>
               <li>info@bocskaiallatorvos.hu</li>
@@ -61,9 +61,9 @@ export default function Footer() {
               <a href="https://www.instagram.com/bocskaiallatorvos/" target="_blank" className="bg-gray-800 hover:bg-brandButtonHover w-10 h-10 rounded-full flex items-center justify-center transition">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="mailto:info@bocskaallatorvos.hu?subject=Weboldalról történő megkeresés" className="bg-gray-800 hover:bg-brandButtonHover w-10 h-10 rounded-full flex items-center justify-center transition">
+              <Link to="/kapcsolat" className="bg-gray-800 hover:bg-brandButtonHover w-10 h-10 rounded-full flex items-center justify-center transition">
                 <Mail className="w-5 h-5" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

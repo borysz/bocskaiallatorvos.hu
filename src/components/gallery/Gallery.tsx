@@ -41,7 +41,7 @@ export default function Gallery() {
                     <h1 className="text-4xl font-bold text-brandHeaderColor mb-3 flex items-center justify-center gap-3">
                         Galéria
                     </h1>
-                    <p className="text-brandColor text-lg">
+                    <p className="text-brandColor text-xl sm:text-2xl">
                         Pillants be rendelőnk mindennapjaiba! 
                     </p>
                 </div>
