@@ -28,25 +28,28 @@ export interface WPPosts {
     content: { rendered: string };
     categories: number[];
     featured_image_url: string;
-    date_gmt: string;          
-    tag_names: string;   
+    date_gmt: string;
+    tag_names: string;
+    meta: {
+        [key: string]: string[];
+    }
 }
 
 export interface WPPartners {
-  id: number;
-  name: string;
-  url: string;
-  image: string;
-  order: number;
+    id: number;
+    name: string;
+    url: string;
+    image: string;
+    order: number;
 }
 
 export interface WPGallery {
-  id: string;
-  name: string;
-  main_image: string;
-  main_image_id: number;
-  order: number;
-  images?: WPGalleryImageDetail[];
+    id: string;
+    name: string;
+    main_image: string;
+    main_image_id: number;
+    order: number;
+    images?: WPGalleryImageDetail[];
 }
 
 export interface WPGalleryImageDetail {

@@ -4,9 +4,9 @@ import { useCms } from '../../context/CmsContext';
 
 const stats = [
     { icon: Award, value: '15+', label: 'Év tapasztalat' },
-    { icon: Users, value: '2000+', label: 'Elégedett ügyfél' },
-    { icon: Heart, value: '5000+', label: 'Kezelt állat' },
-    { icon: Clock, value: '24/7', label: 'Elérhetőség' },
+    { icon: Users, value: '6000+', label: 'Elégedett ügyfél' },
+    { icon: Heart, value: '12000+', label: 'Kezelt állat' },
+    { icon: Clock, value: 'Heti 6 nap', label: 'Hosszú nyitvatartás' },
 ];
 
 
