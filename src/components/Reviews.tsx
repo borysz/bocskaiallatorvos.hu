@@ -44,7 +44,7 @@ export default function Reviews() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-brandHeaderColor mb-4">Ügyfeleink véleménye</h2>
           <p className="text-lg text-brandColor max-w-2xl mx-auto">
-            Büszkék vagyunk arra, hogy elégedett ügyfelek ezrei bíznak bennünk.
+            Büszkék vagyunk rá, hogy elégedett pácienseink ezrei bíznak teljes körű állatorvosi ellátásunkban.
           </p>
         </div>
 

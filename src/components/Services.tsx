@@ -1,51 +1,36 @@
-import { Stethoscope, Syringe, Scissors, HeartPulse, Shield, Pill } from 'lucide-react';
+import { Stethoscope, Activity , Scissors, HeartPulse, MonitorCloud, Pill } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const services = [
   {
     icon: Stethoscope,
-    title: 'Általános vizsgálat',
-    description: 'Teljes körű egészségügyi vizsgálat és diagnosztika tapasztalt szakemberek által.',
+    title: 'Bőrgyógyászati szakrendelés',
+    description: ' Kutyák és macskák teljes körű bőrgyógyászati ellátása hivatalosan elismert bőrgyógyász szakállatorvos által.',
   },
   {
-    icon: Syringe,
-    title: 'Oltások',
-    description: 'Kötelező és ajánlott védőoltások minden korú állat számára, naprakész oltási nyilvántartással.',
+    icon: HeartPulse,
+    title: 'Kardiológiai szakrendelés',
+    description: 'Kardiológiai betegségek diagnosztikája és kezelése: szívultrahang, EKG, vérnyomásmérés.  Kiemelt figyelmet fordítunk a szívférgesség megelőzésére, kivizsgálására, kezelésére.',
+  },
+  {
+    icon: Pill,
+    title: 'Fogászati szakrendelés',
+    description: 'Teljes körű fogászati ellátás korszerű fogászati röntgennel, tapasztalt és magas szintű szaktudással rendelkező állatorvos által.',
+  },  
+  {
+    icon: MonitorCloud,
+    title: 'Képalkotó diagnosztika',
+    description: 'Ultrahang, endoszkópia, röntgen – modern képalkotás a lehető legpontosabb diagnózisért.',
+  },
+  {
+    icon: Activity,
+    title: 'Laborvizsgálatok',
+    description: 'Pontos és megbízható diagnosztikai eredmények világszínvonalú IDEXX technológiával.',
   },
   {
     icon: Scissors,
-    title: 'Sebészeti beavatkozások',
-    description: 'Modern eszközökkel felszerelt műtő, ivartalanítás és egyéb sebészeti eljárások.',
-  },
-  /*{
-    icon: HeartPulse,
-    title: 'Sürgősségi ellátás',
-    description: 'Azonnali segítség sürgős esetekben, gyors diagnózis és hatékony kezelés.',
-  },
-  {
-    icon: Shield,
-    title: 'Megelőzés',
-    description: 'Parazitaellenes kezelések, fogászati ellátás és preventív egészségügyi tanácsadás.',
-  },
-  {
-    icon: Pill,
-    title: 'Gyógyszerkiadás',
-    description: 'Helyben elérhető gyógyszerek és táplálék-kiegészítők kedvence számára.',
-  },*/
-  {
-    icon: Pill,
-    title: 'Fogászati beavatkozás',
-    description: 'Fogászati röntgennel felszerelt Fogorvosi szakvizsgával rendelkező állatorvos kolléga által végzett beavatkozások.',
-  },
-  {
-    icon: Shield,
-    title: 'Bőrgyógyászati vizsgálat',
-    description: 'Kelet-Magyarország egyetlen szakvizsgával rendelkező bőrgyógyásza által.',
-  },
-  {
-    icon: HeartPulse,
-    title: 'Kardiológiai vizsgálat',
-    description: 'Kiemelt figyelmet fordítunk a kardiológiai betegségek diagnosztizálására, kezelésére és a szívférgesség prevencióra!',
+    title: 'Sebészeti ellátás',
+    description: 'Modern eszközökkel felszerelt műtő, ivartalanítás és egyéb tervezett vagy sürgősségi lágysebészeti műtétek.',
   },
 ];
 

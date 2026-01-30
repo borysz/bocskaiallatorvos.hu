@@ -9,4 +9,7 @@ export interface Service {
   created_at: string;
   detailed_content: string | null;
   slug: string | null;
+  meta: {
+     [key: string]: string[];
+  }
 }
