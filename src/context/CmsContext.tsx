@@ -29,7 +29,8 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const cacheFile =
     import.meta.env.MODE === "production"
       ? "cms-cache.json"
-      : "./dist/cms-cache.json";
+      //: "./dist/cms-cache.json";
+      : "/dist/cms-cache.json";
 
   useEffect(() => {
     let isMounted = true;
@@ -40,7 +41,7 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       try {
         const cacheRes = await fetch(cacheFile);
         const contentType = cacheRes.headers.get("content-type") || "";
-
+    
         if (contentType.includes("application/json")) {
           let cacheJson = await cacheRes.json();
           console.log("➡️ Cache friss → JSON betöltve");
@@ -57,7 +58,7 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
           const [pagesRes, mediaRes, postsRes, partnersRes, galleriesRes] = await Promise.all([
             fetch(`${apiUrl}/pages?_fields=id,parent,menu_order,slug,title,content,meta,featured_media&orderby=menu_order&order=asc&per_page=100`),
             fetch(`${apiUrl}/media?_fields=id,slug,guid,caption&per_page=100`),
-            fetch(`${apiUrl}/posts?_fields=id,date_gmt,title,excerpt,content,slug,categories,tag_names,featured_image_url,menu_order&orderby=menu_order&order=asc`),
+            fetch(`${apiUrl}/posts?_fields=meta,id,date_gmt,title,excerpt,content,slug,categories,tag_names,featured_image_url,menu_order&orderby=menu_order&order=asc`),
             fetch(`${apiUrl}/partners`),
             fetch(`${apiUrl}/galleries`)
           ]);

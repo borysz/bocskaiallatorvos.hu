@@ -29,7 +29,7 @@ export default function SzechenyiBanner() {
       </button>
       <Link to="/palyazatok/ginop-2017-01597" target="_blank">
       <img
-        src="https://bocskaiallatorvos.hu/wp-content/plugins/szechenyi-2020-logo/assets/images/szechenyi-2020-logo-bottom.png"
+        src="https://api.bocskaiallatorvos.hu/wp-content/uploads/2026/01/szechenyi-2020-logo-bottom.png"
         alt="Széchenyi 2020 logó"
         className="w-40 h-auto"
       />

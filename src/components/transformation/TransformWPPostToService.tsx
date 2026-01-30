@@ -22,6 +22,7 @@ export function transformWPPostToService(post: WPPosts): Service {
     is_active: true,
     created_at: new Date(post.date_gmt).toISOString(), 
     detailed_content: post.content?.rendered ?? null,
-    slug: post.slug ?? null
+    slug: post.slug ?? null,
+    meta: post.meta
   };
 }
