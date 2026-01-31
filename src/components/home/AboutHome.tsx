@@ -32,7 +32,7 @@ export default function AboutHome() {
                     <div>
                         {aboutPages.map((page) => {
                             const replacedContent = page.content.rendered
-                                .replace(/<p>/g, '<p class="text-lg text-brandColor leading-relaxed mb-6">')
+                                .replace(/<p>/g, '<p class="text-base text-brandColor leading-relaxed mb-6">')
                             /*.replace(/<span>/g,'<span class="text-lg text-gray-800 mb-6">')*/;
 
                             return (
