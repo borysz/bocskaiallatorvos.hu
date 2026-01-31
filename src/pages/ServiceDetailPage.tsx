@@ -59,7 +59,7 @@ export default function ServiceDetailPage() {
                 description={(service?.meta?.meta_description?.slice(-1)[0] ?? '').replace(/<[^>]*>/g, '')}
                 ogImage={service?.image_url}
                 url={currentUrl}
-            /> }
+            />}
             <section id="serviceDetails" className="py-16 bg-gradient-to-b from-brand to-white">
                 <div className="min-h-screen">
                     <header className="bg-white shadow-sm sticky top-0 z-10">
@@ -115,10 +115,13 @@ export default function ServiceDetailPage() {
                                 <div className="mt-12 pt-8 border-t border-gray-200">
                                     <div className="bg-brand rounded-xl p-6">
                                         <h3 className="text-lg font-semibold text-emerald-900 mb-2">
-                                            Időpontfoglalás
+                                            Kapcsolat és időpontfoglalás
                                         </h3>
                                         <p className="text-gray-600 mb-4">
-                                            Szeretne időpontot foglalni erre a szolgáltatásra? Lépjen kapcsolatba velünk!
+                                            <strong>Cím:</strong> 4241 Bocskaikert, Debreceni út 25.<br />
+                                            Debrecentől 10–15 percre, Nyíregyházától kb. 30 percre.
+                                            <br /><br />
+                                            Hívjon bátran időpontért, oltási tervért vagy tanácsért!
                                         </p>
                                         <div className="flex flex-wrap gap-4">
                                             <a
