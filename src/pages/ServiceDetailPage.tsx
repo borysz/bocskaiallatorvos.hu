@@ -119,16 +119,13 @@ export default function ServiceDetailPage() {
                                         </h3>
                                         <p className="text-gray-600 mb-4">
                                             <strong>Cím:</strong> 4241 Bocskaikert, Debreceni út 25.<br />
-                                            Debrecentől 10–15 percre, Nyíregyházától kb. 30 percre.
-                                            <br /><br />
-                                            Hívjon bátran időpontért, oltási tervért vagy tanácsért!
                                         </p>
                                         <div className="flex flex-wrap gap-4">
                                             <a
                                                 href="tel:+36302390940"
                                                 className="inline-flex items-center gap-2 bg-brandButton hover:bg-brandButtonHover text-black  px-6 py-3 rounded-lg  transition-colors font-medium"
                                             >
-                                                Telefonos időpontfoglalás
+                                                +36 30 239 0940
                                             </a>
                                             <Link
                                                 to="/kapcsolat#contact"
