@@ -11,6 +11,8 @@ type TeamTeamProps = {
   doctorsList?: WPPage[];
   colleaguesTitle?: WPPage;
   colleagues?: WPPage[];
+  hrTitle?: WPPage;
+  hrcolleagues?: WPPage[];
   media?: WPMedia[];
 };
 
@@ -22,7 +24,7 @@ function getImageUrl(mediaList: WPMedia[], id: number) {
   };
 }
 
-export default function TeamTeam({ sectionTitle, doctorsTitle, doctorsList, colleaguesTitle, colleagues, media }: TeamTeamProps) {
+export default function TeamTeam({ sectionTitle, doctorsTitle, doctorsList, colleaguesTitle, colleagues, hrTitle, hrcolleagues, media }: TeamTeamProps) {
   const [selectedMember, setSelectedMember] = useState<WPPage | null>(null);
 
   const sectionTitleHtml = sectionTitle?.content.rendered?.replace(
@@ -38,6 +40,7 @@ export default function TeamTeam({ sectionTitle, doctorsTitle, doctorsList, coll
 
   const IconComponentDoctorsTitle = icons[(doctorsTitle?.meta?.icon?.[0] as string) || "Stethoscope"];
   const IconComponentColleaguesTitle = icons[(colleaguesTitle?.meta?.icon?.[0] as string) || "Users"];
+  const IconComponentHRTitle = icons[(hrTitle?.meta?.icon?.[0] as string) || "Crosshair"];
 
   return (
     <section id="bocskaiteam" className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-brand to-white">
@@ -77,7 +80,7 @@ export default function TeamTeam({ sectionTitle, doctorsTitle, doctorsList, coll
                 <h4 className="text-xl font-bold text-brandHeaderColor mb-2 text-center">
                   {doctor.title?.rendered}
                 </h4>
-                <p className={`text-sm font-medium mb-4 text-center ${doctor.meta?.isLeader?.[0] == "1"? 'text-brandButtonHover' : 'text-brandColor'
+                <p className={`text-sm font-medium mb-4 text-center ${doctor.meta?.isLeader?.[0] == "1" ? 'text-brandButtonHover' : 'text-brandColor'
                   }`}>
                   {doctor.meta?.titulus?.[0]}
                 </p>
@@ -92,7 +95,7 @@ export default function TeamTeam({ sectionTitle, doctorsTitle, doctorsList, coll
           </div>
         </div>
 
-        <div>
+        <div className="mb-20">
           <h3 className="text-2xl font-semibold text-brandColor mb-10 flex items-center justify-center gap-3">
             {IconComponentColleaguesTitle && (
               <IconComponentColleaguesTitle className="w-6 h-6 text-brandButton" />
@@ -101,6 +104,40 @@ export default function TeamTeam({ sectionTitle, doctorsTitle, doctorsList, coll
           </h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 max-w-5xl mx-auto">
             {colleagues?.map((member, index) => (
+              <div
+                key={index}
+                onClick={() => setSelectedMember(member)}
+                className="flex flex-col items-center text-center cursor-pointer group"
+              >
+                <div className="animate-pulse-soft">
+                  <img
+                    src={getImageUrl(media ?? [], member.featured_media).src}
+                    alt={getImageUrl(media ?? [], member.featured_media).alt}
+                    className="w-40 h-40 rounded-full object-cover object-[center_top] ring-2 ring-gray-300 mb-4 group-hover:ring-brandSection group-hover:scale-110 group-hover:-rotate-2 transition-all duration-300"
+                  />
+                </div>
+                <h4 className="text-base font-semibold text-brandHeaderColor mb-1">
+                  {member.title.rendered}
+                </h4>
+                <p className="text-sm text-brandColor">
+                  {member.meta?.titulus?.[0]}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h3 className="text-2xl font-semibold text-brandColor mb-10 flex items-center justify-center gap-3">
+            {IconComponentHRTitle && (
+              <IconComponentHRTitle className="w-6 h-6 text-brandButton" />
+            )}
+            <span
+              dangerouslySetInnerHTML={{ __html: hrTitle?.title?.rendered ?? '' }}
+            />
+          </h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 max-w-5xl mx-auto">
+            {hrcolleagues?.map((member, index) => (
               <div
                 key={index}
                 onClick={() => setSelectedMember(member)}
@@ -135,7 +172,7 @@ export default function TeamTeam({ sectionTitle, doctorsTitle, doctorsList, coll
             onClick={(e) => e.stopPropagation()}
           >
             <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex justify-between items-center">
-              <h3 className="text-2xl font-bold text-brandHeaderColor">
+              <h3 className="text-2xl font-bold text-brandHeaderColor" >
                 {selectedMember.title.rendered}
               </h3>
               <button
@@ -164,7 +201,7 @@ export default function TeamTeam({ sectionTitle, doctorsTitle, doctorsList, coll
               </div>
 
               <div className="prose prose-gray max-w-none">
-                <div className="text-brandColor leading-relaxed text-base member-text" 
+                <div className="text-brandColor leading-relaxed text-base member-text"
                   dangerouslySetInnerHTML={{ __html: selectedMember.content.rendered }} />
               </div>
             </div>

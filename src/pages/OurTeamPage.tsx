@@ -16,6 +16,8 @@ export default function OurTeamPage() {
   const ourDoctors = pages.filter((p) => p.parent === 187);
   const ourColleaguesSection = pages.find((p) => ["rolunk-munkatarsaink"].includes(p.slug));
   const ourColleagues = pages.filter((p) => p.parent === 204);
+  const hrColleaguesSection = pages.find((p) => ["rolunk-hr"].includes(p.slug));
+  const hrColleagues = pages.filter((p) => p.parent === 431);
 
   return (
     <div className="">
@@ -27,6 +29,8 @@ export default function OurTeamPage() {
           doctorsList={ourDoctors} 
           colleaguesTitle={ourColleaguesSection} 
           colleagues={ourColleagues}
+          hrTitle={hrColleaguesSection} 
+          hrcolleagues={hrColleagues}
           media={media} />
       <TeamFacility />
     </div>

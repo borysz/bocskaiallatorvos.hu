@@ -2,34 +2,34 @@ import { Stethoscope, Microscope, Activity, Pill, Scan, DoorOpen } from 'lucide-
 
 const facilities = [
   {
+    icon: Scan,
+    title: 'Fogászati röntgen, ultrahang, endoszkóp',
+    description: 'Korszerű diagnosztikai berendezések a precíz diagnózishoz'
+  },
+  {
+    icon: Microscope,
+    title: 'Saját labor',
+    description: 'Pontos és megbízható diagnosztikai eredmények világszínvonalú IDEXX technológiával'
+  },
+  {
+    icon: Stethoscope,
+    title: 'Műtő',
+    description: 'Modern eszközökkel felszerelt műtő a biztonságos beavatkozásokhoz'
+  },
+  {
     icon: DoorOpen,
     title: 'Két vizsgálóhelyiség',
     description: 'Modern, jól felszerelt vizsgálóhelyiségek a kényelmes ellátásért'
   },
   {
     icon: Activity,
-    title: 'Tágas váróhelyiség',
-    description: 'Kényelmes várakozási környezet kedvencei számára'
-  },
-  {
-    icon: Scan,
-    title: 'Röntgen és ultrahang',
-    description: 'Korszerű diagnosztikai berendezések a pontos diagnózishoz'
-  },
-  {
-    icon: Stethoscope,
-    title: 'Műtő',
-    description: 'Modern sebészeti műtő a biztonságos beavatkozásokhoz'
-  },
-  {
-    icon: Microscope,
-    title: 'Saját labor',
-    description: 'Helyben elvégezhető laboratóriumi vizsgálatok'
+    title: 'Cicabarát váróhelyiség',
+    description: 'Tágas és barátságos váróterem elkülönített cicabarát résszel, a stresszmentes várakozásért'
   },
   {
     icon: Pill,
     title: 'Állatgyógyszertár',
-    description: 'Teljes körű gyógyszeres ellátás egy helyen'
+    description: 'Szabadforgalmú és vényköteles állatgyógyászati készítmények egy helyen. '
   }
 ];
 
@@ -54,7 +54,7 @@ export default function Facility() {
               >
                 <div className="flex items-center gap-4 mb-5">
                   <div className="bg-brandButton w-14 h-14 rounded-lg flex items-center justify-center">
-                      <Icon className="w-7 h-7 text-white" />
+                    <Icon className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-brandHeaderColor">
                     {facility.title}

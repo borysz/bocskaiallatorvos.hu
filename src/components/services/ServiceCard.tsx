@@ -1,17 +1,5 @@
 import { Link } from 'react-router-dom';
-
-export interface Service {
-  id: number;
-  title: string;
-  description: string;
-  image_url: string;
-  category: string | null;
-  display_order: number;
-  is_active: boolean;
-  created_at: string;
-  detailed_content: string | null;
-  slug: string | null;
-}
+import { Service } from '../../interfaces/ServicesInterface';
 
 interface ServiceCardProps {
   service: Service;
@@ -40,7 +28,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
 
         <div className="flex flex-col flex-grow p-6">
           <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-brandButtonHover transition-colors duration-300">
-            {service.title}
+            {service?.meta?.title?.slice(-1)[0] ?? service.title}
           </h3>
           <div
             className="text-gray-600 leading-relaxed line-clamp-3 flex-grow"
