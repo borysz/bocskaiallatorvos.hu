@@ -101,7 +101,7 @@ export default function ServiceDetailPage() {
                             </div>
 
                             <div className="p-8 md:p-12">
-                                <div className="prose prose-lg max-w-none">
+                                <div className="prose prose-lg max-w-none section-content">
                                     <h1 className="text-2xl md:text-4xl text-gray-700 leading-tight mb-8 font-medium border-l-4 border-brandButton pl-6 italic">
                                         {service.title}
                                     </h1>

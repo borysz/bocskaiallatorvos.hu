@@ -338,6 +338,6 @@
   color: theme('colors.brandButton'); 
 }
 
-#serviceDetails a, #blogDetail a {
+#serviceDetails .section-content a, #blogDetail .section-content a {
     color: theme('colors.brandButton'); 
 }
