@@ -84,7 +84,7 @@ export default function ServiceDetailPage() {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                                 <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                                    <div className="text-4xl leading-normal font-bold mb-4">{service?.meta?.title?.slice(-1)[0] ?? service.title}</div>
+                                    <div className="text-4xl leading-none md:leading-normal font-bold mb-4">{service?.meta?.title?.slice(-1)[0] ?? service.title}</div>
                                     <div className="flex flex-wrap gap-4 text-sm">
                                         {service.category && (
                                             <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
@@ -102,7 +102,7 @@ export default function ServiceDetailPage() {
 
                             <div className="p-8 md:p-12">
                                 <div className="prose prose-lg max-w-none">
-                                    <h1 className="text-4xl text-gray-700 leading-tight mb-8 font-medium border-l-4 border-brandButton pl-6 italic">
+                                    <h1 className="text-xl md:text-4xl text-gray-700 leading-tight mb-8 font-medium border-l-4 border-brandButton pl-6 italic">
                                         {service.title}
                                     </h1>
 
