@@ -337,3 +337,7 @@
   @apply text-xl font-normal;
   color: theme('colors.brandButton'); 
 }
+
+#serviceDetails a, #blogDetail a {
+    color: theme('colors.brandButton'); 
+}
