@@ -44,7 +44,7 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     
         if (contentType.includes("application/json")) {
           let cacheJson = await cacheRes.json();
-          console.log("➡️ Cache friss → JSON betöltve");
+          console.log("➡️ Cache ready → JSON loaded");
 
           setPages(cacheJson.pages);
           setMedia(cacheJson.media);
