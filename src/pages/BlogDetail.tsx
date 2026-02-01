@@ -65,7 +65,7 @@ export function BlogDetail() {
                         <p className="text-red-500 text-sm">{error || 'Post not found'}</p>
                     </div>
                     <Link
-                        to="/"
+                        to="/blog"
                         className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors"
                     >
                         <ArrowLeft className="w-4 h-4" />

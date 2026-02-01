@@ -263,7 +263,7 @@ export default function JobDetailsPage() {
         <div className="text-center bg-white p-8 rounded-xl shadow-lg">
           <p className="text-red-600 mb-4">{error || 'Álláshirdetés nem található'}</p>
           <Link
-            to="/"
+            to="/karrier"
             className="inline-flex font-medium items-center px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
