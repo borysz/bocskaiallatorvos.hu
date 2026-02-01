@@ -318,7 +318,7 @@ export default function JobDetailsPage() {
         <div className="bg-brandColor text-white py-8 shadow-lg">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <Link
-              to="/"
+              to="/karrier"
               className="inline-flex font-medium items-center text-brandButton hover:text-white transition-colors mb-6 group"
             >
               <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
