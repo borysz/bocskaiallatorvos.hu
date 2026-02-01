@@ -1,4 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ReactGA from "react-ga4";
+import AnalyticsTracker from './components/AnalyticsTracker';
+
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
@@ -16,8 +19,8 @@ import GalleryPage from './pages/GalleryPage';
 import { BlogList } from './pages/BlogList';
 import { BlogDetail } from './pages/BlogDetail';
 import NotFound from './pages/NotFound';
-import ReactGA from "react-ga4";
-import AnalyticsTracker from './components/AnalyticsTracker';
+import JobsPage from './pages/JobsPage';
+import JobDetailsPage from './pages/JobsDetailPage';
 
 ReactGA.initialize("G-H3JP7MM77N");
 
@@ -43,6 +46,8 @@ function App() {
             <Route path="/gyik" element={<FAQPage />} />
             <Route path="/blog" element={<BlogList />} />
             <Route path="/blog/:slug" element={<BlogDetail />} />
+            <Route path="/karrier" element={<JobsPage />} />
+            <Route path="/karrier/:slug" element={<JobDetailsPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
