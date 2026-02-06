@@ -51,15 +51,15 @@ const MetaFetcher = () => {
                     const page = data[0];
                     const ogImageUrl = page._embedded?.["wp:featuredmedia"]?.[0].source_url;
                     setMeta({
-                        title: page.meta.meta_title.slice(-1)[0],
-                        description: page.meta.meta_description,
+                        title: page?.meta?.meta_title?.slice(-1)[0] ?? "",
+                        description: page?.meta?.meta_description,
                         //canonical: headJson.canonical,
-                        og_title: page.meta.meta_title.slice(-1)[0],
-                        og_description: page.meta.meta_description,
+                        og_title: page?.meta?.meta_title?.slice(-1)[0] ?? "",
+                        og_description: page?.meta?.meta_description,
                         og_url: window.location.origin + location.pathname,
                         og_image: ogImageUrl,
-                        twitter_title: page.meta.meta_title.slice(-1)[0],
-                        twitter_description: page.meta.meta_description,
+                        twitter_title: page?.meta?.meta_title?.slice(-1)[0] ?? "",
+                        twitter_description: page?.meta?.meta_description,
                         twitter_image: ogImageUrl,
                         robots: 'index, follow',
                         //schema: headJson.schema,

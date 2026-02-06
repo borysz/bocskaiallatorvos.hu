@@ -26,7 +26,7 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">Gyors linkek</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><Link to="/aszf" className="hover:text-brandButton transition">ÁSZF</Link></li>
+              <li><Link to="/adatvedelmi-tajekoztato" className="hover:text-brandButton transition">Adatvédelem</Link></li>
               <li><Link to="/rolunk" className="hover:text-brandButton transition">Rólunk</Link></li>
               <li><Link to="/szolgaltatasok" className="hover:text-brandButton transition">Szolgáltatások</Link></li>
               <li><Link to="/blog" className="hover:text-brandButton transition">Blog</Link></li>

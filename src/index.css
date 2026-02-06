@@ -323,21 +323,49 @@
   margin-bottom: 1rem;
 }
 
-#serviceDetails ul, #blogDetail ul {
+#serviceDetails ul,
+#blogDetail ul,
+#contentPage ul {
   list-style: disc;
   margin: 10px 0px 0px 20px;
-  padding: 0px
+  padding: 0px;
 }
 
-#serviceDetails ul li::marker, #blogDetail ul li::marker {
+#serviceDetails ol,
+#blogDetail ol,
+#contentPage ol {
+  list-style: decimal;
+  margin: 10px 0px 0px 20px;
+  padding: 0px;
+  @apply mb-4;
+}
+
+#serviceDetails ul li::marker,
+#blogDetail ul li::marker,
+#contentPage ul li::marker,
+#serviceDetails ol li::marker,
+#blogDetail ol li::marker,
+#contentPage ol li::marker {
   color: theme('colors.brandButton');
 }
 
-#serviceDetails h2, #blogDetail h2 {
+#serviceDetails h2,
+#blogDetail h2,
+#contentPage h2 {
   @apply text-xl font-normal;
-  color: theme('colors.brandButton'); 
+  color: theme('colors.brandButton');
 }
 
-#serviceDetails .section-content a, #blogDetail .section-content a {
-    color: theme('colors.brandButton'); 
+#serviceDetails .section-content a,
+#blogDetail .section-content a,
+#contentPage a {
+  color: theme('colors.brandButton');
+}
+
+#contentPage p,
+#contentPage h1,
+#contentPage h2,
+#contentPage h3,
+#contentPage h4 {
+  @apply mb-4;
 }
