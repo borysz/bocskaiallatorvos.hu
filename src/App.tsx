@@ -21,6 +21,8 @@ import { BlogDetail } from './pages/BlogDetail';
 import NotFound from './pages/NotFound';
 import JobsPage from './pages/JobsPage';
 import JobDetailsPage from './pages/JobsDetailPage';
+import CookieConsentPopup from './components/CookieConsent';
+import ContentPage from './pages/ContentPage';
 
 ReactGA.initialize("G-H3JP7MM77N");
 
@@ -48,11 +50,13 @@ function App() {
             <Route path="/blog/:slug" element={<BlogDetail />} />
             <Route path="/karrier" element={<JobsPage />} />
             <Route path="/karrier/:slug" element={<JobDetailsPage />} />
+            <Route path="/adatvedelmi-tajekoztato" element={<ContentPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
       </div>
+      <CookieConsentPopup />
       <SzechenyiBanner />
     </BrowserRouter>
   );
