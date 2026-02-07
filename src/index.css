@@ -369,3 +369,12 @@
 #contentPage h4 {
   @apply mb-4;
 }
+
+
+#rcc-confirm-button:hover {
+  background: theme('colors.brandButtonHover') !important;
+}
+
+#rcc-decline-button:hover {
+  background: #952020 !important;
+} 
