@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
-import { useParams, useLocation, Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Loader2 } from 'lucide-react';
 import { useCms } from '../context/CmsContext';
 import { WPPage } from '../interfaces/WordpressInterfaces';
 
 export default function ContentPage() {
-    //const { slug } = useParams<{ slug: string }>();
     const { pages } = useCms();
     const [loading, setLoading] = useState(true);
     const location = useLocation();
@@ -15,8 +14,6 @@ export default function ContentPage() {
         try {
             setLoading(true);
             const filteredPage = pages.filter(item => item.slug === location.pathname.slice(1));
-
-            //const selectedServices: Service[] = filteredPost.map(transformWPPostToService);
             setPageContent(filteredPage.slice(-1)[0] || []);
 
         }
@@ -33,7 +30,7 @@ export default function ContentPage() {
             <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-blue-50 to-gray-50">
                 <div className="text-center">
                     <Loader2 className="w-12 h-12 animate-spin text-blue-600 mx-auto mb-4" />
-                    <p className="text-brandHeaderColor text-lg">Blogok betöltése...</p>
+                    <p className="text-brandHeaderColor text-lg">Tartalom betöltése...</p>
                 </div>
             </div>
         );

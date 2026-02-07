@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import { WPPage } from "../interfaces/WordpressInterfaces";
 //import { useLocation } from "react-router-dom";
 
 interface MetaAttributes {
@@ -40,38 +41,54 @@ const MetaFetcher = () => {
             try {
                 //const slug = location.pathname.replace(/^\/+|\/+$/g, "") || "fooldal";
                 const slug = window.location.pathname.replace(/^\/+|\/+$/g, "") || "fooldal";
-                if (slug === lastSlug.current) return; 
+                if (slug === lastSlug.current) return;
                 lastSlug.current = slug;
 
-                const res = await fetch(
-                    `${apiUrl}/pages?slug=${slug}&_embed`
-                );
-                const data = await res.json();
-                if (Array.isArray(data) && data.length > 0) {
-                    const page = data[0];
-                    const ogImageUrl = page._embedded?.["wp:featuredmedia"]?.[0].source_url;
-                    setMeta({
-                        title: page?.meta?.meta_title?.slice(-1)[0] ?? "",
-                        description: page?.meta?.meta_description,
-                        //canonical: headJson.canonical,
-                        og_title: page?.meta?.meta_title?.slice(-1)[0] ?? "",
-                        og_description: page?.meta?.meta_description,
-                        og_url: window.location.origin + location.pathname,
-                        og_image: ogImageUrl,
-                        twitter_title: page?.meta?.meta_title?.slice(-1)[0] ?? "",
-                        twitter_description: page?.meta?.meta_description,
-                        twitter_image: ogImageUrl,
-                        robots: 'index, follow',
-                        //schema: headJson.schema,
-                    });
+                const cacheFile =
+                    import.meta.env.MODE === "production"
+                        ? "cms-cache.json"
+                        : "/dist/cms-cache.json";
+
+                const cacheRes = await fetch(cacheFile);
+                const contentType = cacheRes.headers.get("content-type") || "";
+
+                let pageData;
+
+                if (contentType.includes("application/json")) {
+                    let cacheJson = await cacheRes.json();
+
+                    const filteredPage = cacheJson.pages.filter((item: WPPage) => item.slug === slug);
+                    pageData = filteredPage.slice(-1)[0] || [];
+                } else {
+                    const res = await fetch(
+                        `${apiUrl}/pages?slug=${slug}&_embed`
+                    );
+                    pageData = (await res.json())?.[0];
                 }
+                
+                const ogImageUrl = pageData?._embedded?.['wp:featuredmedia']?.[0]?.source_url;
+                const title = pageData?.meta?.meta_title?.[0] ?? "";
+                const description = pageData?.meta?.meta_description?.[0] ?? "";
+
+                setMeta({
+                    title,
+                    description,
+                    og_title: title,
+                    og_description: description,
+                    og_url: window.location.origin + location.pathname,
+                    og_image: ogImageUrl,
+                    twitter_title: title,
+                    twitter_description: description,
+                    twitter_image: ogImageUrl,
+                    robots: 'noindex, nofollow',
+                });
+
             } catch (err) {
                 console.error("Meta fetch error:", err);
             }
         };
         fetchMeta();
 
-        fetchMeta();
         window.addEventListener("popstate", fetchMeta);
         window.addEventListener("urlchange", fetchMeta);
 
