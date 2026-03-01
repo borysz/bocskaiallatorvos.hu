@@ -52,7 +52,7 @@ export default function Services() {
               className="bg-gradient-to-br from-brand to-stone-50 p-8 rounded-xl hover:shadow-xl transition group"
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="bg-brandButton w-14 h-14 rounded-lg flex items-center justify-center group-hover:scale-110 transition">
+                <div className="bg-brandButton w-14 h-14 rounded-lg flex items-center justify-center group-hover:scale-110 transition flex-shrink-0">
                   <service.icon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-brandHeaderColor">{service.title}</h3>

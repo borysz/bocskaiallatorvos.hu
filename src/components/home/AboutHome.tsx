@@ -51,7 +51,7 @@ export default function AboutHome() {
                         <div className="grid grid-cols-2 gap-6 mt-6 ">
                             {stats.map((stat, index) => (
                                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
-                                    <div className="flex items-center gap-3 mb-3">
+                                    <div className="flex items-center gap-3 mb-3  flex-shrink-0">
                                         <stat.icon className="w-8 h-8 text-brandButton" />
                                         <div className="text-2xl font-bold text-brandHeaderColor">{stat.value}</div>
                                     </div>
