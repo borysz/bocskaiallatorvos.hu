@@ -378,3 +378,12 @@
 #rcc-decline-button:hover {
   background: #952020 !important;
 } 
+
+#serviceDetails .aligncenter
+#serviceDetails .aligncenter img,
+#blogDetail .aligncenter,
+#blogDetail .aligncenter img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

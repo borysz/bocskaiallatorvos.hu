@@ -21,7 +21,13 @@ export function BlogList() {
                 setLoading(true);
                 if (error) throw error;
 
-                const blogPosts = posts.filter(item => item.categories.includes(8));
+                //const blogPosts = posts.filter(item => item.categories.includes(8));
+                const blogPosts = posts
+                .filter(item => item.categories.includes(8))
+                .sort((a, b) => 
+                     new Date(b.date_gmt).getTime() - new Date(a.date_gmt).getTime()
+                );
+    
 
                 setTotalCount(blogPosts.length || 0);
 
@@ -80,9 +86,9 @@ export function BlogList() {
                     <h1 className="text-4xl font-bold text-brandHeaderColor mb-8 text-center">
                         Blog
                     </h1>
-                    <p className="text-xl sm:text-2xl text-brandColor max-w-3xl mx-auto leading-relaxed">
+                    {/*<p className="text-xl sm:text-2xl text-brandColor max-w-3xl mx-auto leading-relaxed">
                         Minden, amit tudni érdemes az állatgyógyászatról és kezelésekről
-                    </p>
+                    </p>*/}
                 </header>
 
                 {blogs.length === 0 ? (

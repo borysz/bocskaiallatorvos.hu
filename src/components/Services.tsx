@@ -1,9 +1,9 @@
-import { Stethoscope, Activity , Scissors, HeartPulse, MonitorCloud, Pill } from 'lucide-react';
+import { ShieldPlus, Pipette , Scissors, HeartPulse, MonitorCloud, Cat } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const services = [
   {
-    icon: Stethoscope,
+    icon: ShieldPlus,
     title: 'Bőrgyógyászati szakrendelés',
     description: ' Kutyák és macskák teljes körű bőrgyógyászati ellátása hivatalosan elismert bőrgyógyász szakállatorvos által.',
   },
@@ -13,7 +13,7 @@ const services = [
     description: 'Kardiológiai betegségek diagnosztikája és kezelése: szívultrahang, EKG, vérnyomásmérés.  Kiemelt figyelmet fordítunk a szívférgesség megelőzésére, kivizsgálására, kezelésére.',
   },
   {
-    icon: Pill,
+    icon: Cat,
     title: 'Fogászati szakrendelés',
     description: 'Teljes körű fogászati ellátás korszerű fogászati röntgennel, tapasztalt és magas szintű szaktudással rendelkező állatorvos által.',
   },  
@@ -23,7 +23,7 @@ const services = [
     description: 'Ultrahang, endoszkópia, röntgen – modern képalkotás a lehető legpontosabb diagnózisért.',
   },
   {
-    icon: Activity,
+    icon: Pipette,
     title: 'Laborvizsgálatok',
     description: 'Pontos és megbízható diagnosztikai eredmények világszínvonalú IDEXX technológiával.',
   },
