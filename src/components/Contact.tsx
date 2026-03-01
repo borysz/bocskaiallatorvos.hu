@@ -68,7 +68,7 @@ export default function Contact() {
         <div className="text-center mb-16 animate-fade-in">
           <h1 className="text-4xl font-bold text-brandHeaderColor mb-4">Kapcsolat</h1>
           <p className="text-xl sm:text-2xl text-brandColor max-w-2xl mx-auto">
-            Forduljon hozzánk bizalommal kedvence egészségével kapcsolatos minden kérdésben!
+            Forduljon hozzánk bizalommal kedvence egészségét érintő kérdéseivel!
           </p>
         </div>
 

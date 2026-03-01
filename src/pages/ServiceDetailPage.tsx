@@ -92,10 +92,10 @@ export default function ServiceDetailPage() {
                                                 {service.category}
                                             </div>
                                         )}
-                                        <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
+                                        {/*<div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
                                             <Calendar className="w-4 h-4" />
                                             {new Date(service.created_at).toLocaleDateString('hu-HU')}
-                                        </div>
+                                        </div>*/}
                                     </div>
                                 </div>
                             </div>

@@ -11,8 +11,8 @@ type TeamTeamProps = {
   doctorsList?: WPPage[];
   colleaguesTitle?: WPPage;
   colleagues?: WPPage[];
-  hrTitle?: WPPage;
-  hrcolleagues?: WPPage[];
+  //hrTitle?: WPPage;
+  //hrcolleagues?: WPPage[];
   media?: WPMedia[];
 };
 
@@ -24,7 +24,7 @@ function getImageUrl(mediaList: WPMedia[], id: number) {
   };
 }
 
-export default function TeamTeam({ sectionTitle, doctorsTitle, doctorsList, colleaguesTitle, colleagues, hrTitle, hrcolleagues, media }: TeamTeamProps) {
+export default function TeamTeam({ sectionTitle, doctorsTitle, doctorsList, colleaguesTitle, colleagues, /*hrTitle, hrcolleagues,*/ media }: TeamTeamProps) {
   const [selectedMember, setSelectedMember] = useState<WPPage | null>(null);
 
   const sectionTitleHtml = sectionTitle?.content.rendered?.replace(
@@ -40,7 +40,7 @@ export default function TeamTeam({ sectionTitle, doctorsTitle, doctorsList, coll
 
   const IconComponentDoctorsTitle = icons[(doctorsTitle?.meta?.icon?.[0] as string) || "Stethoscope"];
   const IconComponentColleaguesTitle = icons[(colleaguesTitle?.meta?.icon?.[0] as string) || "Users"];
-  const IconComponentHRTitle = icons[(hrTitle?.meta?.icon?.[0] as string) || "Crosshair"];
+  //const IconComponentHRTitle = icons[(hrTitle?.meta?.icon?.[0] as string) || "Crosshair"];
 
   return (
     <section id="bocskaiteam" className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-brand to-white">
@@ -127,7 +127,7 @@ export default function TeamTeam({ sectionTitle, doctorsTitle, doctorsList, coll
           </div>
         </div>
 
-        <div>
+        {/*<div>
           <h3 className="text-2xl font-semibold text-brandColor mb-10 flex items-center justify-center gap-3">
             {IconComponentHRTitle && (
               <IconComponentHRTitle className="w-6 h-6 text-brandButton" />
@@ -158,8 +158,8 @@ export default function TeamTeam({ sectionTitle, doctorsTitle, doctorsList, coll
                 </p>
               </div>
             ))}
-          </div>
-        </div>
+          </div> 
+        </div>*/}
       </div>
 
       {selectedMember && (

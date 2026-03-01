@@ -29,7 +29,6 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const cacheFile =
     import.meta.env.MODE === "production"
       ? "cms-cache.json"
-      //: "./dist/cms-cache.json";
       : "/dist/cms-cache.json";
 
   useEffect(() => {

@@ -85,7 +85,7 @@ function Pricelists() {
                             </div>
 
                             <div
-                                className={`transition-all duration-500 ease-in-out ${isExpanded ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+                                className={`transition-all duration-500 ease-in-out ${isExpanded ? ' opacity-100' : 'max-h-0 opacity-0'
                                     }`}
                             >
                                 <div className="p-3 sm:p-6">
@@ -129,7 +129,7 @@ function Pricelists() {
                                                             </div>
                                                         </td>
                                                         <td className="py-4 px-4 text-right">
-                                                            <span className="inline-flex items-center gap-1 font-bold text-slate-800 transition-all duration-300 group-hover:scale-105 group-hover:text-black">
+                                                            <span className="inline-flex items-center gap-1 font-bold text-slate-800 transition-all duration-300 group-hover:scale-105 group-hover:text-black whitespace-nowrap">
                                                                 {item.price}
                                                             </span>
                                                         </td>
