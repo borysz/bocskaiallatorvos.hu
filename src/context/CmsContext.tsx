@@ -28,7 +28,7 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const apiUrl = import.meta.env.VITE_API_URL;
   const cacheFile =
     import.meta.env.MODE === "production"
-      ? "cms-cache.json"
+      ? "/cms-cache.json"
       : "/dist/cms-cache.json";
 
   useEffect(() => {
@@ -57,7 +57,7 @@ export const CmsProvider: React.FC<{ children: React.ReactNode }> = ({ children 
           const [pagesRes, mediaRes, postsRes, partnersRes, galleriesRes] = await Promise.all([
             fetch(`${apiUrl}/pages?_fields=id,parent,menu_order,slug,title,content,meta,featured_media&orderby=menu_order&order=asc&per_page=100`),
             fetch(`${apiUrl}/media?_fields=id,slug,guid,caption&per_page=100`),
-            fetch(`${apiUrl}/posts?_fields=meta,id,date_gmt,title,excerpt,content,slug,categories,tag_names,featured_image_url,menu_order&orderby=menu_order&order=asc`),
+            fetch(`${apiUrl}/posts?_fields=meta,id,date_gmt,title,excerpt,content,slug,categories,tag_names,featured_image_url,menu_order&orderby=menu_order&order=asc&per_page=100`),
             fetch(`${apiUrl}/partners`),
             fetch(`${apiUrl}/galleries`)
           ]);
