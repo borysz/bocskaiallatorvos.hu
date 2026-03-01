@@ -53,7 +53,7 @@ export default function Facility() {
                 className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100"
               >
                 <div className="flex items-center gap-4 mb-5">
-                  <div className="bg-brandButton w-14 h-14 rounded-lg flex items-center justify-center">
+                  <div className="bg-brandButton w-14 h-14 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Icon className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-brandHeaderColor">
