@@ -44,12 +44,12 @@ export default function Header() {
               Blog
             </Link>
 
-            <Link
+            {/*<Link
               to="/gyik"
               className={`transition ${isActive('/gyik') ? 'text-brandButton font-medium' : 'text-brandHeaderColor hover:text-brandButton'}`}
             >
               GYIK
-            </Link>
+            </Link>*/}
 
             <Link
               to="/arlista"
@@ -84,11 +84,11 @@ export default function Header() {
 
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-6 px-4 space-y-2 backdrop-blur-xl bg-white/80 shadow-xl rounded-2xl border border-white/40 animate-slideDown">
+           {/* { to: "/gyik", label: "GYIK" }, */}
             {[
               { to: "/rolunk", label: "Rólunk" },
               { to: "/szolgaltatasok", label: "Szolgáltatások" },
               { to: "/blog", label: "Blog" },
-              { to: "/gyik", label: "GYIK" },
               { to: "/arlista", label: "Árlista" },
               { to: "/galeria", label: "Galéria" },
               { to: "/kapcsolat", label: "Kapcsolat" },

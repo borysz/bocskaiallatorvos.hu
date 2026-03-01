@@ -1,4 +1,4 @@
-import { Stethoscope, Microscope, Activity, Pill, Scan, DoorOpen } from 'lucide-react';
+import { Scissors, Microscope, Cat, Pill, Scan, DoorOpen } from 'lucide-react';
 
 const facilities = [
   {
@@ -12,7 +12,7 @@ const facilities = [
     description: 'Pontos és megbízható diagnosztikai eredmények világszínvonalú IDEXX technológiával'
   },
   {
-    icon: Stethoscope,
+    icon: Scissors,
     title: 'Műtő',
     description: 'Modern eszközökkel felszerelt műtő a biztonságos beavatkozásokhoz'
   },
@@ -22,7 +22,7 @@ const facilities = [
     description: 'Modern, jól felszerelt vizsgálóhelyiségek a kényelmes ellátásért'
   },
   {
-    icon: Activity,
+    icon: Cat,
     title: 'Cicabarát váróhelyiség',
     description: 'Tágas és barátságos váróterem elkülönített cicabarát résszel, a stresszmentes várakozásért'
   },

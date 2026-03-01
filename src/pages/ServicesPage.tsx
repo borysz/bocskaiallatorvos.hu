@@ -6,7 +6,7 @@ import { useCms } from '../context/CmsContext';
 import { Service } from '../interfaces/ServicesInterface';
 import { transformWPPostToService } from '../components/transformation/TransformWPPostToService';
 
-const ITEMS_PER_PAGE = 6;
+const ITEMS_PER_PAGE = 12;
 
 export default function ServicesPage() {
   const [services, setServices] = useState<Service[]>([]);
@@ -54,10 +54,10 @@ export default function ServicesPage() {
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-16 animate-fade-in">
           <h1 className="text-4xl font-bold text-brandHeaderColor mb-8 text-center">
-            Állatorvosi Szolgáltatások
+            Állatorvosi szolgáltatások
           </h1>
           <p className="text-xl sm:text-2xl text-brandColor max-w-3xl mx-auto leading-relaxed">
-           Szakszerű egészségügyi ellátás kedvencei számára
+           Szakszerű egészségügyi ellátás kedvence számára
           </p>
         </div>
         {loading ? (

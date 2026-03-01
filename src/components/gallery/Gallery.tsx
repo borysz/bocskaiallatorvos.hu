@@ -42,7 +42,7 @@ export default function Gallery() {
                         Galéria
                     </h1>
                     <p className="text-brandColor text-xl sm:text-2xl">
-                        Pillants be rendelőnk mindennapjaiba! 
+                        Pillantson be rendelőnk mindennapjaiba! 
                     </p>
                 </div>
 
