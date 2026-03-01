@@ -54,7 +54,7 @@ export default function Facility() {
               >
                 <div className="flex items-center gap-4 mb-5">
                   <div className="bg-brandButton w-14 h-14 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Icon className="w-7 h-7 text-white" />
+                    <Icon className="w-7 h-7 text-white flex-shrink-0" />
                   </div>
                   <h3 className="text-xl font-semibold text-brandHeaderColor">
                     {facility.title}
